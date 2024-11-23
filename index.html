@@ -33,66 +33,61 @@
 <body>
     <!-- header -->
     <header class="relative">
-        <div class="container mx-auto px-4 flex justify-between items-center py-4 text-xl">
-            <!-- Logo -->
-            <div class="flex-none w-40">
-                <a href="">
-                    <img class="min-w-28 min-h-14" src="assets/image/logo.png" alt="logo">
-                </a>
-            </div>
-
-            <!-- Navigation Links -->
-            <nav class="relative">
-                <ul class="flex space-x-16">
-                    <li><a href="" class="hover:text-yellow-400">Home</a></li>
-                    <!-- Dropdown for Services -->
-                    <li class="relative group dropdown">
-                        <a href="#" class="flex items-center dropbtn hover:text-yellow-400">
-                            Services
-                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                        </a>
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-content">
-                            <a href="" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
-                            <a href="" class="hover:text-yellow-400">VR Industrial Training</a>
-                            <a href="" class="hover:text-yellow-400">Metaverse Development</a>
-                            <a href="" class="hover:text-yellow-400">Virtual Event Managment</a>
-                            <a href="" class="hover:text-yellow-400">VR Consultation</a>
-                        </div>
-                    </li>
-                    <li><a href="" class="hover:text-yellow-400">AR/VR Times</a></li>
-                    <li><a href="" class="hover:text-yellow-400">Portfolio</a></li>
-                    <li><a href="" class="hover:text-yellow-400">Contact Us</a></li>
-                </ul>
-            </nav>
-
-
-            <!-- Social Icons -->
-            <div class="flex space-x-4">
-                <div class="social-icon w-10 h-10">
+        <div class=" navbar">
+            <div
+                class="container mx-auto px-4 flex space-x-60 justify-center justify-between items-center py-4 text-xl">
+                <!-- Logo -->
+                <div class="flex-none w-40">
                     <a href="">
-                        <img src="assets/image/facebook.png" alt="facebook">
+                        <img class="min-w-28 min-h-14" src="assets/image/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="social-icon w-10 h-10" style="padding: 7px;">
-                    <a href="" class="">
-                        <img src="assets/image/twitter.png" alt="twitter">
-                    </a>
-                </div>
-                <div class="social-icon w-10 h-10">
-                    <a href="" class="">
-                        <img src="assets/image/instragram.png" alt="instragram">
-                    </a>
+
+                <!-- Navigation Links -->
+                <nav class="relative">
+                    <ul class="flex space-x-16">
+                        <li><a href="" class="hover:text-yellow-400">Home</a></li>
+                        <!-- Dropdown for Services -->
+                        <li class="relative group dropdown">
+                            <a href="#" class="flex items-center dropbtn hover:text-yellow-400">
+                                Services
+                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-content">
+                                <a href="" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                                <a href="" class="hover:text-yellow-400">VR Industrial Training</a>
+                                <a href="" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="" class="hover:text-yellow-400">Virtual Event Managment</a>
+                                <a href="" class="hover:text-yellow-400">VR Consultation</a>
+                            </div>
+                        </li>
+                        <li><a href="" class="hover:text-yellow-400">AR/VR Times</a></li>
+                        <li><a href="" class="hover:text-yellow-400">Portfolio</a></li>
+                        <li><a href="" class="hover:text-yellow-400">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <div class="social-icon w-10 h-10">
+                        <a href="">
+                            <img src="assets/image/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                        <a href="" class="">
+                            <img src="assets/image/twitter.png" alt="twitter">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10">
+                        <a href="" class="">
+                            <img src="assets/image/instragram.png" alt="instragram">
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
         </div>
 
         <!-- Mobile Menu -->
@@ -106,17 +101,13 @@
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="banner bg-[url('assets/image/banner.png')] mt-24">
+        <div class="banner">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
 
-                <!-- <div class="banner-image relative">
-                    <img src="assets/image/image 4.png" alt="image4">
-                </div> -->
-                <div class="flex items-center">
+                <div class="flex items-center  mt-36">
                     <div class="banner-contain text-7xl">
-                        <h1 class="" style="font-family: 'Kodchasan', serif; font-weight: 400;font-style: normal;">
-                            Explorer A New <span class="text-yellow-400"
-                                style="font-family: 'Kodchasan', serif; font-weight: 400;font-style: normal;">World</span>
+                        <h1 class="font-2">
+                            Explorer A New <span class="text-yellow-400 font-2">World</span>
                             With
                         </h1>
                     </div>
@@ -124,24 +115,189 @@
                 </div>
             </div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="fl">
-                    <h1 class="text-7xl" style="font-family: 'Kodchasan', serif; font-weight: 400;font-style: normal;">
-                        TWIN <span class="text-yellow-400"
-                            style="font-family: 'Kodchasan', serif; font-weight: 400;font-style: normal;">REALITY</span>
+                <div class="w-96"></div>
+                <div class="w-96"></div>
+                <div class="flex">
+                    <h1 class="text-7xl z-10 font-2">
+                        TWIN <span class="text-yellow-400 font-2">REALITY</span>
                     </h1>
                 </div>
             </div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-96"></div>
+                <div class="w-96"></div>
+                <div class="flex banner-border-2">
+                    <p class="z-10 opacity-100 font-light tracking-wider leading-loose">
+                        We specialize in providing cutting-edge Virtual Reality <br> solutions that transport you to
+                        immersive digital worlds.
+                    </p>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl "
+                style="position: relative; z-index: 999;">
+                <div class="w-96"></div>
+                <div class="w-96"></div>
+                <div class="banner-img flex items-center mt-10 relative">
+                    <img class="w-64" src="assets/image/banner-img.png" alt="banner-img">
+                    <div style="position: absolute;right: -40px;"
+                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4">
+                        <a href="">
+                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
+                        </a>
+                    </div>
+                </div>
+                <div class="ml-14 mt-10">
+                    <a href="">
+                        <span class="text-yellow-400 text-3xl font-2 hover:text-white">Watch Intro</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </main>
-    <script>
-        // JavaScript for mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        <div class="my-28"></div>
+        <!-- twin reality -->
+        <div class="twin-reality">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="title w-2/5">
+                    <h2 class="font-2 text-6xl uppercase leading-relaxed">Twin Reality</h2>
+                    <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
+                    <div class="banner-border-2 pb-4"></div>
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality is a cutting-edge technology company in India that <br> specializes in augmented
+                        reality (AR), virtual reality (VR), and <br> mixed reality (MR) solutions. Since its
+                        establishment, the <br> company has made significant strides in the field of immersive <br>
+                        technology, revolutionizing the way businesses and individuals <br> experience the world around
+                        them.
+                    </p>
+                    <p class="font-light mt-5 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality’s unique approach to AR, VR, and MR involves <br> creating experiences that are
+                        tailored to the needs of the user. <br> They achieve this by combining creative design,
+                        innovative <br> technology, and a deep understanding of user behavior to <br> develop immersive
+                        experiences that are both engaging and <br> impactful.
+                    </p>
+                </div>
+                <div class="w-3/5 twin-reality-img relative"></div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- Why choose TWIN REALITY? -->
+        <div class="why-choose-twin-reality">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="choose-bg w-full p-16 text-center">
+                    <div class="">
+                        <h3 class="font-2 text-4xl">
+                            WHY CHOOSE TWIN <span class="font-2 text-yellow-400">REALITY?</span>
+                        </h3>
+                    </div>
+                    <div class="flex justify-evenly items-center mt-20">
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                            border: 2px solid #241e37;">
+                                <img class="w-14 h-14" src="assets/image/joystick.png" alt="joystick">
+                            </div>
+                            <p class="text-center mt-6 text-2xl">Modern Technology</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                            border: 2px solid #241e37;">
+                                <img class="w-14 h-14" src="assets/image/settings.png" alt="settings">
+                            </div>
+                            <p class="text-center mt-6 text-2xl">Cost Effective</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                            border: 2px solid #241e37;">
+                                <img class="w-14 h-14" src="assets/image/costumer-service.png" alt="costumer-service">
+                            </div>
+                            <p class="text-center mt-6 text-2xl">Versatile Applications</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                            border: 2px solid #241e37;">
+                                <img class="w-14 h-14" src="assets/image/bonus.png" alt="bonus">
+                            </div>
+                            <p class="text-center mt-6 text-2xl">Scalability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- reality -->
+        <div class="reality">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="title w-3/6">
+                    <h2 class="font-2 text-6xl uppercase leading-relaxed">VIRTUAL REALITY</h2>
+                    <div class="banner-border-2 pb-4"></div>
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality , an India-based VR and AR development service <br> provider, is committed to providing
+                        the best experiences in cutting- <br>edge AR and VR solutions, outstanding high-definition visuals,
+                        real-<br>time adaptability, and highly immersive services for Virtual Reality<br> applications .
+                    </p>
+                </div>
+                <div class="w-3/6 twin-reality-img reality-img relative"></div>
+            </div>
+            <div class="my-28"></div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-3/6 twin-reality-img reality-img-2 relative"></div>
+                <div class="title w-3/6">
+                    <h2 class="font-2 text-6xl uppercase leading-relaxed">METAVERSE</h2>
+                    <div class="banner-border-2 pb-4"></div>
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        As a metaverse development company, we take you through the<br> process of building your own virtual world and enriching it with<br> experiences, landscapes, items, assets, and opportunities to connect<br> with customers. With our expertise in blockchain, augmented reality,<br> and virtual reality...
+                    </p>
+                </div>
+            </div>
+            <div class="my-28"></div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="title w-3/6">
+                    <h2 class="font-2 text-6xl uppercase leading-relaxed">VIRTUAL EVENTS</h2>
+                    <div class="banner-border-2 pb-4"></div>
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        At Twin Reality we combine the finest of in-person event experiences<br> with online event capabilities, We provide a virtual event solution to<br> meet the demands of the modern hybrid event, such as 3D immersive<br> platforms, live streaming, and audience involvement.
+                    </p>
+                </div>
+                <div class="w-3/6 twin-reality-img reality-img-3 relative"></div>
+            </div>
+        </div>
+        <div class="my-36"></div>
+        <!-- Projects -->
+        <div class="project">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-2/5">
+                    <div class="our-project flex flex-col">
+                        <img src="assets/image/Model.png" alt="Model">
+                        <h2 class="font-2 text-6xl uppercase leading-relaxed mt-24">our projects</h2>
+                        <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
+                        <div class="banner-border-2 pb-4"></div>
+                        <div class="flex justify-center mt-10">
+                            <button class="project-btn bg-sky-600 p-3 px-4 text-base font-medium tracking-wider" style="width: 150px;">VIEW ALL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-3/5">
+                    <div class="h-80"></div>
+                    <div class="our-project-vr flex flex-col justify-end w-full h-96 p-10">
+                        <div class="flex items-end">
+                            <div class="">
+                                <img src="assets/image/project-1.jpg" alt="project-1" style="width: 400px;">
+                            </div>
+                            <div class="ml-20">
+                                <div class="flex justify-center mb-20">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </div>
+                                <img src="assets/image/project-2.png" alt="project-2" style="width: 350px;">
+                            </div>
+                        </div>
+                        <p class="font-2 text-lg text-yellow-400 tracking-wide leading-loose mt-10">VIRTUAL REALITY</p>
+                        <p class="font-2 tracking-wide">Virtual Reality For Medical Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-36"></div>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    </main>
 </body>
 
 </html>

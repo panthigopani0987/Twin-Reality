@@ -8,6 +8,19 @@ body {
     background-color: #09021b;
 }
 
+.font-2 {
+    font-family: 'Kodchasan', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    z-index: 99;
+}
+
 header::before {
     position: absolute;
     content: "";
@@ -26,6 +39,7 @@ header::before {
     left: 900px;
     opacity: 0.1;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .dropdown {
@@ -72,17 +86,87 @@ header::before {
 }
 
 .banner {
-    height: 850px;
-    background-image: url('assest/image/banner.png');
+    width: auto;
+    height: 950px;
+    background: rgb(38, 108, 153);
+    background: linear-gradient(0deg, rgba(38, 108, 153, 1) 0%, rgba(15, 44, 75, 1) 10%, rgba(9, 2, 27, 1) 28%);
+    position: relative;
+}
+
+.banner::before {
+    position: absolute;
+    content: "";
+    background-image: url('../assets/image/image\ 4.jpg');
+    width: 860px;
+    height: 590px;
+    top: 360px;
+    left: 100px;
+    z-index: 999;
+}
+
+.banner::after {
+    position: absolute;
+    content: "";
+    background-image: url('../assets/image/banner-bg.jpg');
+    width: 660px;
+    height: 200px;
+    bottom: 10px;
+    opacity: 50%;
+    z-index: 99;
 }
 
 .banner-image img {
     width: 750px;
     height: 600px;
 }
-.banner-border{
+
+.banner-border {
     width: 500px;
     border: 1px solid #fafafa;
     opacity: 10%;
     margin-left: 30px;
+}
+
+.banner-border-2 {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #fafafa1a;
+}
+
+.twin-reality-img::after {
+    position: absolute;
+    content: "";
+    background-image: url('../assets/image/twin-reality-img.jpg');
+    width: 1000px;
+    height: 630px;
+    top: -300px;
+    left: 102px;
+}
+
+.choose-bg{
+    height: 420px;
+    background: rgb(36,31,52);
+    background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 9%, rgba(14,7,32,1) 39%);
+    border: 2px solid #241e37;
+}
+.reality-img::after,.reality-img-2::after,.reality-img-3::after{
+    width: 850px;
+    height: 400px;
+    background-image: url('../assets/image/vr.jpg');
+    top: -190px;
+    left: 100px;
+}
+.reality-img-2::after{
+    background-image: url('../assets/image/vr-2.jpg');
+    left: -200px;
+}
+.reality-img-3::after{
+    background-image: url('../assets/image/vr-3.jpg');
+}
+.our-project img{
+    width: 500px;
+}
+.our-project-vr{
+    background: rgb(36,31,52);
+    background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 9%, rgba(14,7,32,1) 39%);
+    border: 2px solid #241e37;
 }
