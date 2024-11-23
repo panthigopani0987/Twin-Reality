@@ -1,0 +1,88 @@
+* {
+    color: #fff;
+    font-family: "Jost", serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #09021b;
+}
+
+header::before {
+    position: absolute;
+    content: "";
+    background: hsla(291, 100%, 50%, 1);
+
+    background: radial-gradient(circle, hsla(291, 100%, 50%, 1) 24%, hsla(257, 86%, 6%, 1) 61%);
+
+    background: -moz-radial-gradient(circle, hsla(291, 100%, 50%, 1) 24%, hsla(257, 86%, 6%, 1) 61%);
+
+    background: -webkit-radial-gradient(circle, hsla(291, 100%, 50%, 1) 24%, hsla(257, 86%, 6%, 1) 61%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#da00fe", endColorstr="#09021B", GradientType=1);
+    width: 950px;
+    height: 950px;
+    top: -300px;
+    left: 900px;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, #580D72 0%, #F8C30B 100%);
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 310px;
+    min-height: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.social-icon {
+    border: 1px solid;
+    border-image-source: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(216, 216, 216, 0) 0%, #D8D8D8 100%)
+}
+
+.social-icon {
+    background: #FAFAFA;
+    padding: 4px;
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid;
+    backdrop-filter: blur(42px);
+    border-image-source: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(216, 216, 216, 0) 0%, #D8D8D8 100%);
+    z-index: 1;
+}
+
+.banner {
+    height: 850px;
+    background-image: url('assest/image/banner.png');
+}
+
+.banner-image img {
+    width: 750px;
+    height: 600px;
+}
+.banner-border{
+    width: 500px;
+    border: 1px solid #fafafa;
+    opacity: 10%;
+    margin-left: 30px;
+}
