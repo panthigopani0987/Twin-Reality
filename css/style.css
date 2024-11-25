@@ -21,7 +21,7 @@ body {
     z-index: 99;
 }
 
-header::before {
+header::before ,.gradiant-2::after{
     position: absolute;
     content: "";
     background: hsla(291, 100%, 50%, 1);
@@ -34,9 +34,9 @@ header::before {
 
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#da00fe", endColorstr="#09021B", GradientType=1);
     width: 950px;
-    height: 950px;
+    height: 800px;
     top: -300px;
-    left: 900px;
+    right: 0px;
     opacity: 0.1;
     border-radius: 50%;
     z-index: 1;
@@ -85,7 +85,9 @@ header::before {
     z-index: 1;
 }
 
-.banner {
+.banner,
+.gradiant,
+.footer {
     width: auto;
     height: 950px;
     background: rgb(38, 108, 153);
@@ -142,31 +144,65 @@ header::before {
     left: 102px;
 }
 
-.choose-bg{
+.choose-bg {
     height: 420px;
-    background: rgb(36,31,52);
-    background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 9%, rgba(14,7,32,1) 39%);
+    background: rgb(36, 31, 52);
+    background: linear-gradient(127deg, rgba(36, 31, 52, 1) 0%, rgba(36, 27, 59, 1) 9%, rgba(14, 7, 32, 1) 39%);
     border: 2px solid #241e37;
 }
-.reality-img::after,.reality-img-2::after,.reality-img-3::after{
+
+.reality-img::after,
+.reality-img-2::after,
+.reality-img-3::after {
     width: 850px;
     height: 400px;
     background-image: url('../assets/image/vr.jpg');
     top: -190px;
     left: 100px;
 }
-.reality-img-2::after{
+
+.reality-img-2::after {
     background-image: url('../assets/image/vr-2.jpg');
     left: -200px;
 }
-.reality-img-3::after{
+
+.reality-img-3::after {
     background-image: url('../assets/image/vr-3.jpg');
 }
-.our-project img{
+
+.our-project img {
     width: 500px;
 }
-.our-project-vr{
-    background: rgb(36,31,52);
-    background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 9%, rgba(14,7,32,1) 39%);
+
+.our-project-vr {
+    background: rgb(36, 31, 52);
+    background: linear-gradient(127deg, rgba(36, 31, 52, 1) 0%, rgba(36, 27, 59, 1) 9%, rgba(14, 7, 32, 1) 39%);
     border: 2px solid #241e37;
+
+}
+
+.gradiant {
+    height: auto;
+    background: rgb(66, 56, 109);
+    background: linear-gradient(27deg, rgba(66, 56, 109, 1) 0%, rgba(27, 21, 60, 1) 14%, rgba(9, 2, 27, 1) 26%);
+}
+
+.gradiant-2::after {
+    width: 1000px;
+    height: 1200px;
+    z-index: -9;
+    top: 0px;
+    right: -300px;
+}
+
+.our-times-img::after {
+    width: 900px;
+    height: 600px;
+    background-image: url('../assets/image/our-times.jpg');
+    left: 51px;
+}
+.footer{
+    height: auto;
+    background: linear-gradient(96.42deg, #09021B -0.73%, #54477B 100.84%);
+
 }
