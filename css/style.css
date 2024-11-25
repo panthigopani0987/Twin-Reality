@@ -134,7 +134,7 @@ header::before ,.gradiant-2::after{
     border-bottom: 2px solid #fafafa1a;
 }
 
-.twin-reality-img::after {
+.twin-reality-img::after ,.footer-img::after{
     position: absolute;
     content: "";
     background-image: url('../assets/image/twin-reality-img.jpg');
@@ -202,7 +202,13 @@ header::before ,.gradiant-2::after{
     left: 51px;
 }
 .footer{
-    height: auto;
+    height: 620px;
     background: linear-gradient(96.42deg, #09021B -0.73%, #54477B 100.84%);
 
+}
+.footer-img::after{
+    background-image: url('../assets/image/footer.png');
+    width: 600px;
+    height: 620px;
+    top: -310px;
 }
