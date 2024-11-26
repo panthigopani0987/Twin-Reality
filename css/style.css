@@ -21,7 +21,8 @@ body {
     z-index: 99;
 }
 
-header::before ,.gradiant-2::after{
+.header::before,
+.gradiant-2::after {
     position: absolute;
     content: "";
     background: hsla(291, 100%, 50%, 1);
@@ -87,7 +88,8 @@ header::before ,.gradiant-2::after{
 
 .banner,
 .gradiant,
-.footer {
+.footer,
+.sub-banner {
     width: auto;
     height: 950px;
     background: rgb(38, 108, 153);
@@ -134,7 +136,8 @@ header::before ,.gradiant-2::after{
     border-bottom: 2px solid #fafafa1a;
 }
 
-.twin-reality-img::after ,.footer-img::after{
+.twin-reality-img::after,
+.footer-img::after {
     position: absolute;
     content: "";
     background-image: url('../assets/image/twin-reality-img.jpg');
@@ -201,14 +204,59 @@ header::before ,.gradiant-2::after{
     background-image: url('../assets/image/our-times.jpg');
     left: 51px;
 }
-.footer{
-    height: 620px;
+
+.footer {
+    height: 610px;
     background: linear-gradient(96.42deg, #09021B -0.73%, #54477B 100.84%);
 
 }
-.footer-img::after{
+
+.footer-img::after {
     background-image: url('../assets/image/footer.png');
     width: 600px;
     height: 620px;
     top: -310px;
+}
+
+.sub-banner {
+    height: 700px;
+    background-image: url('../assets/image/sub-banner.jpg');
+}
+
+.service-form form input {
+    outline: none;
+
+}
+
+input:focus+label {
+    color: #fafafa;
+}
+
+.form {
+    height: 650px;
+}
+
+.tr-sol::after {
+    height: 600px;
+    background-image: url('../assets/image/vr-sol.png');
+    top: -290px;
+    left: 170px;
+}
+
+.vr-videos {
+    width: 70%;
+    height: 400px;
+    background-image: url('../assets/image/vr-video.jpg');
+}
+
+.vr-videos::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.452);
 }
