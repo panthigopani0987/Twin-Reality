@@ -197,6 +197,9 @@ body {
     top: 0px;
     right: -300px;
 }
+.gradiant-3::after{
+    top: 500px;
+}
 
 .our-times-img::after {
     width: 900px;
@@ -259,4 +262,14 @@ input:focus+label {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.452);
+}
+
+.tool_platforms {
+    background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,
+        linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);
+    border-radius: 0px;
+    box-sizing: content-box;
+}
+.faq-header{
+    border-bottom: 2px solid #fafafa23;
 }
