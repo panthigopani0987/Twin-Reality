@@ -137,7 +137,8 @@ body {
 }
 
 .twin-reality-img::after,
-.footer-img::after {
+.footer-img::after,.tranning-img::after ,
+.industry-img-2::after {
     position: absolute;
     content: "";
     background-image: url('../assets/image/twin-reality-img.jpg');
@@ -156,7 +157,7 @@ body {
 
 .reality-img::after,
 .reality-img-2::after,
-.reality-img-3::after {
+.reality-img-3::after{
     width: 850px;
     height: 400px;
     background-image: url('../assets/image/vr.jpg');
@@ -164,13 +165,25 @@ body {
     left: 100px;
 }
 
-.reality-img-2::after {
+.reality-img-2::after,.industry-img-2::after {
     background-image: url('../assets/image/vr-2.jpg');
     left: -200px;
 }
 
 .reality-img-3::after {
     background-image: url('../assets/image/vr-3.jpg');
+}
+.tranning-img::after,.industry-img-2::after{
+    background-image: url('../assets/image/indutry-img.png');
+    background-size: cover;
+    background-position: center;
+}
+.industry-img-2::after{
+    width: 900px;
+    height: 500px;
+    background-image: url('../assets/image/industry-img-2.png');
+    background-position: center top;
+    top: -240px;
 }
 
 .our-project img {
@@ -184,7 +197,7 @@ body {
 
 }
 
-.gradiant {
+.gradiant{
     height: auto;
     background: rgb(66, 56, 109);
     background: linear-gradient(27deg, rgba(66, 56, 109, 1) 0%, rgba(27, 21, 60, 1) 14%, rgba(9, 2, 27, 1) 26%);
@@ -199,6 +212,9 @@ body {
 }
 .gradiant-3::after{
     top: 500px;
+}
+.gradiant-4::after{
+    top: -300px;
 }
 
 .our-times-img::after {
@@ -250,6 +266,13 @@ input:focus+label {
     width: 70%;
     height: 400px;
     background-image: url('../assets/image/vr-video.jpg');
+}
+.vr-video-1{
+    background-image: url('../assets/image/our-times.jpg');
+}
+.vr-video-2{
+    width: 80%;
+    height: 500px;
 }
 
 .vr-videos::after {
