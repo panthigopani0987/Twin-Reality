@@ -299,3 +299,6 @@ input:focus+label {
 .faq-header{
     border-bottom: 2px solid #fafafa23;
 }
+.galleryImg:hover .gallery-img{
+    opacity: 1;
+}
