@@ -98,7 +98,7 @@
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
                     <h1 class="font-2 text-7xl leading-normal mt-20">
-                        <span class="font-2 text-7xl text-yellow-500">VR APP</span><br> DEVELOPMENT
+                        <span class="font-2 text-7xl text-yellow-500">NEW IDEA FOR</span><br> YOUR APP?
                     </h1>
                 </div>
             </div>
@@ -107,12 +107,10 @@
         <!-- form -->
         <div class="service-form">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
-                <div class="form-contain w-full flex justify-evenly">
+                <div class="form-contain w-full flex flex-col">
+                    <h3 class="font-2 mb-8 text-5xl uppercase">Let’s Talk</h3>
                     <p class="font-light leading-relaxed tracking-wider ">
-                        Bring your ideas to life with our Virtual Reality company. Our team of experienced developers
-                        specializes in creating immersive, interactive VR experiences that<br> engage and captivate
-                        users. From gaming and entertainment to education and training, we can help you build a VR app
-                        to meet your specific needs and <br>goals.
+                        Send us a message and we’ll get back to you within 2 business days!
                     </p>
                 </div>
                 <div class="form w-full choose-bg p-16 mt-10">
@@ -162,6 +160,179 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- date&time -->
+        <div class="date-time">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="w-full text-center">
+                    <h2 class=" font-2 text-7xl leading-normal uppercase">select a date & time​</h2>
+                </div>
+                <div class="w-full flex flex justify-start mt-20">
+                    <div class="w-1/2 flex flex-col justify-center">
+                        <div class="mt-16">
+                            <p class="font-2 text-6xl uppercase leading-relaxed">30 minute</p>
+                            <span class="text-6xl font-2 text-yellow-500 uppercase"> meeting</span>
+                            <p class="mt-4 text-4xl leading-loose tracking-wider text-zinc-50">
+                                Vishal Singh
+                            </p>
+                            <p class="mt-2 text-2xl leading-normal tracking-wider font-light text-zinc-300">
+                                Web conferencing details provided upon<br> confirmation.
+                            </p>
+                        </div>
+                        <div class="mt-14 mb-24">
+                            <img src="assets/image/date-time.png" alt="date-time" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class=" border border-zinc-50 border-solid opacity-10" style="height: auto;"></div>
+                    <div class="w-1/2 flex flex-col mt-20">
+                        <div class="choose-bg p-16" style="height: 600px;">
+                            <div class="flex justify-center  items-center mb-8">
+                                <button id="prev" class="text-3xl font-2">
+                                    <img src="assets/image/down (1).png" alt="down" class="w-10 h-10">
+                                </button>
+                                <h2 id="monthYear" class="text-3xl font-2 text-yellow-500 px-5">May 2023</h2>
+                                <button id="next" class="text-3xl font-2">
+                                    <img src="assets/image/down.png" alt="down" class="w-10 h-10">
+                                </button>
+                            </div>
+
+                            <!-- Days of the Week -->
+                            <div class="flex justify-center text-center mb-6">
+                                <div class="font-2 px-8">Mo</div>
+                                <div class="font-2 px-8">Tu</div>
+                                <div class="font-2 px-8">We</div>
+                                <div class="font-2 px-8">Th</div>
+                                <div class="font-2 px-8">Fr</div>
+                                <div class="font-2 px-8">Sa</div>
+                                <div class="font-2 px-8">Su</div>
+                            </div>
+                            <div class="w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <!-- Dates -->
+                            <div id="dates" class="grid grid-cols-7 text-center gap-y-4 gap-px-1 mt-10"></div>
+                        </div>
+                        <div class="time p-20 flex flex-col">
+                            <div class="flex items-center">
+                                <img src="assets/image/time.png" alt="time" class="w-10 h-10">
+                                <p class="pl-5 text-2xl text-zinc-300">Time Zone</p>
+                            </div>
+                            <select name="time" id="timeZoneSelect"
+                                class="bg-transparent border-2 border-zinc-700 mt-10 p-3 text-zinc-400 font-light outline-none">
+                                <option value="India Standard Time (11:01 am)" class="text-zinc-800">India Standard Time
+                                    (11:01 am)</option>
+                                <option value="Eastern Standard Time (11:01 am)" class="text-zinc-800">Eastern Standard
+                                    Time (11:01 am)</option>
+                                <option value="Australian Eastern Standard Time (11:01 am)" class="text-zinc-800">
+                                    Australian Eastern Standard Time (11:01 am)</option>
+                                <option value="Pacific Standard Time (11:01 am)" class="text-zinc-800">Pacific Standard
+                                    Time (11:01 am)</option>
+                                <option value="India Standard Time (11:01 am)" class="text-zinc-800">India Standard Time
+                                    (11:01 am)</option>
+                            </select>
+                            <div id="selectedTime" class="mt-4 text-sm text-gray-400"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- Contact -->
+        <div class="contact-us">
+            <div class="container mx-auto px-4 flex flex-col  items-center py-4 text-xl">
+                <div class="w-full flex items-start justify-between mt-20">
+                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40">
+                        <span class="text-4xl text-zinc-300 tracking-wide">Contact Us</span>
+                        <div class="flex items-center pt-8">
+                            <img src="assets/image/phone-call.png" alt="phone-call" class="w-5 h-5">
+                            <p class="pl-4 font-light text-zinc-300">+91 8780363238</p>
+                        </div>
+                        <div class="flex items-center pt-4">
+                            <img src="assets/image/email1.png" alt="email1" class="w-5 h-5">
+                            <p class="pl-4 font-light text-zinc-300 tracking-wider">contact@twinreality.com</p>
+                        </div>
+                    </div>
+                    <div class="tool_platforms w-96 flex flex-col items-center justify-center p-10 h-40">
+                        <span class="text-4xl text-zinc-300 tracking-wide">Visit Us</span>
+                        <div class="flex flex-col items-center pt-8">
+                            <p class=" font-light text-zinc-300 tracking-wide">Currently we are located in<br> Ahmedabad and Vadodara.</p>
+                            <p class=" font-light text-zinc-300 tracking-wide pt-5">Office location coming soon</p>
+                        </div>
+                    </div>
+                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40">
+                        <span class="text-4xl text-zinc-300 tracking-wide">Our Hours</span>
+                        <div class="flex items-center pt-8">
+                            <img src="assets/image/time.png" alt="time.png" class="w-5 h-5">
+                            <p class="pl-4 font-light text-zinc-300">Mon - Sat: 9AM-8PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- Clients With Our Solutions -->
+        <div class="takeOurWord">
+            <div class="mt-28"></div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-full">
+                    <div class="">
+                        <h3 class="font-2 text-6xl  text-center">
+                            Clients With Our Solutions
+                        </h3>
+                    </div>
+                    <div class="flex mt-28">
+                        <div class="w-1/2 mr-5">
+                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                                <div class="flex items-end">
+                                    <div>
+                                        <img class="object-cover object-top" src="assets/image/testimonial-1.png"
+                                            alt="project-1" style="width: 320px;height: 320px;">
+                                    </div>
+                                    <div style="width: 80%;" class="pl-8">
+                                        <p class="text-xl leading-relaxed tracking-wide pb-7">
+                                            "“Happy with my Virtual Art Gallery design. The whole team performed a fantastic job, from conceptualising my design to putting it into action. ”
+                                        </p>
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <span class="font-2 text-lg">
+                                                    Eesa Haines
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2 ml-5">
+                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                                <div class="flex items-end">
+                                    <div>
+                                        <img class="object-cover object-top" src="assets/image/testimonial-2.png"
+                                            alt="project-1" style="width: 320px;height: 320px;">
+                                    </div>
+                                    <div style="width: 80%;" class="pl-8">
+                                        <p class="text-lg leading-relaxed tracking-wide pb-7">
+                                            “The virtual show my team and I created for a client was a huge success, and they really enjoyed the 3D elements. I want to participate in this again next year....
+                                        </p>
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <span class="font-2 text-lg">
+                                                    Tina Talley
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,8 +387,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/slider.js"></script>
-    <script defer src="js/faq.js"></script>
+    <script src="js/calender.js"></script>
 </body>
 
 </html>
