@@ -438,20 +438,6 @@
             </div>
         </div>
     </footer>
-    <!-- JavaScript for Automatic Slider -->
-    <script>
-        const slider = document.getElementById("video-slider");
-        const totalSlides = slider.children.length;
-        let currentIndex = 0;
-
-        function slideNext() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        // Set interval for automatic sliding
-        setInterval(slideNext, 3000); // Slides change every 3 seconds
-    </script>
 </body>
 
 </html>

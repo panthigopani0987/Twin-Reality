@@ -260,7 +260,7 @@
                 </div>
                 <div class="relative overflow-hidden">
                     <!-- Slider Content -->
-                    <div class="flex transition-transform duration-500 ease-in-out" id="video-slider">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimontal-slider">
                         <!-- Slide 1 -->
                         <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
                             <div class="w-full flex justify-start mt-20">
@@ -691,40 +691,8 @@
         </div>
     </footer>
     <!-- JavaScript for Automatic Slider -->
-    <script>
-        const slider = document.getElementById("video-slider");
-        const totalSlides = slider.children.length;
-        let currentIndex = 0;
-
-        function slideNext() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        // Set interval for automatic sliding
-        setInterval(slideNext, 3000); // Slides change every 3 seconds
-    </script>
-    <script defer>
-        // JavaScript for toggling FAQ answers
-        document.addEventListener("DOMContentLoaded", function () {
-            const faqHeaders = document.querySelectorAll(".faq-header");
-
-            faqHeaders.forEach((header) => {
-                header.addEventListener("click", function () {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector(".icon");
-
-                    if (content.classList.contains("hidden")) {
-                        content.classList.remove("hidden");
-                        icon.textContent = "-";
-                    } else {
-                        content.classList.add("hidden");
-                        icon.textContent = "+";
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/slider.js"></script>
+    <script defer src="js/faq.js"></script>
 </body>
 
 </html>
