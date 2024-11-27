@@ -216,6 +216,9 @@ body {
 .gradiant-4::after{
     top: -300px;
 }
+.gradiant-5::after{
+    top: 50%
+}
 
 .our-times-img::after {
     width: 900px;
