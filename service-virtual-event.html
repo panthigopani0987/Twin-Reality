@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page  -->
+    <title>Twin Reality || Explore a new world with twin reality</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/image/favicon.png" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fonts -->
+    <!-- Jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Kodchasan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class=" navbar">
+            <div
+                class="container mx-auto px-4 flex space-x-60 justify-center justify-between items-center py-4 text-xl">
+                <!-- Logo -->
+                <div>
+                    <a href="home.html">
+                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="relative">
+                    <ul class="flex space-x-16">
+                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
+                        <!-- Dropdown for Services -->
+                        <li class="relative group dropdown">
+                            <a href="" class="flex items-center dropbtn text-yellow-500">
+                                Services
+                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-content">
+                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
+                                    Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="text-yellow-500">Virtual Event Managment</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
+                            </div>
+                        </li>
+                        <li><a href="" class="hover:text-yellow-500">AR/VR Times</a></li>
+                        <li><a href="" class="hover:text-yellow-500">Portfolio</a></li>
+                        <li><a href="" class="hover:text-yellow-500">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <div class="social-icon w-10 h-10">
+                        <a href="">
+                            <img src="assets/image/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                        <a href="" class="">
+                            <img src="assets/image/twitter.png" alt="twitter">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10">
+                        <a href="" class="">
+                            <img src="assets/image/instragram.png" alt="instragram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- banner -->
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-3/5 flex items-center ">
+                    <h1 class="font-2 text-7xl leading-normal mt-20">
+                        <span class="font-2 text-7xl text-yellow-500">CUSTOMIZED </span><br>VIRTUAL EVENT
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- form -->
+        <div class="service-form">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="form-contain w-full flex">
+                    <p class="font-light leading-relaxed tracking-wider ">
+                        Developing virtual events with custom made venue and custom booth
+                    </p>
+                </div>
+                <div class="form w-full choose-bg p-16 mt-10" style="height: 520px;">
+                    <form action="" method="get">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
+                                    Name</label>
+                                <input type="text" id="first-name" placeholder="Your First Name"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="email-address" class="block text-xl font-medium text-zinc-400 mb-3">Email
+                                    Address</label>
+                                <input type="email" id="email-address" placeholder="Your Email Address"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
+                            <div>
+                                <label for="details"
+                                    class="block text-xl font-medium text-zinc-400 mb-3">Details</label>
+                                <textarea id="details" rows="4" placeholder="Your details"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
+                            <div>
+                                <button type="submit"
+                                    class="project-btn bg-sky-600 p-3 px-16 text-xl font-medium tracking-wider text-center uppercase">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- vr-video -->
+        <div class="vr-video">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-full">
+                    <h2 class="text-center font-2 text-7xl mb-8 uppercase">Projects​</h2>
+
+                    <div class="relative overflow-hidden">
+                        <!-- Slider Content -->
+                        <div class="flex transition-transform duration-500 ease-in-out" id="video-slider">
+                            <!-- Slide 1 -->
+                            <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
+                                <div class="vr-videos  vr-video-2 relative bg-center bg-cover bg-no-repeat flex justify-center items-center"
+                                    style="background-image: url('assets/image/vr-project.jpg');">
+                                    <div
+                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
+                                        <a href="">
+                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="mt-20 text-3xl">Staples Virtual Exhibition</p>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
+                                <div
+                                    class="vr-videos vr-video-1 vr-video-2 relative bg-center bg-cover bg-no-repeat flex justify-center items-center">
+                                    <div
+                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
+                                        <a href="">
+                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="mt-20 text-3xl">Staples Virtual Exhibition</p>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="min-w-full flex flex-col items-center text-center p-6 b rounded-lg">
+                                <div
+                                    class="vr-videos vr-video-2 relative bg-center bg-cover bg-no-repeat flex justify-center items-center">
+                                    <div
+                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
+                                        <a href="">
+                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="mt-20 text-3xl">Staples Virtual Exhibition</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-10">
+                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                        <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                    </div>
+                </div>
+                <!-- Slider Container -->
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- event management -->
+        <div class="event-management">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-full">
+                    <div class=" text-center">
+                        <h3 class="font-2 text-6xl uppercase">
+                            Benefits of Virtual Event Management
+                        </h3>
+                    </div>
+                    <div class="w-full flex justify-between items-start mt-20">
+                        <div class="w-1/2 bg-cover bg-center bg-no-repeat"
+                            style="background-image: url('assets/image/event-management.png');height: 400px;">
+                        </div>
+                        <div class="w-1/2 flex justify-center items-center">
+                            <div class="w-1/2 flex flex-col justify-center items-center">
+                                <div class="w-72 h-48 flex flex-col justify-center items-center">
+                                    <img src="assets/image/event (2).png" alt="event">
+                                    <span class="text-gray-400 mt-5">Custom Virtual Venue</span>
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="width: 378px;"></div>
+                                <div class="w-72 h-48 flex flex-col justify-center items-center">
+                                    <img src="assets/image/event (4).png" alt="event">
+                                    <span class="text-gray-400 mt-5">Custom Virtual Booths</span>
+                                </div>
+                            </div>
+                            <div class=" border border-zinc-50 border-solid opacity-10" style="height: 400px;"></div>
+                            <div class="w-1/2 flex flex-col justify-center items-center">
+                                <div class="w-72 h-48 flex flex-col justify-center items-center">
+                                    <img src="assets/image/event (3).png" alt="event">
+                                    <span class="text-gray-400 mt-5">Live Conference Video</span>
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="width: 378px;"></div>
+                                <div class="w-72 h-48 flex flex-col justify-center items-center">
+                                    <img src="assets/image/event (1).png" alt="event">
+                                    <span class="text-gray-400 mt-5">Live Chat And Networking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <div class="gradiant-2  relative overflow-hidden">
+            <!-- vr advantages -->
+            <div class="vr-advantages">
+                <div class="container mx-auto px-4 flex items-center py-4 text-xl mb-8">
+                    <div class="w-full text-center">
+                        <h3 class="font-2 text-6xl uppercase leading-relaxed">
+                            What are Virtual Event Management<br> Companies?
+                        </h3>
+                    </div>
+                </div>
+                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                    <div class="choose-bg w-full p-14">
+                        <p class="text-justify tracking-wider text-zinc-400">
+                            The event industry has changed as a result of the COVID-19 pandemic. There’s no denying
+                            that. Physical activities have been suspended temporarily. The rise of virtual and hybrid
+                            events and their success have influenced a storm in the industry.
+                        </p>
+                        <p class="text-justify tracking-wider mt-6 text-zinc-400">
+                            In the virtual event sector, 2020 was a year of trailblazers. Tech behemoths like
+                            Salesforce, AWS, and Adobe shifted their yearly summits and conferences online and began
+                            investigating the potential of digital to transform their virtual events into distinctive
+                            and memorable experiences for their audiences. They went above and beyond and established
+                            new benchmarks for<br> virtual event success.
+                        </p>
+                        <p class="text-justify tracking-wider mt-6 text-zinc-400">
+                            Companies that specialise in virtual event management have the knowledge and skills to
+                            handle a client’s virtual event project from beginning to end. These businesses make sure
+                            there are no loose ends to embarrass you in front of your audience. They offer the
+                            assistance and back-up strategies necessary to make sure your online event is successful.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-28"></div>
+            <!-- COMPANIES -->
+            <div class="company relative" style="height: 500px;">
+                <div class="mt-28"></div>
+                <img src="assets/image/company-bg.png" alt="company-bg"
+                    class="w-56 h-56 absolute top-14 left-0 opacity-30">
+                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                    <div class="w-full text-center">
+                        <div class="">
+                            <h3 class="font-2 text-6xl">
+                                CLIENTS
+                            </h3>
+                        </div>
+                        <div class="flex justify-between items-start mt-20">
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/company-1.png" alt="company-1"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/company-2.png" alt="company-2"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover object-center" src="assets/image/company-3.png"
+                                        alt="company-3" style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/company-4.png" alt="company-4"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/company-5.png" alt="company-5"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-16"></div>
+    </main>
+    <footer>
+        <div class="footer overflow-hidden">
+            <div class="container mx-auto px-4 flex items-center py-20 text-xl">
+                <div class="w-1/3">
+                    <div class="flex flex-col justify-center items-start">
+                        <div class="logo">
+                            <img src="assets/image/logo.png" alt="logo" style="width: 160px;">
+                        </div>
+                        <div class="footer-contain mt-10 ">
+                            <p class="text-zinc-400 opacity-75 text-2xl leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 flex-col justify-center items-center text-center">
+                    <div class="footer-title">
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium text-4xl">Reach us</h4>
+                    </div>
+                    <div class="banner-border-2 pb-4"></div>
+                    <div class="footer-social-icon flex justify-evenly mt-10">
+                        <div class="calendly">
+                            <a href="" class="flex flex-col items-center justify-center">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="h-20">
+                                <span class="pt-5">Book a Meeting On<br> Calendly</span>
+                            </a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="" class=" flex flex-col items-center justify-center">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="h-20">
+                                <span class="pt-5">Connect With Us<br> On WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-social-icon mt-10">
+                        <div class="email">
+                            <a href="" class="flex flex-col items-center justify-center">
+                                <img src="assets/image/email.png" alt="email" class="h-20">
+                                <span class="pt-5">Contact<br> @twinreality.in</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 twin-reality-img footer-img relative"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript for Automatic Slider -->
+    <script>
+        const slider = document.getElementById("video-slider");
+        const totalSlides = slider.children.length;
+        let currentIndex = 0;
+
+        function slideNext() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Set interval for automatic sliding
+        setInterval(slideNext, 3000); // Slides change every 3 seconds
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page  -->
+    <title>Twin Reality || Explore a new world with twin reality</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/image/favicon.png" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fonts -->
+    <!-- Jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Kodchasan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class=" navbar">
+            <div
+                class="container mx-auto px-4 flex space-x-60 justify-center justify-between items-center py-4 text-xl">
+                <!-- Logo -->
+                <div>
+                    <a href="home.html">
+                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="relative">
+                    <ul class="flex space-x-16">
+                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
+                        <!-- Dropdown for Services -->
+                        <li class="relative group dropdown">
+                            <a href="" class="flex items-center dropbtn text-yellow-500">
+                                Services
+                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-content">
+                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="text-yellow-500">VR Industrial Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event Managment</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
+                            </div>
+                        </li>
+                        <li><a href="" class="hover:text-yellow-500">AR/VR Times</a></li>
+                        <li><a href="" class="hover:text-yellow-500">Portfolio</a></li>
+                        <li><a href="" class="hover:text-yellow-500">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <div class="social-icon w-10 h-10">
+                        <a href="">
+                            <img src="assets/image/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                        <a href="" class="">
+                            <img src="assets/image/twitter.png" alt="twitter">
+                        </a>
+                    </div>
+                    <div class="social-icon w-10 h-10">
+                        <a href="" class="">
+                            <img src="assets/image/instragram.png" alt="instragram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- banner -->
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="w-3/5 flex items-center ">
+                    <h1 class="font-2 text-7xl leading-normal mt-20">
+                        <span class="font-2 text-7xl text-yellow-500">METAVERSE</span><br> DEVELOPMENT
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- form -->
+        <div class="service-form">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="form-contain w-full flex">
+                    <p class="font-light leading-relaxed tracking-wider ">
+                        We are one of the India’s first Metaverse Development Company. Creating Virtual Solutions for industries.
+                    </p>
+                </div>
+                <div class="form w-full choose-bg p-16 mt-10">
+                    <form action="" method="get">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
+                                    Name</label>
+                                <input type="text" id="first-name" placeholder="Your First Name"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-xl font-medium text-zinc-400 mb-3">Last
+                                    Name</label>
+                                <input type="text" id="last-name" placeholder="Your Last Name"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                            <div>
+                                <label for="email-address" class="block text-xl font-medium text-zinc-400 mb-3">Email
+                                    Address</label>
+                                <input type="email" id="email-address" placeholder="Your Email Address"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="role" class="block text-xl font-medium text-zinc-400 mb-3">Role</label>
+                                <input type="text" id="role" placeholder="Your Job Role"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
+                            <div>
+                                <label for="message"
+                                    class="block text-xl font-medium text-zinc-400 mb-3">Message</label>
+                                <textarea id="message" rows="4" placeholder="Your Message"
+                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
+                            <div>
+                                <button type="submit"
+                                    class="project-btn bg-sky-600 p-3 px-16 text-xl font-medium tracking-wider text-center">
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="my-32"></div>
+        <!-- twin-reality-sol -->
+        <div class="twin-reality overflow-hidden">
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class=" w-2/5">
+                    <h2 class="font-2 text-6xl uppercase leading-normal">metaverse<br> Development<br> for Business</h2>
+                    <div class="banner-border-2 pb-4"></div>
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        The metaverse is rapidly emerging as a new frontier for<br> businesses looking to leverage
+                        immersive technologies to<br> engage customers, train employees, and showcase products<br> and
+                        services in new and innovative ways. By providing a fully<br> immersive, interactive virtual
+                        environment, the metaverse allows<br> companies to create highly engaging and memorable<br>
+                        experiences that can help to drive brand awareness, build<br> customer loyalty, and improve
+                        business outcomes across a<br> range of industries.
+                    </p>
+                </div>
+                <div class="w-3/5 twin-reality-img tr-sol bg-center  bg-cover bg-no-repeat  relative"></div>
+            </div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <p class="font-light text-gray-400 leading-relaxed tracking-wide">
+                    At Twin Reality, we believe that the metaverse represents a powerful new tool for businesses looking
+                    to achieve their goals and stand out in an increasingly competitive marketplace. With our expertise
+                    in metaverse development and immersive technologies, we are well-positioned to help companies of all
+                    sizes and industries harness the full potential of this exciting new technology.
+                </p>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- what is the need -->
+        <div class="what-needs">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="w-full text-center">
+                    <h2 class=" font-2 text-6xl leading-normal">What Is The Need To Develop A Metaverse<br> For Your
+                        Business?​</h2>
+                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Developing a metaverse for your business can
+                        provide numerous benefits and help you stay ahead of the competition in today’s rapidly<br>
+                        evolving business landscape.</p>
+                </div>
+                <div class="w-full flex items-start justify-evenly mt-20">
+                    <div class="tool_platforms flex flex-col items-center justify-center text-center w-5/12 h-72">
+                        <h6 class="font-2 text-2xl">
+                            Enhanced Learning Experience
+                        </h6>
+                        <p class="text-zinc-400 mt-7">
+                            A metaverse can help businesses to create highly<br> immersive and engaging experiences for
+                            their customers.<br> This can include everything from virtual showrooms and<br> product
+                            demos to interactive experiences that allow<br> customers to explore your products or
+                            services in new and<br> innovative ways.
+                        </p>
+                    </div>
+                    <div class="tool_platforms flex flex-col items-center justify-center text-center w-5/12 h-72">
+                        <h6 class="font-2 text-2xl">
+                            Improved Employee Training
+                        </h6>
+                        <p class="text-zinc-400 mt-7">
+                            Metaverse technology can help to improve employee<br> training by providing interactive
+                            simulations, gamifying<br> learning, enabling remote training, & providing real-time<br>
+                            feedback. By using metaverse technology, companies can<br> create more engaging experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full flex items-start justify-evenly mt-14">
+                    <div class="tool_platforms flex flex-col items-center justify-center text-center w-5/12 h-72 ">
+                        <h6 class="font-2 text-2xl">
+                            Increased Brand Awareness
+                        </h6>
+                        <p class="text-zinc-400 mt-7">
+                            By creating a unique and memorable virtual experience, a<br> metaverse can help to increase
+                            brand awareness and<br> improve customer loyalty. This can be particularly effective<br> for
+                            businesses in highly competitive industries.
+                        </p>
+                    </div>
+                    <div class="tool_platforms flex flex-col items-center justify-center text-center w-5/12 h-72">
+                        <h6 class="font-2 text-2xl">
+                            Competitive Advantage
+                        </h6>
+                        <p class="text-zinc-400 mt-7">
+                            With the increasing popularity of immersive technologies<br> like virtual reality and
+                            augmented reality, businesses that<br> are able to leverage the metaverse effectively can
+                            gain a<br> significant competitive advantage over those that do not.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- metaverse development -->
+        <div class="metaverse">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="w-full text-center">
+                    <h2 class=" font-2 text-7xl leading-normal">Metaverse Development Solutions​</h2>
+                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Developing a metaverse for your business can
+                        provide numerous benefits and help you stay ahead of the competition in today’s rapidly<br>
+                        evolving business landscape.</p>
+                </div>
+                <div class="relative overflow-hidden">
+                    <!-- Slider Content -->
+                    <div class="flex transition-transform duration-500 ease-in-out" id="video-slider">
+                        <!-- Slide 1 -->
+                        <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
+                            <div class="w-full flex justify-start mt-20">
+                                <div class="w-1/2 flex flex-col justify-center" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">01.</span>
+                                        <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR provides an immersive and interactive training environment,<br> allowing
+                                            trainees
+                                            to engage with realistic simulations. This<br> hands-on experience enhances
+                                            learning
+                                            retention and<br> understanding compared to traditional training methods.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 h-96 pt-16">
+                                    <img src="assets/image/tranning-img.png" alt="tranning-img" style=" height: 430px;">
+                                </div>
+                            </div>
+                            <div class="w-full flex items-start">
+                                <div class="w-1/2">
+                                    <img src="assets/image/metaverse.png" alt="metaverse"
+                                        style="width: 750px; height: 430px;" class="object-cover object-center">
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 flex flex-col justify-center pl-20" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">02.</span>
+                                        <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR training eliminates the need for expensive physical<br> equipment setups,
+                                            travel expenses, and material consumption<br> for training purposes. It also
+                                            reduces the time required for<br> training sessions, as trainees can access
+                                            virtual simulations at<br> any time and from anywhere.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
+                            <div class="w-full flex items-start mt-20">
+                                <div class="w-1/2 flex flex-col justify-center" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">01.</span>
+                                        <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR provides an immersive and interactive training environment,<br> allowing
+                                            trainees
+                                            to engage with realistic simulations. This<br> hands-on experience enhances
+                                            learning
+                                            retention and<br> understanding compared to traditional training methods.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 h-96 pt-16">
+                                    <img src="assets/image/tranning-img.png" alt="tranning-img" style=" height: 430px;">
+                                </div>
+                            </div>
+                            <div class="w-full flex items-start">
+                                <div class="w-1/2">
+                                    <img src="assets/image/metaverse.png" alt="metaverse"
+                                        style="width: 750px; height: 430px;" class="object-cover object-center">
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 flex flex-col justify-center pl-20" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">02.</span>
+                                        <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR training eliminates the need for expensive physical<br> equipment setups,
+                                            travel expenses, and material consumption<br> for training purposes. It also
+                                            reduces the time required for<br> training sessions, as trainees can access
+                                            virtual simulations at<br> any time and from anywhere.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="min-w-full flex flex-col items-center p-6 b rounded-lg">
+                            <div class="w-full flex items-start mt-20">
+                                <div class="w-1/2 flex flex-col justify-center" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">01.</span>
+                                        <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR provides an immersive and interactive training environment,<br> allowing
+                                            trainees
+                                            to engage with realistic simulations. This<br> hands-on experience enhances
+                                            learning
+                                            retention and<br> understanding compared to traditional training methods.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 h-96 pt-16">
+                                    <img src="assets/image/tranning-img.png" alt="tranning-img" style=" height: 430px;">
+                                </div>
+                            </div>
+                            <div class="w-full flex items-start">
+                                <div class="w-1/2">
+                                    <img src="assets/image/metaverse.png" alt="metaverse"
+                                        style="width: 750px; height: 430px;" class="object-cover object-center">
+                                </div>
+                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                </div>
+                                <div class="w-1/2 flex flex-col justify-center pl-20" style="height: 495px;">
+                                    <div class="flex items-center">
+                                        <span class="text-5xl text-yellow-500">02.</span>
+                                        <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                            VR training eliminates the need for expensive physical<br> equipment setups,
+                                            travel expenses, and material consumption<br> for training purposes. It also
+                                            reduces the time required for<br> training sessions, as trainees can access
+                                            virtual simulations at<br> any time and from anywhere.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-10">
+                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <!-- Tools & Platforms -->
+        <div class="tools-platforms">
+            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                <div class="w-full text-center">
+                    <h2 class=" font-2 text-7xl leading-relaxed">TOOLS & PLATFORMS USED IN<br> VR DEVELOPMENT​</h2>
+                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
+                        Create Different Solutions</p>
+                </div>
+                <div class="w-full flex items-start justify-evenly mt-20">
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/React360.png" alt="React360" class="pr-5 w-28">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">React360</span>
+                    </div>
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 w-20">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">Vuforia</span>
+                    </div>
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/unity.png" alt="unity" class="pr-5 w-28">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">Unity</span>
+                    </div>
+                </div>
+                <div class="w-full flex items-start justify-evenly mt-20">
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/unreal-engine.png" alt="unreal-engine" class="pr-5 w-28">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">Unreal&nbsp;Engine</span>
+                    </div>
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/blender.png" alt="blender" class="pr-5 w-28">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">Blender</span>
+                    </div>
+                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                        <img src="assets/image/3ds max.png" alt="3ds max" class="pr-5 w-28">
+                        <span class="text-3xl text-zinc-300 font-light tracking-wide">3ds&nbsp;Max</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+        <div class="gradiant-2 gradiant-3 relative overflow-hidden">
+            <div class="faq">
+                <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+                    <div class="container mx-auto py-16 px-6">
+                        <h1 class="text-7xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
+                        <div class="space-y-4">
+
+                            <!-- FAQ Item 1 -->
+                            <div>
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
+                                            class=" text-4xl text-yellow-500">1.</span> In Which Industries Is VR Most
+                                        Useful?</h2>
+                                    <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
+                                        <span style="font-size: 25px;">
+                                            -
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="faq-content py-8">
+                                    <p class="text-xl  text-zinc-500">
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar<br> devices. VR has
+                                        found
+                                        its application across many industries and is proving to be a game-changer. The
+                                        following are some of the industries where <br>VR is most useful:
+                                    </p>
+                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
+                                            healthcare to simulate surgeries and train medical professionals. It is also
+                                            being used in therapy to<br> help patients overcome phobias and anxiety.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
+                                            education to create immersive learning experiences that allow students to
+                                            explore and understand<br> complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
+                                            used in architecture and design to provide clients with a virtual tour of
+                                            buildings and spaces<br> before they are constructed.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div>
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
+                                            class=" text-4xl text-yellow-500">2.</span> How Is Virtual Reality Being
+                                        Used In
+                                        Finance?</h2>
+                                    <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
+                                        <span style="font-size: 25px;">
+                                            +
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="faq-content hidden py-8">
+                                    <p class="text-xl  text-zinc-500">
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar<br> devices. VR has
+                                        found
+                                        its application across many industries and is proving to be a game-changer. The
+                                        following are some of the industries where <br>VR is most useful:
+                                    </p>
+                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
+                                            healthcare to simulate surgeries and train medical professionals. It is also
+                                            being used in therapy to<br> help patients overcome phobias and anxiety.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
+                                            education to create immersive learning experiences that allow students to
+                                            explore and understand<br> complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
+                                            used in architecture and design to provide clients with a virtual tour of
+                                            buildings and spaces<br> before they are constructed.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div>
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
+                                            class=" text-4xl text-yellow-500">3.</span> How Will Virtual Reality Help To
+                                        Promote A Business?</h2>
+                                    <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
+                                        <span style="font-size: 25px;">
+                                            +
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="faq-content hidden py-8">
+                                    <p class="text-xl  text-zinc-500">
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar<br> devices. VR has
+                                        found
+                                        its application across many industries and is proving to be a game-changer. The
+                                        following are some of the industries where <br>VR is most useful:
+                                    </p>
+                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
+                                            healthcare to simulate surgeries and train medical professionals. It is also
+                                            being used in therapy to<br> help patients overcome phobias and anxiety.
+                                        </li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
+                                            education to create immersive learning experiences that allow students to
+                                            explore and understand<br> complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
+                                            used in architecture and design to provide clients with a virtual tour of
+                                            buildings and spaces<br> before they are constructed.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="text-center mt-8">
+                            <button
+                                class="project-btn bg-sky-600 mt-10 p-3 px-16 text-xl font-medium tracking-wider text-center uppercase">
+                                Load more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-20"></div>
+            <!-- COMPANIES -->
+            <div class="company relative">
+                <img src="assets/image/company-bg.png" alt="company-bg"
+                    class="w-56 h-56 absolute top-14 left-0 opacity-30">
+                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                    <div class="w-full text-center">
+                        <div class="">
+                            <h3 class="font-2 text-6xl">
+                                CLIENTS
+                            </h3>
+                        </div>
+                        <div class="flex justify-between items-start mt-20">
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/client (3).png" alt="company-1"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/client (4).png" alt="company-2"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover object-center" src="assets/image/client (1).png"
+                                        alt="company-3" style="height: 236px;">
+                                </div>
+                            </div>
+                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-60 h-60">
+                                    <img class="object-cover" src="assets/image/client (2).png" alt="company-4"
+                                        style="height: 236px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-28"></div>
+    </main>
+    <footer>
+        <div class="footer overflow-hidden">
+            <div class="container mx-auto px-4 flex items-center py-20 text-xl">
+                <div class="w-1/3">
+                    <div class="flex flex-col justify-center items-start">
+                        <div class="logo">
+                            <img src="assets/image/logo.png" alt="logo" style="width: 160px;">
+                        </div>
+                        <div class="footer-contain mt-10 ">
+                            <p class="text-zinc-400 opacity-75 text-2xl leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 flex-col justify-center items-center text-center">
+                    <div class="footer-title">
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium text-4xl">Reach us</h4>
+                    </div>
+                    <div class="banner-border-2 pb-4"></div>
+                    <div class="footer-social-icon flex justify-evenly mt-10">
+                        <div class="calendly">
+                            <a href="" class="flex flex-col items-center justify-center">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="h-20">
+                                <span class="pt-5">Book a Meeting On<br> Calendly</span>
+                            </a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="" class=" flex flex-col items-center justify-center">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="h-20">
+                                <span class="pt-5">Connect With Us<br> On WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-social-icon mt-10">
+                        <div class="email">
+                            <a href="" class="flex flex-col items-center justify-center">
+                                <img src="assets/image/email.png" alt="email" class="h-20">
+                                <span class="pt-5">Contact<br> @twinreality.in</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 twin-reality-img footer-img relative"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript for Automatic Slider -->
+    <script>
+        const slider = document.getElementById("video-slider");
+        const totalSlides = slider.children.length;
+        let currentIndex = 0;
+
+        function slideNext() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Set interval for automatic sliding
+        setInterval(slideNext, 3000); // Slides change every 3 seconds
+    </script>
+    <script defer>
+        // JavaScript for toggling FAQ answers
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqHeaders = document.querySelectorAll(".faq-header");
+
+            faqHeaders.forEach((header) => {
+                header.addEventListener("click", function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector(".icon");
+
+                    if (content.classList.contains("hidden")) {
+                        content.classList.remove("hidden");
+                        icon.textContent = "-";
+                    } else {
+                        content.classList.add("hidden");
+                        icon.textContent = "+";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
