@@ -16,8 +16,8 @@ body {
 
 .navbar {
     position: absolute;
+    width: 100%;
     top: 10px;
-    left: 190px;
     z-index: 99;
 }
 
