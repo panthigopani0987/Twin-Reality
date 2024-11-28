@@ -41,7 +41,7 @@ body {
     right: 0px;
     opacity: 0.1;
     border-radius: 50%;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .dropdown {
@@ -175,7 +175,7 @@ body {
     background-image: url('../assets/image/vr-3.jpg');
 }
 .tranning-img::after,.industry-img-2::after{
-    background-image: url('../assets/image/indutry-img.png');
+    background-image: url('../assets/image/indutry-img.jpg');
     background-size: cover;
     background-position: center;
 }
