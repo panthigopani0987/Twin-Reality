@@ -32,91 +32,133 @@
 
 <body>
     <!-- header -->
-    <header class="header">
-        <div class="navbar mt-6">
+    <header class="header  text-white shadow-md">
+        <div class="navbar fixed -top-7 left-0 w-full mt-6 mx-auto px-4"  style="z-index: 9999; background-color: #09021b;">
+            <!-- Flex Container -->
             <div class="flex justify-evenly items-center text-xl">
                 <!-- Logo -->
-                <div class="">
+                <div class="flex-shrink-0">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="w-36">
                     </a>
                 </div>
-
+    
                 <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex space-x-16">
-                        <li><a href="home.html" class="text-yellow-500">Home</a></li>
+                <nav class="hidden lg:flex relative">
+                    <ul class="flex space-x-14">
+                        <li><a href="home.html" class="text-yellow-500 hover:text-yellow-400">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn hover:text-yellow-500">
+                            <a href="#" class="flex items-center dropbtn hover:text-yellow-400">
                                 Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
                             </a>
                             <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
+                            <div
+                                class="dropdown-content absolute left-0 hidden group-hover:flex flex-col bg-gray-700 text-xl rounded shadow-lg p-4 mt-2 space-y-2">
+                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event Management</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
                             </div>
                         </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
+                        <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                        <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                        <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
                     </ul>
                 </nav>
-
-
+    
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+    
                 <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon w-10 h-10">
-                        <a href="">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
-                        <a href="" class="">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon w-10 h-10">
-                        <a href="" class="">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="hidden lg:flex space-x-4">
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/facebook.png" alt="facebook" class="w-full h-full">
+                    </a>
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/twitter.png" alt="twitter" class="w-full h-full">
+                    </a>
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/instragram.png" alt="instagram" class="w-full h-full">
+                    </a>
                 </div>
             </div>
+    
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden flex-col lg:hidden bg-gray-700 rounded shadow-md mt-4 p-4">
+                <ul class="space-y-4">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <li>
+                        <details>
+                            <summary class="flex items-center hover:text-yellow-400">
+                                Services
+                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
+                            </summary>
+                            <div class="flex flex-col mt-2 space-y-2 text-sm pl-4">
+                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                    Management</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                            </div>
+                        </details>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                    <li class="flex space-x-4 mt-4">
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/facebook.png" alt="facebook" class="w-full h-full">
+                        </a>
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/twitter.png" alt="twitter" class="w-full h-full">
+                        </a>
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/instragram.png" alt="instagram" class="w-full h-full">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
+    
     <!-- main -->
     <main>
         <!-- banner -->
         <div class="banner">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
 
                 <div class="flex items-center  mt-40">
-                    <div class="banner-contain text-7xl">
-                        <h1 class="font-2">
-                            Explorer A New <span class="text-yellow-500 font-2">World</span>
+                    <div class="banner-contain text-7xl ">
+                        <h1 class="font-2 2xl:text-6xl">
+                            Explorer A New <span class="text-yellow-500 font-2 2xl:text-6xl">World</span>
                             With
                         </h1>
                     </div>
                     <div class="banner-border"></div>
                 </div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex">
-                    <h1 class="text-7xl z-10 font-2">
+                    <h1 class="text-7xl z-10 font-2 2xl:text-6xl">
                         TWIN <span class="text-yellow-500 font-2">REALITY</span>
                     </h1>
                 </div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex banner-border-2">
@@ -126,7 +168,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl "
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl "
                 style="position: relative; z-index: 999;">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
@@ -149,7 +191,7 @@
         <div class="my-28"></div>
         <!-- twin reality -->
         <div class="twin-reality">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class=" w-2/5">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">Twin Reality</h2>
                     <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
@@ -174,7 +216,7 @@
         <div class="my-28"></div>
         <!-- Why choose TWIN REALITY? -->
         <div class="why-choose-twin-reality">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="choose-bg w-full p-16 text-center">
                     <div class="">
                         <h3 class="font-2 text-4xl">
@@ -217,7 +259,7 @@
         <div class="my-28"></div>
         <!-- reality -->
         <div class="reality">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class=" w-3/6">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">VIRTUAL REALITY</h2>
                     <div class="banner-border-2 pb-4"></div>
@@ -232,7 +274,7 @@
                 <div class="w-3/6 twin-reality-img reality-img relative"></div>
             </div>
             <div class="my-28"></div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-3/6 twin-reality-img reality-img-2 relative"></div>
                 <div class=" w-3/6">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">METAVERSE</h2>
@@ -246,7 +288,7 @@
                 </div>
             </div>
             <div class="my-28"></div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class=" w-3/6">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">VIRTUAL EVENTS</h2>
                     <div class="banner-border-2 pb-4"></div>
@@ -263,7 +305,7 @@
         <div class="gradiant pb-20">
             <!-- Projects -->
             <div class="project">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-2/5">
                         <div class="our-project flex flex-col">
                             <img src="assets/image/Model.png" alt="Model">
@@ -303,7 +345,7 @@
             <div class="my-28"></div>
             <!-- Our service -->
             <div class="our-service">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 text-6xl">
@@ -354,14 +396,14 @@
         <div class="my-28"></div>
         <!-- OUR AR/VR TIMES -->
         <div class="our-times">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl text-center">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl text-center">
                 <div class="w-full mb-20">
                     <h3 class="font-2 text-6xl">
                         OUR AR/VR TIMES
                     </h3>
                 </div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class=" w-3/6">
                     <div class="flex items-center">
                         <img class="w-56 h-56 object-cover object-center" src="assets/image/times-1.png" alt="times-1">
@@ -405,7 +447,7 @@
         <div class="gradiant-2 relative overflow-hidden">
             <!-- TESTIMONIAL -->
             <div class="testimontal">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full">
                         <h2 class="text-center font-2 text-7xl mb-20">TESTIMONTAL​</h2>
         
@@ -501,13 +543,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slider Container -->
+                    <!-- Slider container 2xl:container -->
                 </div>
             </div>
             <div class="my-28"></div>
             <!-- COMPANIES -->
             <div class="company">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="container 2xl:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 text-6xl">
@@ -558,7 +600,7 @@
     </main>
     <footer>
         <div class="footer overflow-hidden">
-            <div class="container mx-auto px-4 flex items-center py-20 text-xl">
+            <div class="container 2xl:container mx-auto px-4 flex items-center py-20 text-xl">
                 <div class="w-1/3">
                     <div class="flex flex-col justify-center items-start">
                         <div class="logo">

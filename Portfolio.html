@@ -32,63 +32,105 @@
 
 <body>
     <!-- header -->
-    <header>
-        <div class="navbar mt-6">
+     <!-- header -->
+     <header class="header  text-white shadow-md">
+        <div class="navbar fixed -top-7 left-0 w-full mt-6 mx-auto px-4"  style="z-index: 9999; background-color: #09021b;">
+            <!-- Flex Container -->
             <div class="flex justify-evenly items-center text-xl">
                 <!-- Logo -->
-                <div class="">
+                <div class="flex-shrink-0">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="w-36">
                     </a>
                 </div>
-
+    
                 <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex space-x-16">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
+                <nav class="hidden lg:flex relative">
+                    <ul class="flex space-x-14">
+                        <li><a href="home.html" class="text-yellow-500 hover:text-yellow-400">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn hover:text-yellow-500">
+                            <a href="#" class="flex items-center dropbtn hover:text-yellow-400">
                                 Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
                             </a>
                             <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
+                            <div
+                                class="dropdown-content absolute left-0 hidden group-hover:flex flex-col bg-gray-700 text-xl rounded shadow-lg p-4 mt-2 space-y-2">
+                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event Management</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
                             </div>
                         </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
+                        <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                        <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                        <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
                     </ul>
                 </nav>
-
-
+    
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+    
                 <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon w-10 h-10">
-                        <a href="">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
-                        <a href="" class="">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon w-10 h-10">
-                        <a href="" class="">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="hidden lg:flex space-x-4">
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/facebook.png" alt="facebook" class="w-full h-full">
+                    </a>
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/twitter.png" alt="twitter" class="w-full h-full">
+                    </a>
+                    <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                        <img src="assets/image/instragram.png" alt="instagram" class="w-full h-full">
+                    </a>
                 </div>
             </div>
+    
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden flex-col lg:hidden bg-gray-700 rounded shadow-md mt-4 p-4">
+                <ul class="space-y-4">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <li>
+                        <details>
+                            <summary class="flex items-center hover:text-yellow-400">
+                                Services
+                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
+                            </summary>
+                            <div class="flex flex-col mt-2 space-y-2 text-sm pl-4">
+                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                    Management</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                            </div>
+                        </details>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                    <li class="flex space-x-4 mt-4">
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/facebook.png" alt="facebook" class="w-full h-full">
+                        </a>
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/twitter.png" alt="twitter" class="w-full h-full">
+                        </a>
+                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
+                            <img src="assets/image/instragram.png" alt="instagram" class="w-full h-full">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- main -->
