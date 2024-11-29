@@ -41,7 +41,7 @@ body {
     right: 0px;
     opacity: 0.1;
     border-radius: 50%;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .dropdown {
@@ -161,7 +161,7 @@ body {
 .reality-img-3::after{
     width: 850px;
     height: 400px;
-    background-image: url('../assets/image/vr.jpg');
+    background-image: url('../assets/image/vr\ \(1\).jpg');
     top: -190px;
     left: 100px;
 }
