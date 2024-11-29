@@ -229,16 +229,15 @@ body {
 }
 
 .footer {
-    height: 610px;
     background: linear-gradient(96.42deg, #09021B -0.73%, #54477B 100.84%);
-
 }
 
 .footer-img::after {
     background-image: url('../assets/image/footer.png');
     width: 600px;
     height: 620px;
-    top: -310px;
+    top: -10px;
+    left: 70%;
 }
 
 .sub-banner {
