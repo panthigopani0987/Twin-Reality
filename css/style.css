@@ -41,7 +41,6 @@ body {
     right: 0px;
     opacity: 0.1;
     border-radius: 50%;
-    z-index: 99999;
 }
 
 .dropdown {

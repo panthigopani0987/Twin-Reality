@@ -27,117 +27,98 @@
         rel="stylesheet">
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99999999;
+            background-color: #09021b;
+            overflow: hidden;
+        }
+
+        .sticky+.content {
+            padding-top: 102px;
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- header -->
-    <header class="header text-white shadow-md">
-        <div class="navbar fixed -top-7 left-0 w-full md:w-full mt-6 mx-auto px-4"  style="z-index: 9999; background-color: #09021b;">
-            <!-- Flex Container -->
-            <div class="flex justify-evenly items-center text-xl">
-                <!-- Logo -->
-                <div class="w-64">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="w-36">
-                    </a>
-                </div>
-    
-                <!-- Navigation Links -->
-                <nav class="whidden lg:flex relative">
-                    <ul class="flex space-x-14">
-                        <li><a href="home.html" class="text-yellow-500 hover:text-yellow-400">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="#" class="flex items-center dropbtn hover:text-yellow-400">
-                                Services
-                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div
-                                class="dropdown-content absolute left-0 hidden group-hover:flex flex-col bg-gray-700 text-xl rounded shadow-lg p-4 mt-2 space-y-2">
-                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event Management</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
-                    </ul>
-                </nav>
-    
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-    
-                <!-- Social Icons -->
-                <div class="hidden lg:flex space-x-4">
-                    <a href="" class="social-icon w-10 h-10 hover:opacity-75">
-                        <img src="assets/image/facebook.png" alt="facebook" class="w-7 h-7">
-                    </a>
-                    <a href="" class="social-icon w-10 h-10 hover:opacity-75">
-                        <img src="assets/image/twitter.png" alt="twitter" class="w-7 h-7">
-                    </a>
-                    <a href="" class="social-icon w-10 h-10 hover:opacity-75">
-                        <img src="assets/image/instragram.png" alt="instagram" class="w-7 h-7">
-                    </a>
-                </div>
+    <header class="relative header" id="myHeader" style="z-index: 99999999;">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4 text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="min-w-28 min-h-14" src="assets/image/logo.png" alt="logo">
+                </a>
             </div>
-    
-            <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="hidden flex-col lg:hidden bg-gray-700 rounded shadow-md mt-4 p-4">
-                <ul class="space-y-4">
-                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
-                    <li>
-                        <details>
-                            <summary class="flex items-center hover:text-yellow-400">
-                                Services
-                                <img class="w-3 ml-2" src="assets/image/down-arrow.png" alt="down arrow">
-                            </summary>
-                            <div class="flex flex-col mt-2 space-y-2 text-sm pl-4">
-                                <a href="service-vr.html" class="hover:text-yellow-400">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
-                                    Management</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
-                            </div>
-                        </details>
+            <!-- Navigation Links -->
+            <nav class="relative">
+                <ul class="flex space-x-16">
+                    <li><a href="home.html" class="text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn hover:text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
                     </li>
                     <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
                     <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
                     <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
-                    <li class="flex space-x-4 mt-4">
-                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
-                            <img src="assets/image/facebook.png" alt="facebook" class="w-full h-full">
-                        </a>
-                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
-                            <img src="assets/image/twitter.png" alt="twitter" class="w-full h-full">
-                        </a>
-                        <a href="" class="social-icon w-8 h-8 hover:opacity-75">
-                            <img src="assets/image/instragram.png" alt="instagram" class="w-full h-full">
-                        </a>
-                    </li>
                 </ul>
             </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4">
+                <div class="social-icon w-10 h-10">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook" >
+                    </a>
+                </div>
+                <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon w-10 h-10">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
+                </div>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
         </div>
     </header>
-    
+
     <!-- main -->
     <main>
         <!-- banner -->
         <div class="banner">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
 
                 <div class="flex items-center  mt-40">
                     <div class="banner-contain  ">
@@ -149,7 +130,8 @@
                     <div class="banner-border"></div>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex">
@@ -158,7 +140,8 @@
                     </h1>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex banner-border-2">
@@ -174,10 +157,12 @@
                 <div class="w-96"></div>
                 <div class="banner-img flex items-center mt-10 relative">
                     <img class="w-64" src="assets/image/banner-img.png" alt="banner-img">
-                    <div  style="position: absolute;right: -220px;" class="flex items-center group">
-                        <div class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4">
+                    <div style="position: absolute;right: -220px;" class="flex items-center group">
+                        <div
+                            class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4">
                             <a href="" class=" w-16 h-16 flex justify-evenly items-center">
-                                <i class="fa-solid fa-caret-up fa-rotate-90 text-5xl text-white  group-hover:text-yellow-500"></i>
+                                <i
+                                    class="fa-solid fa-caret-up fa-rotate-90 text-5xl text-white  group-hover:text-yellow-500"></i>
                             </a>
                         </div>
                         <div class="ml-5">
@@ -192,8 +177,9 @@
         <div class="my-28"></div>
         <!-- twin reality -->
         <div class="twin-reality">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class=" w-2/5">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class=" lg:w-2/5 md:w-full md:text-center lg:text-left">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">Twin Reality</h2>
                     <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
                     <div class="banner-border-2 pb-4"></div>
@@ -204,6 +190,7 @@
                         technology, revolutionizing the way businesses and individuals <br> experience the world around
                         them.
                     </p>
+                    <img src="assets/image/twin-reality-img.jpg" alt="twin-reality" class="my-10 md:block lg:hidden">
                     <p class="font-light mt-5 text-gray-400 leading-relaxed tracking-wide">
                         Twin Reality’s unique approach to AR, VR, and MR involves <br> creating experiences that are
                         tailored to the needs of the user. <br> They achieve this by combining creative design,
@@ -211,20 +198,21 @@
                         experiences that are both engaging and <br> impactful.
                     </p>
                 </div>
-                <div class="w-3/5 twin-reality-img relative"></div>
+                <div class="w-3/5 twin-reality-img relative md:hidden lg:block"></div>
             </div>
         </div>
         <div class="my-28"></div>
         <!-- Why choose TWIN REALITY? -->
         <div class="why-choose-twin-reality">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="choose-bg w-full h-auto p-16 text-center">
                     <div class="">
                         <h3 class="font-2 lg:text-4xl md:text-3xl">
                             WHY CHOOSE TWIN <span class="font-2 text-yellow-500">REALITY?</span>
                         </h3>
                     </div>
-                    <div class="flex justify-evenly items-start lg:mt-20 md:mt-10">
+                    <div class="flex sm:flex-wrap justify-evenly items-start lg:mt-20 md:mt-10">
                         <div class="flex flex-col items-center">
                             <div class="lg:w-24 lg:h-24 md:h-16 md:w-16 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
                             border: 2px solid #241e37;">
@@ -260,7 +248,8 @@
         <div class="my-28"></div>
         <!-- reality -->
         <div class="reality">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col lg:items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col lg:items-center py-4 text-xl">
                 <div class="md:w-full mb-10 md:block lg:hidden">
                     <img src="assets/image/vr-app.png" alt="vr-app" class="h-80 object-cover" style="width: 800px;">
                 </div>
@@ -278,7 +267,8 @@
                 <div class="lg:w-3/6 lg:block twin-reality-img reality-img bg-cover relative md:hidden"></div>
             </div>
             <div class="lg:my-28"></div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col items-center py-4 text-xl">
                 <div class="lg:w-3/6 twin-reality-img reality-img-2 relative lg:block md:hidden"></div>
                 <div class="md:w-full mb-10 md:block lg:hidden">
                     <img src="assets/image/banner-img.png" alt="vr-app" class="h-80 object-cover" style="width: 800px;">
@@ -295,7 +285,8 @@
                 </div>
             </div>
             <div class="lg:my-28 "></div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col items-center py-4 text-xl">
                 <div class="lg:w-3/6 md:w-full lg:text-left md:text-center">
                     <div class="md:w-full mb-10 md:block lg:hidden">
                         <img src="assets/image/vr-3.jpg" alt="vr-app" class="h-80 object-cover" style="width: 800px;">
@@ -315,38 +306,46 @@
         <div class="gradiant pb-20">
             <!-- Projects -->
             <div class="project">
-                <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col lg:justify-between items-center py-4 text-xl">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row md:flex-col lg:justify-between items-center py-4 text-xl">
                     <div class="lg:w-2/5 md:w-full md:mb-56">
                         <div class="our-project lg:flex md:flex-row md:justify-between lg:flex-col">
                             <img src="assets/image/Model.png" alt="Model" class="lg:w-96 md:w-72">
                             <div class="md:text-right lg:text-left">
-                                <h2 class="font-2 lg:text-6xl md:text-4xl md:mb-5 uppercase leading-relaxed mt-24">our projects</h2>
-                                <p class="font-2 md:text-base tracking-widest font-light">AR, VR, MR Company In India</p>
+                                <h2 class="font-2 lg:text-6xl md:text-4xl md:mb-5 uppercase leading-relaxed mt-24">our
+                                    projects</h2>
+                                <p class="font-2 md:text-base tracking-widest font-light">AR, VR, MR Company In India
+                                </p>
                                 <div class="banner-border-2 lg:pb-4"></div>
                                 <div class="lg:flex lg:justify-start md:justify-end lg:mt-10 md:mt-5">
-    
+
                                     <a href=""
-                                        class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600 transition duration-150 ease-out hover:ease-in  p-3 px-10 font-medium tracking-wider text-center">VIEW ALL</a>
+                                        class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600 transition duration-150 ease-out hover:ease-in  p-3 px-10 font-medium tracking-wider text-center">VIEW
+                                        ALL</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lg:w-3/5 md:w-full">
                         <div class="lg:h-80 lg:block md:hidden"></div>
-                        <div class="our-project-vr lg:flex lg:flex-col md:flex-row lg:justify-end lg:w-full lg:h-96 lg:p-10">
+                        <div
+                            class="our-project-vr lg:flex lg:flex-col md:flex-row lg:justify-end lg:w-full lg:h-96 lg:p-10">
                             <div class="lg:flex lg:items-end">
                                 <div class="">
-                                    <img src="assets/image/project-1.jpg" alt="project-1" class="md:w-80" style="width: 400px;">
+                                    <img src="assets/image/project-1.jpg" alt="project-1" class="md:w-80"
+                                        style="width: 400px;">
                                 </div>
                                 <div class="ml-20">
                                     <div class="flex justify-center mb-20">
                                         <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
                                         <img src="assets/image/Arrow 1.png" alt="Arrow 1">
                                     </div>
-                                    <img src="assets/image/project-2.png" alt="project-2" style="width: 350px;" class="w-80">
+                                    <img src="assets/image/project-2.png" alt="project-2" style="width: 350px;"
+                                        class="w-80">
                                 </div>
                             </div>
-                            <p class="font-2 lg:text-lg text-yellow-500 tracking-wide leading-loose mt-10">VIRTUAL REALITY
+                            <p class="font-2 lg:text-lg text-yellow-500 tracking-wide leading-loose mt-10">VIRTUAL
+                                REALITY
                             </p>
                             <p class="font-2 tracking-wide">Virtual Reality For Medical Education</p>
                         </div>
@@ -356,7 +355,8 @@
             <div class="my-28"></div>
             <!-- Our service -->
             <div class="our-service">
-                <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl">
@@ -366,32 +366,41 @@
                         <div class="flex justify-between items-start mt-20">
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-64 md:w-32 md:h-32">
-                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64" src="assets/image/services-1.png" alt="services-1" style="border: 2px solid #241e37;">
+                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64"
+                                        src="assets/image/services-1.png" alt="services-1"
+                                        style="border: 2px solid #241e37;">
                                 </div>
                                 <p class="text-center mt-6 lg:text-2xl md:text-lg">Virtual Reality</p>
                             </div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-32 md:h-32">
-                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64" src="assets/image/services-2.png" alt="services-2" style="border: 2px solid #241e37;">
+                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64"
+                                        src="assets/image/services-2.png" alt="services-2"
+                                        style="border: 2px solid #241e37;">
                                 </div>
                                 <p class="text-center mt-6 lg:text-2xl md:text-lg">VR Industrial <br> Training</p>
                             </div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-32 md:h-32">
-                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64 object-center" src="assets/image/services-3.png"
-                                        alt="services-3" style="border: 2px solid #241e37;">
+                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64 object-center"
+                                        src="assets/image/services-3.png" alt="services-3"
+                                        style="border: 2px solid #241e37;">
                                 </div>
                                 <p class="text-center mt-6 lg:text-2xl md:text-lg">Metaverse <br> Development</p>
                             </div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-32 md:h-32">
-                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64" src="assets/image/services-4.png" alt="services-4" style="border: 2px solid #241e37;">
+                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64"
+                                        src="assets/image/services-4.png" alt="services-4"
+                                        style="border: 2px solid #241e37;">
                                 </div>
                                 <p class="text-center mt-6 lg:text-2xl md:text-lg">Virtual Event <br> Management</p>
                             </div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-32 md:h-32">
-                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64" src="assets/image/services-5.png" alt="services-5" style="border: 2px solid #241e37;">
+                                    <img class="object-cover md:w-32 md:h-32 lg:w-64 lg:h-64"
+                                        src="assets/image/services-5.png" alt="services-5"
+                                        style="border: 2px solid #241e37;">
                                 </div>
                                 <p class="text-center mt-6 lg:text-2xl md:text-lg">VR Consultation</p>
                             </div>
@@ -403,17 +412,20 @@
         <div class="my-28"></div>
         <!-- OUR AR/VR TIMES -->
         <div class="our-times">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl text-center">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl text-center">
                 <div class="w-full mb-20">
                     <h3 class="font-2 lg:text-6xl md:text-5xl">
                         OUR AR/VR TIMES
                     </h3>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex lg:flex-row md:flex-col items-center py-4 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex lg:flex-row md:flex-col items-center py-4 text-xl">
                 <div class=" lg:w-3/6 md:w-full md:flex md:flex-col">
                     <div class="flex items-center">
-                        <img class="w-56 h-56 md:w-48 md:h-48 object-cover object-center" src="assets/image/times-1.png" alt="times-1">
+                        <img class="w-56 h-56 md:w-48 md:h-48 object-cover object-center" src="assets/image/times-1.png"
+                            alt="times-1">
                         <div class="p-6">
                             <h3 class="font-2">Process of designing a VR industrial<br> training program</h3>
                             <p class="pt-3 font-light text-base">
@@ -421,13 +433,17 @@
                                 (VR)....
                             </p>
                             <a href="VR-Times.html" class="pt-4 flex items-center group">
-                                <span class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ MORE</span>
-                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in " src="assets/image/Arrow 1.png" alt="Arrow">
+                                <span
+                                    class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
+                                    MORE</span>
+                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
+                                    src="assets/image/Arrow 1.png" alt="Arrow">
                             </a>
                         </div>
                     </div>
                     <div class="flex items-center mt-10">
-                        <img class="w-56 h-56 md:w-48 md:h-48 object-cover object-center" src="assets/image/times-2.png" alt="times-2">
+                        <img class="w-56 h-56 md:w-48 md:h-48 object-cover object-center" src="assets/image/times-2.png"
+                            alt="times-2">
                         <div class="p-6">
                             <h3 class="font-2">Illumetry Eos: Illumetry Unveils Its New<br> Holographic Display Device
                             </h3>
@@ -436,8 +452,11 @@
                                 gadget....
                             </p>
                             <a href="VR-Times.html" class="pt-4 flex items-center group">
-                                <span class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ MORE</span>
-                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in " src="assets/image/Arrow 1.png" alt="Arrow">
+                                <span
+                                    class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
+                                    MORE</span>
+                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
+                                    src="assets/image/Arrow 1.png" alt="Arrow">
                             </a>
                         </div>
                     </div>
@@ -454,20 +473,23 @@
         <div class="gradiant-2 relative overflow-hidden">
             <!-- TESTIMONIAL -->
             <div class="testimontal">
-                <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full">
                         <h2 class="text-center font-2 lg:text-7xl md:text-5xl mb-20">TESTIMONTAL​</h2>
-        
+
                         <div class="relative overflow-hidden">
                             <!-- Slider Content -->
                             <div class="flex transition-transform duration-500 ease-in-out" id="testimontal-slider">
                                 <!-- Slide 1 -->
                                 <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
-                                    <div class="our-project-vr flex flex-col justify-end lg:w-full lg:h-96 md:h-72 lg:p-10 md:p-5">
+                                    <div
+                                        class="our-project-vr flex flex-col justify-end lg:w-full lg:h-96 md:h-72 lg:p-10 md:p-5">
                                         <div class="flex items-end">
                                             <div>
-                                                <img class="object-cover object-top lg:h-96 md:h-72 " src="assets/image/testimonials.png"
-                                                    alt="project-1" style="width: 320px;">
+                                                <img class="object-cover object-top lg:h-96 md:h-72 "
+                                                    src="assets/image/testimonials.png" alt="project-1"
+                                                    style="width: 320px;">
                                             </div>
                                             <div style="width: 80%;" class="lg:pl-16 md:pl-10">
                                                 <div class="lg:ml-20 lg:block md:ml-14 hidden">
@@ -476,25 +498,32 @@
                                                         <img src="assets/image/Arrow 1.png" alt="Arrow 1">
                                                     </div>
                                                 </div>
-                                                <p class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                <p
+                                                    class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
                                                     Lorem
                                                     Ipsum
-                                                    has been the industry's standard dummy text ever since the 1500s, when an
+                                                    has been the industry's standard dummy text ever since the 1500s,
+                                                    when an
                                                     unknown
-                                                    printer took a galley of type and scrambled it to make a type specimen book.
-                                                    It has survived not only five centuries, but also the leap into electronic
+                                                    printer took a galley of type and scrambled it to make a type
+                                                    specimen book.
+                                                    It has survived not only five centuries, but also the leap into
+                                                    electronic
                                                     typesetting.
                                                 </p>
                                                 <div class="flex justify-between">
                                                     <div>
-                                                        <img src="assets/image/star.png" alt="star" class="pb-3 lg:w-36 md:w-28">
+                                                        <img src="assets/image/star.png" alt="star"
+                                                            class="pb-3 lg:w-36 md:w-28">
                                                         <span class="font-2 lg:text-lg md:text-lg">
                                                             Yasheh Patel
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <img src="assets/image/“.png" alt="“" class="ml-auto lg:w-24 md:w-16">
+                                                        <img src="assets/image/“.png" alt="“"
+                                                            class="ml-auto lg:w-24 md:w-16">
                                                     </div>
                                                 </div>
                                             </div>
@@ -503,11 +532,13 @@
                                 </div>
                                 <!-- Slide 2 -->
                                 <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
-                                    <div class="our-project-vr flex flex-col justify-end lg:w-full lg:h-96 md:h-72 lg:p-10 md:p-5">
+                                    <div
+                                        class="our-project-vr flex flex-col justify-end lg:w-full lg:h-96 md:h-72 lg:p-10 md:p-5">
                                         <div class="flex items-end">
                                             <div>
-                                                <img class="object-cover object-top lg:h-96 md:h-72 " src="assets/image/testimonial-2.png"
-                                                    alt="project-1" style="width: 320px;">
+                                                <img class="object-cover object-top lg:h-96 md:h-72 "
+                                                    src="assets/image/testimonial-2.png" alt="project-1"
+                                                    style="width: 320px;">
                                             </div>
                                             <div style="width: 80%;" class="lg:pl-16 md:pl-10">
                                                 <div class="lg:ml-20 lg:block md:ml-14 hidden">
@@ -516,25 +547,32 @@
                                                         <img src="assets/image/Arrow 1.png" alt="Arrow 1">
                                                     </div>
                                                 </div>
-                                                <p class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                <p
+                                                    class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
                                                     Lorem
                                                     Ipsum
-                                                    has been the industry's standard dummy text ever since the 1500s, when an
+                                                    has been the industry's standard dummy text ever since the 1500s,
+                                                    when an
                                                     unknown
-                                                    printer took a galley of type and scrambled it to make a type specimen book.
-                                                    It has survived not only five centuries, but also the leap into electronic
+                                                    printer took a galley of type and scrambled it to make a type
+                                                    specimen book.
+                                                    It has survived not only five centuries, but also the leap into
+                                                    electronic
                                                     typesetting.
                                                 </p>
                                                 <div class="flex justify-between">
                                                     <div>
-                                                        <img src="assets/image/star.png" alt="star" class="pb-3 lg:w-36 md:w-28">
+                                                        <img src="assets/image/star.png" alt="star"
+                                                            class="pb-3 lg:w-36 md:w-28">
                                                         <span class="font-2 lg:text-lg md:text-lg">
                                                             Alexis Mark
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <img src="assets/image/“.png" alt="“" class="ml-auto lg:w-24 md:w-16">
+                                                        <img src="assets/image/“.png" alt="“"
+                                                            class="ml-auto lg:w-24 md:w-16">
                                                     </div>
                                                 </div>
                                             </div>
@@ -550,7 +588,8 @@
             <div class="my-28"></div>
             <!-- COMPANIES -->
             <div class="company">
-                <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl md:text-4xl">
@@ -560,32 +599,36 @@
                         <div class="flex justify-between items-start mt-20">
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-1.png" alt="company-1">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-1.png"
+                                        alt="company-1">
                                 </div>
                             </div>
                             <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-2.png" alt="company-2">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-2.png"
+                                        alt="company-2">
                                 </div>
                             </div>
                             <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24 object-center" src="assets/image/company-3.png"
-                                    alt="company-3">
+                                    <img class="object-cover lg:h-60 md:h-24 object-center"
+                                        src="assets/image/company-3.png" alt="company-3">
                                 </div>
                             </div>
                             <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-4.png" alt="company-4">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-4.png"
+                                        alt="company-4">
                                 </div>
                             </div>
                             <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center">
                                 <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-5.png" alt="company-5">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-5.png"
+                                        alt="company-5">
                                 </div>
                             </div>
                         </div>
@@ -597,7 +640,8 @@
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
                 <div class="lg:w-1/3 md:w-1/2">
                     <div class="flex flex-col justify-center items-start">
                         <div class="logo">
@@ -605,33 +649,37 @@
                         </div>
                         <div class="footer-contain mt-10 ">
                             <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
-                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when an<br> unknown printer took a galley.
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl" >Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
                     </div>
-                    <div class="banner-border-2 pb-4"></div>   
+                    <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href=""  class="flex flex-col items-center justify-center">
+                            <a href="" class="flex flex-col items-center justify-center">
                                 <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br> Calendly</span>
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                                    Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center">
                                 <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On WhatsApp</span>
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                                    WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href=""  class="flex flex-col items-center justify-center">
+                            <a href="" class="flex flex-col items-center justify-center">
                                 <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
                                 <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
                             </a>
@@ -643,6 +691,20 @@
         </div>
     </footer>
     <script src="js/slider.js"></script>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
 </body>
 
 </html>
