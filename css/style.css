@@ -162,6 +162,7 @@ body {
     width: 850px;
     height: 400px;
     background-image: url('../assets/image/vr\ \(1\).jpg');
+    background-size: cover;
     top: -190px;
     left: 100px;
 }
@@ -172,7 +173,9 @@ body {
 }
 
 .reality-img-3::after {
-    background-image: url('../assets/image/vr-3.jpg');
+    background-image: url('../assets/image/vr-3.jpg');    
+    background-size: cover;
+
 }
 .tranning-img::after,.industry-img-2::after{
     background-image: url('../assets/image/indutry-img.jpg');
