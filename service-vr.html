@@ -194,17 +194,11 @@
 
                     <div class="relative overflow-hidden">
                         <!-- Slider Content -->
-                        <div class="flex transition-transform duration-500 ease-in-out" id="testimontal-slider">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">    
                             <!-- Slide 1 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
-                                <div
-                                    class="vr-videos relative bg-center bg-cover bg-no-repeat flex justify-center items-center">
-                                    <div
-                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
-                                        <a href="">
-                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
-                                        </a>
-                                    </div>
+                                <div class="flex justify-center items-center">
+                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/YLb1gnmsceA?si=3zvbZrQtgQtVJXm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
                                     <p class="text-gray-400 ">
@@ -230,14 +224,8 @@
 
                             <!-- Slide 2 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
-                                <div
-                                    class="vr-videos relative bg-center bg-cover bg-no-repeat flex justify-center items-center">
-                                    <div
-                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
-                                        <a href="">
-                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
-                                        </a>
-                                    </div>
+                                <div class="flex justify-center items-center">
+                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/M3T2iE5tkFE?si=Wk2AlwrjFodPiPiq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
                                     <p class="text-gray-400 ">
@@ -262,15 +250,9 @@
                             </div>
 
                             <!-- Slide 3 -->
-                            <div class="min-w-full flex flex-col items-center text-center p-6 b rounded-lg">
-                                <div
-                                    class="vr-videos relative bg-center bg-cover bg-no-repeat flex justify-center items-center">
-                                    <div
-                                        class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4 z-10">
-                                        <a href="">
-                                            <img class="w-6 h-6" src="assets/image/play-btn.png" alt="play-btn">
-                                        </a>
-                                    </div>
+                            <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
+                                <div class="flex justify-center items-center">
+                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/Z_0iFPRYAbI?si=x2wc9yCm_zSlux3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
                                     <p class="text-gray-400 ">
@@ -296,8 +278,12 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-10">
-                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
-                        <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                        <a type="button" id="prev" class="cursor-pointer">
+                            <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                        </a>
+                        <a type="button" id="next" class="cursor-pointer">
+                            <img  src="assets/image/Arrow 1.png" alt="Arrow 1">
+                        </a>
                     </div>
                 </div>
                 <!-- Slider Container -->
@@ -393,30 +379,28 @@
                     <p class="font-light pt-10 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
                         Create Different Solutions</p>
                 </div>
-                <div class="w-full flex items-start justify-evenly mt-20">
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                <div class="w-full flex flex-wrap items-center justify-between mt-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20">
                         <img src="assets/image/React360.png" alt="React360" class="pr-5 w-28">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">React360</span>
                     </div>
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-32 h-20">
                         <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 w-20">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">Vuforia</span>
                     </div>
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-32 h-20">
                         <img src="assets/image/unity.png" alt="unity" class="pr-5 w-28">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">Unity</span>
                     </div>
-                </div>
-                <div class="w-full flex items-start justify-evenly mt-20">
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-20 h-20 mt-20 ">
                         <img src="assets/image/unreal-engine.png" alt="unreal-engine" class="pr-5 w-28">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">Unreal&nbsp;Engine</span>
                     </div>
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20 mt-20">
                         <img src="assets/image/blender.png" alt="blender" class="pr-5 w-28">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">Blender</span>
                     </div>
-                    <div class="tool_platforms w-52 flex items-center justify-center p-10 px-32 h-20">
+                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20 mt-20 ">
                         <img src="assets/image/3ds max.png" alt="3ds max" class="pr-5 w-28">
                         <span class="text-3xl text-zinc-300 font-light tracking-wide">3ds&nbsp;Max</span>
                     </div>

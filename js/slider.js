@@ -1,11 +1,15 @@
-const slider_1 = document.getElementById("testimontal-slider");
-const totalSlides_1 = slider_1.children.length;
-let currentIndex_1 = 0;
+const slider = document.getElementById("testimonial-slider");
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
 
-function slideNext() {
-    currentIndex_1 = (currentIndex_1 + 1) % totalSlides_1;
-    slider_1.style.transform = `translateX(-${currentIndex_1 * 100}%)`;
-}
+let currentIndex = 0;
 
-// Set interval for automatic sliding
-setInterval(slideNext, 3000); // Slides change every 3 seconds
+nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slider.children.length;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+
+prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});

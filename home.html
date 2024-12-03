@@ -27,6 +27,8 @@
         rel="stylesheet">
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- animate.js  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         .sticky {
             position: fixed;
@@ -49,13 +51,13 @@
     <header class="relative header" id="myHeader" style="z-index: 99999999;">
         <div class="container mx-auto px-4 flex justify-between items-center py-4 text-xl">
             <!-- Logo -->
-            <div class="flex-none w-40">
+            <div class="flex-none w-40  animate__animated animate__heartBeat">
                 <a href="home.html">
                     <img class="min-w-28 min-h-14" src="assets/image/logo.png" alt="logo">
                 </a>
             </div>
             <!-- Navigation Links -->
-            <nav class="relative">
+            <nav class="relative animate__animated animate__fadeInDown">
                 <ul class="flex space-x-16">
                     <li><a href="home.html" class="text-yellow-400">Home</a></li>
                     <!-- Dropdown for Services -->
@@ -69,7 +71,8 @@
                             <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
                             <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
                             <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
-                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event Managment</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
                             <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
                         </div>
                     </li>
@@ -79,10 +82,10 @@
                 </ul>
             </nav>
             <!-- Social Icons -->
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 animate__animated animate__flip">
                 <div class="social-icon w-10 h-10">
                     <a href="https://www.facebook.com/" class="" target="_blank">
-                        <img src="assets/image/facebook.png" alt="facebook" >
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
                 <div class="social-icon w-10 h-10" style="padding: 7px;">
@@ -118,7 +121,7 @@
         <!-- banner -->
         <div class="banner">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl animate__animated animate__lightSpeedInLeft">
 
                 <div class="flex items-center  mt-40">
                     <div class="banner-contain  ">
@@ -131,7 +134,7 @@
                 </div>
             </div>
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl animate__animated animate__lightSpeedInRight">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex">
@@ -141,7 +144,7 @@
                 </div>
             </div>
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl animate__animated animate__lightSpeedInRight">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
                 <div class="flex banner-border-2">
@@ -151,7 +154,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container  mx-auto px-4 flex items-center py-4 text-xl "
+            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container  mx-auto px-4 flex items-center py-4 text-xl animate__animated animate__zoomInDown"
                 style="position: relative; z-index: 999;">
                 <div class="w-96"></div>
                 <div class="w-96"></div>
@@ -198,7 +201,8 @@
                         experiences that are both engaging and <br> impactful.
                     </p>
                 </div>
-                <div class="w-3/5 twin-reality-img relative md:hidden lg:block"></div>
+                <div class="w-3/5 twin-reality-img relative md:hidden lg:block animate__animated animate__slideInRight">
+                </div>
             </div>
         </div>
         <div class="my-28"></div>
@@ -475,12 +479,12 @@
             <div class="testimontal">
                 <div
                     class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
-                    <div class="w-full">
+                    <div class="w-full   overflow-hidden">
                         <h2 class="text-center font-2 lg:text-7xl md:text-5xl mb-20">TESTIMONTAL​</h2>
 
-                        <div class="relative overflow-hidden">
+                        <div class="relative">
                             <!-- Slider Content -->
-                            <div class="flex transition-transform duration-500 ease-in-out" id="testimontal-slider">
+                            <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">
                                 <!-- Slide 1 -->
                                 <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
                                     <div
@@ -492,12 +496,6 @@
                                                     style="width: 320px;">
                                             </div>
                                             <div style="width: 80%;" class="lg:pl-16 md:pl-10">
-                                                <div class="lg:ml-20 lg:block md:ml-14 hidden">
-                                                    <div class="flex justify-end mb-24">
-                                                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
-                                                        <img src="assets/image/Arrow 1.png" alt="Arrow 1">
-                                                    </div>
-                                                </div>
                                                 <p
                                                     class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
                                                     Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -541,12 +539,6 @@
                                                     style="width: 320px;">
                                             </div>
                                             <div style="width: 80%;" class="lg:pl-16 md:pl-10">
-                                                <div class="lg:ml-20 lg:block md:ml-14 hidden">
-                                                    <div class="flex justify-end mb-24">
-                                                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
-                                                        <img src="assets/image/Arrow 1.png" alt="Arrow 1">
-                                                    </div>
-                                                </div>
                                                 <p
                                                     class="leading-loose lg:text-xl md:text-base tracking-wide lg:pr-28 lg:pb-14 md:pb-5">
                                                     Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -579,6 +571,14 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="absolute -top-14 right-10 flex justify-center mt-10">
+                                <a type="button" id="prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="next" class="cursor-pointer">
+                                    <img  src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -692,19 +692,22 @@
     </footer>
     <script src="js/slider.js"></script>
     <script>
-        window.onscroll = function() {myFunction()};
-        
+        window.onscroll = function () { myFunction() };
+
         var header = document.getElementById("myHeader");
         var sticky = header.offsetTop;
-        
+
         function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
         }
-        </script>
+    </script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
