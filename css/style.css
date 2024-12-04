@@ -22,7 +22,7 @@ body {
     z-index: 99;
 }
 
-.header::before,
+
 .gradiant-2::after {
     position: absolute;
     content: "";
@@ -91,34 +91,11 @@ body {
 .footer,
 .sub-banner {
     width: auto;
-    height: 950px;
+    height: auto;
     background: rgb(38, 108, 153);
     background: linear-gradient(0deg, rgba(38, 108, 153, 1) 0%, rgba(15, 44, 75, 1) 10%, rgba(9, 2, 27, 1) 28%);
     position: relative;
 }
-
-.banner::before {
-    position: absolute;
-    content: "";
-    background-image: url('../assets/image/image\ 4.jpg');
-    width: 860px;
-    height: 590px;
-    top: 360px;
-    left: 100px;
-    z-index: 999;
-}
-
-.banner::after {
-    position: absolute;
-    content: "";
-    background-image: url('../assets/image/banner-bg.jpg');
-    width: 660px;
-    height: 200px;
-    bottom: 10px;
-    opacity: 50%;
-    z-index: 99;
-}
-
 .banner-image img {
     width: 750px;
     height: 600px;
