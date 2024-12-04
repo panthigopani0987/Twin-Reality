@@ -28,24 +28,24 @@
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center text-xl">
+            <div class="flex justify-evenly items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="animate__animated animate__heartBeat">
+                <div class="">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative animate__animated animate__fadeInDown">
-                    <ul class="flex space-x-16">
+                <nav class="relative">
+                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
@@ -72,34 +72,34 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4 animate__animated animate__flip">
-                    <div class="social-icon w-10 h-10">
+                <div class="flex space-x-4">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20 animate__animated animate__fadeInLeft">
-                        <span class="font-2 text-7xl text-yellow-500">VR APP</span><br> DEVELOPMENT
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl text-yellow-500">VR APP</span><br> DEVELOPMENT
                     </h1>
                 </div>
             </div>
@@ -111,25 +111,25 @@
                 <div class="form-contain w-full flex justify-evenly">
                     <p class="font-light leading-relaxed tracking-wider ">
                         Bring your ideas to life with our Virtual Reality company. Our team of experienced developers
-                        specializes in creating immersive, interactive VR experiences that<br> engage and captivate
+                        specializes in creating immersive, interactive VR experiences that engage and captivate
                         users. From gaming and entertainment to education and training, we can help you build a VR app
-                        to meet your specific needs and <br>goals.
+                        to meet your specific needs and goals.
                     </p>
                 </div>
-                <div class="form w-full choose-bg p-16 mt-10">
+                <div class="form w-full h-auto choose-bg md:p-16 p-10 mt-10 " data-aos="flip-up">
                     <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
                                     Name</label>
                                 <input type="text" id="first-name" placeholder="Your First Name"
-                                    class=" animate__animated animate__zoomIn mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
                                 <label for="last-name" class="block text-xl font-medium text-zinc-400 mb-3">Last
                                     Name</label>
                                 <input type="text" id="last-name" placeholder="Your Last Name"
-                                    class=" animate__animated animate__zoomIn mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
@@ -137,12 +137,12 @@
                                 <label for="email-address" class="block text-xl font-medium text-zinc-400 mb-3">Email
                                     Address</label>
                                 <input type="email" id="email-address" placeholder="Your Email Address"
-                                    class=" animate__animated animate__zoomIn mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
                                 <label for="role" class="block text-xl font-medium text-zinc-400 mb-3">Role</label>
                                 <input type="text" id="role" placeholder="Your Job Role"
-                                    class=" animate__animated animate__zoomIn mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
@@ -150,7 +150,7 @@
                                 <label for="message"
                                     class="block text-xl font-medium text-zinc-400 mb-3">Message</label>
                                 <textarea id="message" rows="4" placeholder="Your Message"
-                                    class=" animate__animated animate__zoomIn mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
                                 </textarea>
                             </div>
                         </div>
@@ -170,20 +170,25 @@
         <!-- twin-reality-sol -->
         <div class="twin-reality overflow-hidden">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class=" w-2/5">
-                    <h2 class="font-2 text-6xl uppercase leading-relaxed">Virtual Reality<br> Solutions</h2>
+                <div class="xl:w-2/5" data-aos="fade-right">
+                    <h2 class="font-2 2xl:text-6xl md:text-5xl uppercase 2xl:leading-relaxed md:leading-relaxed">Virtual
+                        Reality Solutions</h2>
                     <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        Twin Reality, a leading AR,VR,MR company in India, offers<br> cost-effective and efficient
-                        psychophysics-based solutions using<br> Virtual Reality (VR) technology. With the help of
-                        head-mounted<br> VR devices and virtual hand controllers, industrial classrooms<br> can simulate
-                        plant equipment to train employees effectively.<br> Fusion VR’s VR solutions are tailored to
-                        meet the unique<br> challenges faced by various industries, making it an effective<br> tool for
-                        businesses to train their employees and improve their<br> operations.
+                    <img src="assets/image/vr-sol.png" alt="vr-sol"
+                        class="w-full object-cover object-top h-96 mt-10 lg:block xl:hidden">
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed text-justify tracking-wide">
+                        Twin Reality, a leading AR,VR,MR company in India, offers cost-effective and efficient
+                        psychophysics-based solutions using Virtual Reality (VR) technology. With the help of
+                        head-mounted VR devices and virtual hand controllers, industrial classrooms can simulate
+                        plant equipment to train employees effectively. Fusion VR’s VR solutions are tailored to
+                        meet the unique challenges faced by various industries, making it an effective tool for
+                        businesses to train their employees and improve their operations.
                     </p>
                 </div>
-                <div class="w-3/5 twin-reality-img tr-sol bg-center  bg-cover bg-no-repeat  relative animate__animated animate__lightSpeedInRight"></div>
+                <div class="xl:w-3/5 lg:hidden xl:block twin-reality-img tr-sol bg-center  bg-cover bg-no-repeat  relative"
+                    data-aos="fade-left">
+                </div>
             </div>
         </div>
         <div class="my-28"></div>
@@ -195,26 +200,30 @@
 
                     <div class="relative overflow-hidden">
                         <!-- Slider Content -->
-                        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">    
+                        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">
                             <!-- Slide 1 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
-                                <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/YLb1gnmsceA?si=3zvbZrQtgQtVJXm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="flex justify-center items-center" data-aos="fade-down">
+                                    <iframe width="1000" height="500"
+                                        src="https://www.youtube.com/embed/YLb1gnmsceA?si=3zvbZrQtgQtVJXm0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
-                                <div class="vr-video-contain text-center mt-10">
+                                <div class="vr-video-contain text-center mt-10" data-aos="fade-up">
                                     <p class="text-gray-400 ">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
-                                        enables users to interact with a three-dimensional<br> environment. It typically
+                                        enables users to interact with a three-dimensional environment. It typically
                                         involves
                                         the use of specialized electronic devices, such as headsets and handheld
                                         controllers, to
-                                        create a sense of<br> presence and interactivity.
+                                        create a sense of presence and interactivity.
                                     </p>
                                     <p class="text-gray-400 mt-5">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
-                                        game, a training simulation, or a virtual tour. The user<br> can move around and
+                                        game, a training simulation, or a virtual tour. The user can move around and
                                         interact
                                         with the environment as if it were real, and the system will respond
                                         accordingly.
@@ -226,22 +235,26 @@
                             <!-- Slide 2 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/M3T2iE5tkFE?si=Wk2AlwrjFodPiPiq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="1000" height="500"
+                                        src="https://www.youtube.com/embed/M3T2iE5tkFE?si=Wk2AlwrjFodPiPiq"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
                                     <p class="text-gray-400 ">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
-                                        enables users to interact with a three-dimensional<br> environment. It typically
+                                        enables users to interact with a three-dimensional environment. It typically
                                         involves
                                         the use of specialized electronic devices, such as headsets and handheld
                                         controllers, to
-                                        create a sense of<br> presence and interactivity.
+                                        create a sense of presence and interactivity.
                                     </p>
                                     <p class="text-gray-400 mt-5">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
-                                        game, a training simulation, or a virtual tour. The user<br> can move around and
+                                        game, a training simulation, or a virtual tour. The user can move around and
                                         interact
                                         with the environment as if it were real, and the system will respond
                                         accordingly.
@@ -253,22 +266,26 @@
                             <!-- Slide 3 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/Z_0iFPRYAbI?si=x2wc9yCm_zSlux3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="1000" height="500"
+                                        src="https://www.youtube.com/embed/Z_0iFPRYAbI?si=x2wc9yCm_zSlux3I"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
                                     <p class="text-gray-400 ">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
-                                        enables users to interact with a three-dimensional<br> environment. It typically
+                                        enables users to interact with a three-dimensional environment. It typically
                                         involves
                                         the use of specialized electronic devices, such as headsets and handheld
                                         controllers, to
-                                        create a sense of<br> presence and interactivity.
+                                        create a sense of presence and interactivity.
                                     </p>
                                     <p class="text-gray-400 mt-5">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
-                                        game, a training simulation, or a virtual tour. The user<br> can move around and
+                                        game, a training simulation, or a virtual tour. The user can move around and
                                         interact
                                         with the environment as if it were real, and the system will respond
                                         accordingly.
@@ -283,7 +300,7 @@
                             <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
                         </a>
                         <a type="button" id="next" class="cursor-pointer">
-                            <img  src="assets/image/Arrow 1.png" alt="Arrow 1">
+                            <img src="assets/image/Arrow 1.png" alt="Arrow 1">
                         </a>
                     </div>
                 </div>
@@ -296,52 +313,52 @@
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
                     <div class=" text-center">
-                        <h3 class="font-2 text-6xl">
+                        <h3 class="font-2 lg:text-6xl sm:text-4xl">
                             VR APP DEVELOPMENT FOR INDUSTRIES
                         </h3>
                     </div>
                     <div class="flex justify-between items-start mt-20">
-                        <div class="w-96 h-48 flex justify-center items-center">
-                            <p>
-                                Virtual Reality Company<br> Solutions for different industries
+                        <div class="w-96 lg:h-48 sm:h-32 flex justify-center items-center" data-aos="zoom-in">
+                            <p class="lg:text-xl sm:text-lg">
+                                Virtual Reality Company Solutions for different industries
                             </p>
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-1.png" alt="vr-app-1" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Architectural</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-1.png" alt="vr-app-1" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Architectural</span>
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-2.png" alt="vr-app-2.png" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Healthcare</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-2.png" alt="vr-app-2.png" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Healthcare</span>
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-3.png" alt="vr-app-3.png" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Education</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-3.png" alt="vr-app-3.png" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Education</span>
                         </div>
                     </div>
                     <div class="h-full border border-zinc-50 border-solid opacity-10"></div>
                     <div class="flex justify-between items-start">
-                        <div class="w-96 h-48 flex justify-center items-center">
+                        <div class="w-96 lg:h-48 sm:h-32 flex justify-center items-center" data-aos="zoom-in">
                             <img src="assets/image/vr-app.png" alt="vr-app"
-                                class="w-96 h-48 object-cover object-center">
+                                class="w-96 lg:h-48 sm:h-32 object-cover object-center">
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-4.png" alt="vr-app-4" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Chemicals, Oil & Gas</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-4.png" alt="vr-app-4" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Chemicals, Oil & Gas</span>
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-5.png" alt="vr-app-5.png" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Automotive</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-5.png" alt="vr-app-5.png" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Automotive</span>
                         </div>
-                        <div class="h-48 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 h-48 flex flex-col justify-center items-center">
-                            <img src="assets/image/vr-app-6.png" alt="vr-app-6.png" class=" animate__animated animate__zoomIn">
-                            <span class="text-gray-400 mt-5">Industrial-Training</span>
+                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
+                            <img src="assets/image/vr-app-6.png" alt="vr-app-6.png" class="xl:w-auto lg:w-10 md:w-9">
+                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Industrial-Training</span>
                         </div>
                     </div>
                 </div>
@@ -352,14 +369,14 @@
         <div class="vr-advantages">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl mb-10">
                 <div class="w-full text-center">
-                    <h3 class="font-2 text-6xl uppercase">
+                    <h3 class="font-2  lg:text-6xl sm:text-4xl uppercase">
                         Advantages Of VR & AR In Business
                     </h3>
                 </div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="choose-bg w-full p-16 pl-28 h-96 ">
-                    <ul class="list-disc leading-relaxed tracking-wider animate__animated animate__pulse">
+            <div class="container mx-auto px-4 flex items-center xl:my-4 xl:text-xl lg:text-lg">
+                <div class="choose-bg w-full p-16 lg:pl-28 h-96" data-aos="zoom-in-down">
+                    <ul class="list-disc leading-relaxed tracking-wider">
                         <li class="pb-10 text-zinc-300">Enhancing Consumer And Business Transparency Through A Striking
                             Visual Experience.</li>
                         <li class="pb-10 text-zinc-300">Real-Time Data Sharing With The Proper User At The Proper Time.
@@ -376,34 +393,41 @@
         <div class="tools-platforms">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="w-full text-center">
-                    <h2 class=" font-2 text-7xl leading-relaxed">TOOLS & PLATFORMS USED IN<br> VR DEVELOPMENT​</h2>
-                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
+                    <h2 class=" font-2  lg:text-6xl sm:text-5xl leading-normal">TOOLS & PLATFORMS USED IN VR
+                        DEVELOPMENT​</h2>
+                    <p class="font-light mt-5 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
                         Create Different Solutions</p>
                 </div>
-                <div class="w-full flex flex-wrap items-center justify-between mt-20">
-                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20">
-                        <img src="assets/image/React360.png" alt="React360" class="pr-5 w-28 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">React360</span>
+                <div class="w-full flex flex-wrap items-center justify-evenly">
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/React360.png" alt="React360" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">React360</span>
                     </div>
-                    <div class="tool_platforms flex items-center justify-center p-10 px-32 h-20">
-                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 w-20 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">Vuforia</span>
+                    <div data-aos="zoom-in-down" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Vuforia</span>
                     </div>
-                    <div class="tool_platforms flex items-center justify-center p-10 px-32 h-20">
-                        <img src="assets/image/unity.png" alt="unity" class="pr-5 w-28 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">Unity</span>
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unity.png" alt="unity.png" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unity</span>
                     </div>
-                    <div class="tool_platforms flex items-center justify-center p-10 px-20 h-20 mt-20 ">
-                        <img src="assets/image/unreal-engine.png" alt="unreal-engine" class="pr-5 w-28 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">Unreal&nbsp;Engine</span>
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unreal-engine.png" alt="unreal-engine.png" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unreal Engine</span>
                     </div>
-                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20 mt-20">
-                        <img src="assets/image/blender.png" alt="blender" class="pr-5 w-28 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">Blender</span>
+                    <div data-aos="zoom-in-up" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/blender.png" alt="blender.png" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Blender</span>
                     </div>
-                    <div class="tool_platforms flex items-center justify-center p-10 px-28 h-20 mt-20 ">
-                        <img src="assets/image/3ds max.png" alt="3ds max" class="pr-5 w-28 animate__animated animate__rubberBand">
-                        <span class="text-3xl text-zinc-300 font-light tracking-wide animate__animated animate__rubberBand">3ds&nbsp;Max</span>
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/3ds max.png" alt="3ds max.png" class="pr-5 lg:w-24 sm:w-16">
+                        <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">3ds Max</span>
                     </div>
                 </div>
             </div>
@@ -413,12 +437,13 @@
             <div class="faq">
                 <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                     <div class="container mx-auto py-16 px-6">
-                        <h1 class="text-7xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
-                        <div class="space-y-4">
-    
+                        <h1 class=" lg:text-6xl sm:text-4xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
+                        <div class="space-y-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+
                             <!-- FAQ Item 1 -->
                             <div>
-                                <div class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
                                     <h2 class="text-2xl tracking-wide text-zinc-400"><span
                                             class=" text-4xl text-yellow-500">1.</span> In Which Industries Is VR Most
                                         Useful?</h2>
@@ -430,32 +455,39 @@
                                 </div>
                                 <div class="faq-content py-8">
                                     <p class="text-xl  text-zinc-500">
-                                        Virtual Reality (VR) is an immersive technology that allows users to experience a
-                                        simulated environment through a headset or other similar<br> devices. VR has found
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar devices. VR has
+                                        found
                                         its application across many industries and is proving to be a game-changer. The
-                                        following are some of the industries where <br>VR is most useful:
+                                        following are some of the industries where VR is most useful:
                                     </p>
                                     <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
-                                            gaming industry, providing a completely immersive experience for gamers.</li>
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
                                             healthcare to simulate surgeries and train medical professionals. It is also
-                                            being used in therapy to<br> help patients overcome phobias and anxiety.</li>
+                                            being used in therapy to help patients overcome phobias and anxiety.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
                                             education to create immersive learning experiences that allow students to
-                                            explore and understand<br> complex concepts.</li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is being
+                                            explore and understand complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
                                             used in architecture and design to provide clients with a virtual tour of
-                                            buildings and spaces<br> before they are constructed.</li>
+                                            buildings and spaces before they are constructed.</li>
                                     </ul>
                                 </div>
                             </div>
-    
+
                             <!-- FAQ Item 2 -->
                             <div>
-                                <div class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
                                     <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">2.</span> How Is Virtual Reality Being Used In
+                                            class=" text-4xl text-yellow-500">2.</span> How Is Virtual Reality Being
+                                        Used In
                                         Finance?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
                                         <span style="font-size: 25px;">
@@ -465,30 +497,36 @@
                                 </div>
                                 <div class="faq-content hidden py-8">
                                     <p class="text-xl  text-zinc-500">
-                                        Virtual Reality (VR) is an immersive technology that allows users to experience a
-                                        simulated environment through a headset or other similar<br> devices. VR has found
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar devices. VR has
+                                        found
                                         its application across many industries and is proving to be a game-changer. The
-                                        following are some of the industries where <br>VR is most useful:
+                                        following are some of the industries where VR is most useful:
                                     </p>
                                     <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
-                                            gaming industry, providing a completely immersive experience for gamers.</li>
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
                                             healthcare to simulate surgeries and train medical professionals. It is also
-                                            being used in therapy to<br> help patients overcome phobias and anxiety.</li>
+                                            being used in therapy to help patients overcome phobias and anxiety.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
                                             education to create immersive learning experiences that allow students to
-                                            explore and understand<br> complex concepts.</li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is being
+                                            explore and understand complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
                                             used in architecture and design to provide clients with a virtual tour of
-                                            buildings and spaces<br> before they are constructed.</li>
+                                            buildings and spaces before they are constructed.</li>
                                     </ul>
                                 </div>
                             </div>
-    
+
                             <!-- FAQ Item 3 -->
                             <div>
-                                <div class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
+                                <div
+                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
                                     <h2 class="text-2xl tracking-wide text-zinc-400"><span
                                             class=" text-4xl text-yellow-500">3.</span> How Will Virtual Reality Help To
                                         Promote A Business?</h2>
@@ -500,31 +538,37 @@
                                 </div>
                                 <div class="faq-content hidden py-8">
                                     <p class="text-xl  text-zinc-500">
-                                        Virtual Reality (VR) is an immersive technology that allows users to experience a
-                                        simulated environment through a headset or other similar<br> devices. VR has found
+                                        Virtual Reality (VR) is an immersive technology that allows users to experience
+                                        a
+                                        simulated environment through a headset or other similar devices. VR has
+                                        found
                                         its application across many industries and is proving to be a game-changer. The
-                                        following are some of the industries where <br>VR is most useful:
+                                        following are some of the industries where VR is most useful:
                                     </p>
                                     <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
-                                            gaming industry, providing a completely immersive experience for gamers.</li>
+                                            gaming industry, providing a completely immersive experience for gamers.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
                                             healthcare to simulate surgeries and train medical professionals. It is also
-                                            being used in therapy to<br> help patients overcome phobias and anxiety.</li>
+                                            being used in therapy to help patients overcome phobias and anxiety.
+                                        </li>
                                         <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
                                             education to create immersive learning experiences that allow students to
-                                            explore and understand<br> complex concepts.</li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is being
+                                            explore and understand complex concepts.</li>
+                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
+                                            being
                                             used in architecture and design to provide clients with a virtual tour of
-                                            buildings and spaces<br> before they are constructed.</li>
+                                            buildings and spaces before they are constructed.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Load More Button -->
                         <div class="text-center mt-8">
-                            <button class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  mt-10 p-3 px-16 text-xl font-medium tracking-wider text-center uppercase">
+                            <button
+                                class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  mt-10 p-3 px-16 text-xl font-medium tracking-wider text-center uppercase">
                                 Load more
                             </button>
                         </div>
@@ -538,42 +582,42 @@
                     class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
-                            <h3 class="font-2 lg:text-6xl md:text-4xl">
+                            <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
                         <div class="flex justify-between items-start mt-20">
-                            <div class="flex flex-col items-center animate__animated animate__shakeX">
-                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-1.png"
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
                                         alt="company-1">
                                 </div>
                             </div>
-                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center animate__animated animate__shakeX">
-                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-2.png"
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
                                         alt="company-2">
                                 </div>
                             </div>
-                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center animate__animated animate__shakeX">
-                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24 object-center"
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24 object-center"
                                         src="assets/image/company-3.png" alt="company-3">
                                 </div>
                             </div>
-                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center animate__animated animate__shakeX">
-                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-4.png"
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
                                         alt="company-4">
                                 </div>
                             </div>
-                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center animate__animated animate__shakeX">
-                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
-                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-5.png"
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-5.png"
                                         alt="company-5">
                                 </div>
                             </div>
@@ -588,13 +632,13 @@
         <div class="footer overflow-hidden h-auto">
             <div
                 class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="lg:w-1/3 md:w-1/2">
-                    <div class="flex flex-col justify-center items-start animate__animated animate__zoomInLeft">
+                <div class="xl:w-1/3 sm:w-1/2">
+                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 md:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -602,41 +646,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInLeft">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
-                            <a href="" class=" flex flex-col items-center justify-center animate__animated animate__slideInRight">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                            <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInUp">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 lg:block twin-reality-img footer-img relativ md:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
             </div>
         </div>
     </footer>
     <script src="js/slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
     <script defer src="js/faq.js"></script>
 </body>
 

@@ -243,13 +243,6 @@ input:focus+label {
     top: -290px;
     left: 170px;
 }
-
-.tool_platforms {
-    background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,
-        linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);
-    border-radius: 0px;
-    box-sizing: content-box;
-}
 .faq-header{
     border-bottom: 2px solid #fafafa23;
 }
