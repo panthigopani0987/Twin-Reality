@@ -27,6 +27,8 @@
         rel="stylesheet">
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- animate.js  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -35,14 +37,14 @@
         <div class="navbar">
             <div class="flex justify-evenly items-center text-xl">
                 <!-- Logo -->
-                <div class="">
+                <div class="animate__animated animate__heartBeat">
                     <a href="home.html">
                         <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative">
+                <nav class="relative animate__animated animate__bounceInDown">
                     <ul class="flex space-x-16">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
@@ -70,23 +72,23 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 animate__animated animate__flip">
                     <div class="social-icon w-10 h-10">
-                        <a href="">
+                        <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
                     <div class="social-icon w-10 h-10" style="padding: 7px;">
-                        <a href="" class="">
+                        <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
                     <div class="social-icon w-10 h-10">
-                        <a href="" class="">
+                        <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </header>
@@ -96,7 +98,7 @@
         <div class="relative sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20">
+                    <h1 class="font-2 text-7xl leading-normal mt-20 animate__animated animate__slideInLeft">
                         <span class="font-2 text-7xl text-yellow-500">NEW IDEA FOR</span><br> YOUR APP?
                     </h1>
                 </div>
@@ -113,7 +115,7 @@
                     </p>
                 </div>
                 <div class="form w-full choose-bg p-16 mt-10">
-                    <form action="" method="get">
+                    <form action="" method="get" class="  animate__animated animate__zoomIn">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
@@ -169,7 +171,7 @@
                 </div>
                 <div class="w-full flex flex justify-start mt-20">
                     <div class="w-1/2 flex flex-col justify-center">
-                        <div class="mt-16">
+                        <div class="mt-16  animate__animated animate__flash">
                             <p class="font-2 text-6xl uppercase leading-relaxed">30 minute</p>
                             <span class="text-6xl font-2 text-yellow-500 uppercase"> meeting</span>
                             <p class="mt-4 text-4xl leading-loose tracking-wider text-zinc-50">
@@ -179,14 +181,14 @@
                                 Web conferencing details provided upon<br> confirmation.
                             </p>
                         </div>
-                        <div class="mt-14 mb-24">
+                        <div class="mt-14 mb-24  animate__animated animate__jackInTheBox">
                             <img src="assets/image/date-time.png" alt="date-time" style="width: 100%;">
                         </div>
                     </div>
                     <div class=" border border-zinc-50 border-solid opacity-10" style="height: auto;"></div>
                     <div class="w-1/2 flex flex-col mt-20">
                         <div class="choose-bg p-16" style="height: 600px;">
-                            <div class="flex justify-center  items-center mb-8">
+                            <div class="flex justify-center  items-center mb-8 animate__animated animate__zoomInDown">
                                 <button id="prev" class="text-3xl font-2">
                                     <img src="assets/image/down (1).png" alt="down" class="w-10 h-10">
                                 </button>
@@ -197,7 +199,7 @@
                             </div>
 
                             <!-- Days of the Week -->
-                            <div class="flex justify-center text-center mb-6">
+                            <div class="flex justify-center text-center mb-6 animate__animated animate__zoomInDown">
                                 <div class="font-2 px-8">Mo</div>
                                 <div class="font-2 px-8">Tu</div>
                                 <div class="font-2 px-8">We</div>
@@ -206,9 +208,9 @@
                                 <div class="font-2 px-8">Sa</div>
                                 <div class="font-2 px-8">Su</div>
                             </div>
-                            <div class="w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="w-full border border-zinc-50 border-solid opacity-10 animate__animated animate__zoomInDown"></div>
                             <!-- Dates -->
-                            <div id="dates" class="grid grid-cols-7 text-center gap-y-4 gap-px-1 mt-10"></div>
+                            <div id="dates" class="grid grid-cols-7 text-center gap-y-4 gap-px-1 mt-10 animate__animated animate__zoomInDown"></div>
                         </div>
                         <div class="time p-20 flex flex-col">
                             <div class="flex items-center">
@@ -239,7 +241,7 @@
         <div class="contact-us">
             <div class="container mx-auto px-4 flex flex-col  items-center py-4 text-xl">
                 <div class="w-full flex items-start justify-between mt-20">
-                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40">
+                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40 animate__animated animate__flipInX">
                         <span class="text-4xl text-zinc-300 tracking-wide">Contact Us</span>
                         <div class="flex items-center pt-8">
                             <img src="assets/image/phone-call.png" alt="phone-call" class="w-5 h-5">
@@ -250,14 +252,14 @@
                             <p class="pl-4 font-light text-zinc-300 tracking-wider">contact@twinreality.com</p>
                         </div>
                     </div>
-                    <div class="tool_platforms w-96 flex flex-col items-center justify-center p-10 h-40">
+                    <div class="tool_platforms w-96 flex flex-col items-center justify-center p-10 h-40 animate__animated animate__flipInX">
                         <span class="text-4xl text-zinc-300 tracking-wide">Visit Us</span>
                         <div class="flex flex-col items-center pt-8">
                             <p class=" font-light text-zinc-300 tracking-wide">Currently we are located in<br> Ahmedabad and Vadodara.</p>
                             <p class=" font-light text-zinc-300 tracking-wide pt-5">Office location coming soon</p>
                         </div>
                     </div>
-                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40">
+                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40 animate__animated animate__flipInX">
                         <span class="text-4xl text-zinc-300 tracking-wide">Our Hours</span>
                         <div class="flex items-center pt-8">
                             <img src="assets/image/time.png" alt="time.png" class="w-5 h-5">
@@ -283,7 +285,7 @@
                             <div class="our-project-vr flex flex-col justify-end h-72 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top" src="assets/image/testimonial-1.png"
+                                        <img class="animate__animated animate__flipInY object-cover object-top" src="assets/image/testimonial-1.png"
                                             alt="project-1" style="width: 320px;height: 320px;">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
@@ -308,7 +310,7 @@
                             <div class="our-project-vr flex flex-col justify-end h-72 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top" src="assets/image/testimonial-2.png"
+                                        <img class="animate__animated animate__flipInY object-cover object-top" src="assets/image/testimonial-2.png"
                                             alt="project-1" style="width: 320px;height: 320px;">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
@@ -337,48 +339,53 @@
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
-            <div class="container  2xl:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="2xl:w-1/3 md:w-1/2">
-                    <div class="flex flex-col justify-center items-start">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
+                <div class="lg:w-1/3 md:w-1/2">
+                    <div class="flex flex-col justify-center items-start animate__animated animate__zoomInLeft">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="2xl:w-40 md:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 md:w-32">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 2xl:text-2xl md:text-lg leading-relaxed tracking-wide">
-                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when an<br> unknown printer took a galley.
+                            <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="2xl:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
+                <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium 2xl:text-4xl md:text-3xl" >Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
                     </div>
-                    <div class="banner-border-2 pb-4"></div>   
+                    <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href=""  class="flex flex-col items-center justify-center">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Book a Meeting On<br> Calendly</span>
+                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInLeft">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                                    Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
-                            <a href="" class=" flex flex-col items-center justify-center">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Connect With Us<br> On WhatsApp</span>
+                            <a href="" class=" flex flex-col items-center justify-center animate__animated animate__slideInRight">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                                    WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href=""  class="flex flex-col items-center justify-center">
-                                <img src="assets/image/email.png" alt="email" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
+                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInUp">
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="2xl:w-1/3 2xl:block twin-reality-img footer-img relativ md:hidden"></div>
+                <div class="lg:w-1/3 lg:block twin-reality-img footer-img relativ md:hidden"></div>
             </div>
         </div>
     </footer>

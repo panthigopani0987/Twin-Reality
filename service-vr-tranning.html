@@ -27,7 +27,8 @@
         rel="stylesheet">
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <!-- animate.js  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />   
 </head>
 
 <body>
@@ -36,14 +37,14 @@
         <div class="navbar">
             <div class="flex justify-evenly items-center text-xl">
                 <!-- Logo -->
-                <div class="">
+                <div class="animate__animated animate__heartBeat">
                     <a href="home.html">
                         <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative">
+                <nav class="relative animate__animated animate__fadeInDown">
                     <ul class="flex space-x-16">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
@@ -71,19 +72,19 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 animate__animated animate__flip">
                     <div class="social-icon w-10 h-10">
-                        <a href="">
+                        <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
                     <div class="social-icon w-10 h-10" style="padding: 7px;">
-                        <a href="" class="">
+                        <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
                     <div class="social-icon w-10 h-10">
-                        <a href="" class="">
+                        <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
@@ -97,7 +98,7 @@
         <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20">
+                    <h1 class="font-2 text-7xl leading-normal mt-20  animate__animated animate__fadeInLeft">
                         <span class="font-2 text-7xl text-yellow-500">VR INDUSTRIAL</span><br> TRAINING
                     </h1>
                 </div>
@@ -113,7 +114,7 @@
                     </p>
                 </div>
                 <div class="form-1 w-full choose-bg p-16 mt-10" style="height: 450px;">
-                    <form action="" method="get">
+                    <form action="" method="get" class=" animate__animated animate__zoomIn">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
@@ -237,7 +238,7 @@
                     </div>
                     <div class="h-full border border-zinc-50 border-solid opacity-10"></div>
                     <div class="flex justify-between items-start">
-                        <div class="w-1/2 py-14 pb-16 bg-cover bg-top bg-no-repeat "
+                        <div class="w-1/2 py-14 pb-16 bg-cover bg-top bg-no-repeat animate__animated animate__fadeInLeft"
                             style="height: 400px; background-image: url('assets/image/tranning-img.png');"></div>
                         <div class=" border border-zinc-50 border-solid opacity-10" style="height: 400px;"></div>
                         <div class="w-1/2 py-14 pb-16 pl-14" style="height: 400px;">
@@ -295,7 +296,7 @@
         <div class="industrial-tranning overflow-hidden" style="background: radial-gradient(73.67% 110.5% at 123.89% 115.23%, #CFA7C8 0%, rgba(91, 85, 172, 0.442) 56.2%, rgba(91, 85, 172, 0.439) 58.9%, rgba(91, 85, 172, 0) 100%);
 ">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/6 twin-reality-img reality-img-2  relative"></div>
+                <div class="w-3/6 twin-reality-img reality-img-2  relative animate__animated animate__fadeInLeft"></div>
                 <div class=" w-3/6">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">INDUSTRIAL TRAININIG</h2>
                     <div class="banner-border-2 pb-4"></div>
@@ -319,10 +320,10 @@
                         In addition to cost savings, VR industrial training offers several other<br> benefits. It can be conducted at any time and place, making it more<br> convenient and flexible for trainees. VR training also allows for more<br> realistic simulations and scenarios, which can help trainees retain<br> information and learn more effectively. Finally, VR training can<br> improve safety by allowing trainees to practice procedures and tasks<br> without the risk of injury.
                     </p>
                 </div>
-                <div class="w-3/6 twin-reality-img tranning-img relative"></div>
+                <div class="w-3/6 twin-reality-img tranning-img relative animate__animated animate__fadeInRight"></div>
             </div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/6 twin-reality-img industry-img-2  relative"></div>
+                <div class="w-3/6 twin-reality-img industry-img-2  relative animate__animated animate__fadeInLeft"></div>
                 <div class=" w-3/6">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">TRAINING EXAMPLES</h2>
                     <div class="banner-border-2 pb-4"></div>
@@ -337,51 +338,50 @@
             <div class="my-28"></div>
         </div>
         <div class="gradiant-2 gradiant-4 relative overflow-hidden">
+            <div class="mt-28"></div>
             <!-- COMPANIES -->
-            <div class="company relative" style="height: 500px;">
-                <div class="mt-28"></div>
-                <img src="assets/image/company-bg.png" alt="company-bg"
-                    class="w-56 h-56 absolute top-14 left-0 opacity-30">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="company relative">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
-                            <h3 class="font-2 text-6xl">
-                                CLIENTS
+                            <h3 class="font-2 lg:text-6xl md:text-4xl">
+                                TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
                         <div class="flex justify-between items-start mt-20">
-                            <div class="flex flex-col items-center">
-                                <div class="w-60 h-60">
-                                    <img class="object-cover" src="assets/image/company-1.png" alt="company-1"
-                                        style="height: 236px;">
+                            <div class="flex flex-col items-center animate__animated animate__shakeX">
+                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-1.png"
+                                        alt="company-1">
                                 </div>
                             </div>
-                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-60 h-60">
-                                    <img class="object-cover" src="assets/image/company-2.png" alt="company-2"
-                                        style="height: 236px;">
+                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center animate__animated animate__shakeX">
+                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-2.png"
+                                        alt="company-2">
                                 </div>
                             </div>
-                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-60 h-60">
-                                    <img class="object-cover object-center" src="assets/image/company-3.png"
-                                        alt="company-3" style="height: 236px;">
+                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center animate__animated animate__shakeX">
+                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
+                                    <img class="object-cover lg:h-60 md:h-24 object-center"
+                                        src="assets/image/company-3.png" alt="company-3">
                                 </div>
                             </div>
-                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-60 h-60">
-                                    <img class="object-cover" src="assets/image/company-4.png" alt="company-4"
-                                        style="height: 236px;">
+                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center animate__animated animate__shakeX">
+                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-4.png"
+                                        alt="company-4">
                                 </div>
                             </div>
-                            <div class="h-60 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-60 h-60">
-                                    <img class="object-cover" src="assets/image/company-5.png" alt="company-5"
-                                        style="height: 236px;">
+                            <div class="lg:h-60 md:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center animate__animated animate__shakeX">
+                                <div class="lg:w-60 lg:h-60 md:w-28 md:h-28">
+                                    <img class="object-cover lg:h-60 md:h-24" src="assets/image/company-5.png"
+                                        alt="company-5">
                                 </div>
                             </div>
                         </div>
@@ -393,48 +393,53 @@
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
-            <div class="container  2xl:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="2xl:w-1/3 md:w-1/2">
-                    <div class="flex flex-col justify-center items-start">
+            <div
+                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
+                <div class="lg:w-1/3 md:w-1/2">
+                    <div class="flex flex-col justify-center items-start animate__animated animate__zoomInLeft">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="2xl:w-40 md:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 md:w-32">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 2xl:text-2xl md:text-lg leading-relaxed tracking-wide">
-                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when an<br> unknown printer took a galley.
+                            <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="2xl:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
+                <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium 2xl:text-4xl md:text-3xl" >Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
                     </div>
-                    <div class="banner-border-2 pb-4"></div>   
+                    <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href=""  class="flex flex-col items-center justify-center">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Book a Meeting On<br> Calendly</span>
+                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInLeft">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                                    Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
-                            <a href="" class=" flex flex-col items-center justify-center">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Connect With Us<br> On WhatsApp</span>
+                            <a href="" class=" flex flex-col items-center justify-center animate__animated animate__slideInRight">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                                    WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href=""  class="flex flex-col items-center justify-center">
-                                <img src="assets/image/email.png" alt="email" class="2xl:h-20 md:h-14">
-                                <span class="2xl:pt-5 2xl:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
+                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInUp">
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
+                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="2xl:w-1/3 2xl:block twin-reality-img footer-img relativ md:hidden"></div>
+                <div class="lg:w-1/3 lg:block twin-reality-img footer-img relativ md:hidden"></div>
             </div>
         </div>
     </footer>
