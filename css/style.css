@@ -145,7 +145,7 @@ body {
 
 .reality-img-2::after,.industry-img-2::after {
     background-image: url('../assets/image/vr-2.jpg');
-    left: -200px;
+    left: -250px;
 }
 
 .reality-img-3::after {
@@ -159,11 +159,12 @@ body {
     background-position: center;
 }
 .industry-img-2::after{
-    width: 900px;
+    width: 850px;
     height: 500px;
     background-image: url('../assets/image/industry-img-2.png');
     background-position: center top;
     top: -240px;
+    left: -250px;
 }
 
 .our-project img {
