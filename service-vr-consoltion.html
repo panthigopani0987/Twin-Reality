@@ -35,17 +35,17 @@
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center text-xl">
+            <div class="flex justify-evenly items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="animate__animated animate__heartBeat">
+                <div class="">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative animate__animated animate__bounceInDown">
-                    <ul class="flex space-x-16">
+                <nav class="relative">
+                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
@@ -55,7 +55,7 @@
                             </a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
                                 <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
                                     Training</a>
                                 <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
@@ -72,34 +72,34 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4 animate__animated animate__flip">
-                    <div class="social-icon w-10 h-10">
+                <div class="flex space-x-4">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner relative bg-center bg-top bg-cover bg-no-repeat p-40">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+            <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 text-7xl text-yellow-500 block">VR </span>CONSULATION
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
+                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">VR </span>CONSULATION
                     </h1>
                 </div>
             </div>
@@ -210,27 +210,27 @@
                     </div>
                     <div class="flex mt-28">
                         <div class="w-1/2 mr-5">
-                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top" src="assets/image/testimonial-1.png" data-aos="flip-left"
-                                            alt="project-1" style="width: 320px;height: 320px;">
+                                        <img class="object-cover object-top xl:h-72 xl:w-72 lg:w-52 lg:h-64" src="assets/image/testimonial-1.png" data-aos="flip-left"
+                                            alt="project-1">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
-                                        <p class="text-xl leading-relaxed tracking-wide pb-7">
+                                        <p class="xl:text-xl md:text-base leading-relaxed tracking-wide pb-7">
                                             It's fantastic that we attend the consultation session. Now I have more
                                             clear view of my XR app
                                         </p>
                                         <div class="flex justify-between">
                                             <div>
-                                                <img src="assets/image/star.png" alt="star" class="pb-3">
-                                                <span class="font-2 text-lg">
-                                                    Mark -<span class="text-zinc-300 font-2 text-lg"> Founder Travel
+                                                <img src="assets/image/star.png" alt="star" class="pb-3 xl:w-auto md:w-20">
+                                                <span class="font-2 xl:text-lg md:text-sm">
+                                                    Mark -<span class="text-zinc-300 font-2 xl:text-lg md:text-sm"> Founder Travel
                                                         VR</span>
                                                 </span>
                                             </div>
                                             <div>
-                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 md:h-5">
                                             </div>
                                         </div>
                                     </div>
@@ -238,27 +238,27 @@
                             </div>
                         </div>
                         <div class="w-1/2 ml-5">
-                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top" src="assets/image/testimonial-2.png" data-aos="flip-right"
-                                            alt="project-1" style="width: 320px;height: 320px;">
+                                        <img class="object-cover object-top xl:w-72 xl:h-72 lg:w-52 lg:h-64" src="assets/image/testimonial-2.png" data-aos="flip-right"
+                                            alt="project-1">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
-                                        <p class="text-lg leading-relaxed tracking-wide pb-7">
+                                        <p class="xl:text-lg md:text-base leading-relaxed tracking-wide pb-7">
                                             We are developing Medical VR app and has some doubts related to implication.
                                             The meeting was fruitful.
                                         </p>
                                         <div class="flex justify-between">
                                             <div>
-                                                <img src="assets/image/star.png" alt="star" class="pb-3">
-                                                <span class="font-2 text-lg">
-                                                    Alexis -<span class="text-zinc-300 font-2 text-lg"> CEO Medical
+                                                <img src="assets/image/star.png" alt="star" class="pb-3 xl:w-auto md:w-20">
+                                                <span class="font-2 xl:text-lg md:text-sm">
+                                                    Alexis -<span class="text-zinc-300 font-2 xl:text-lg md:text-sm"> CEO Medical
                                                         Training</span>
                                                 </span>
                                             </div>
                                             <div>
-                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 md:h-5">
                                             </div>
                                         </div>
                                     </div>
@@ -441,11 +441,6 @@
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        new WOW().init();
-    </script>
-
     <script>
         AOS.init({
             duration: 1200,  // Controls animation duration

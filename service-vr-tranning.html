@@ -28,24 +28,24 @@
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center text-xl">
+            <div class="flex justify-evenly items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="animate__animated animate__heartBeat">
+                <div class="">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative animate__animated animate__fadeInDown">
-                    <ul class="flex space-x-16">
+                <nav class="relative">
+                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
@@ -55,7 +55,7 @@
                             </a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
                                 <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
                                     Training</a>
                                 <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
@@ -72,18 +72,18 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4 animate__animated animate__flip">
-                    <div class="social-icon w-10 h-10">
+                <div class="flex space-x-4">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
@@ -95,11 +95,11 @@
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+            <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20"  data-aos="fade-right">
-                        <span class="font-2 text-7xl text-yellow-500">VR INDUSTRIAL</span> TRAINING
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
+                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">VR INDUSTRIAL</span> TRAINING
                     </h1>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                         Custom Virtual Reality App Development for Industrial Training
                     </p>
                 </div>
-                <div class="form-1 w-full choose-bg p-16 mt-10" style="height: 450px;"  data-aos="flip-up">
+                <div class="form-1 w-full choose-bg p-16 mt-10" style="height: 450px;" data-aos="flip-up">
                     <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -167,20 +167,32 @@
                         <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">
                             <!-- Slide 1 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
-                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/vxdR8QUS8Lc?si=-bqLCYZwd11QXkJf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe width="1000" height="500"
+                                    src="https://www.youtube.com/embed/vxdR8QUS8Lc?si=-bqLCYZwd11QXkJf"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
 
                             <!-- Slide 2 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/ITHaJGshnWA?si=VH7vkFwur-bqNHZ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="1000" height="500"
+                                        src="https://www.youtube.com/embed/ITHaJGshnWA?si=VH7vkFwur-bqNHZ3"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
 
                             <!-- Slide 3 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 b rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/R9_imC5XwVo?si=R6Ce_ZrTHTypZtcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="1000" height="500"
+                                        src="https://www.youtube.com/embed/R9_imC5XwVo?si=R6Ce_ZrTHTypZtcs"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +202,7 @@
                             <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
                         </a>
                         <a type="button" id="next" class="cursor-pointer">
-                            <img  src="assets/image/Arrow 1.png" alt="Arrow 1">
+                            <img src="assets/image/Arrow 1.png" alt="Arrow 1">
                         </a>
                     </div>
                 </div>
@@ -207,28 +219,29 @@
                             The Power Of VR Training
                         </h3>
                     </div>
-                    <div class="flex justify-between items-start mt-20">
-                        <div class="w-1/2 h-80 py-8 pb-10" data-aos="fade-down-right">
+                    <div class="flex lg:flex-row sm:flex-col justify-between items-start mt-20">
+                        <div class="lg:w-1/2 sm:w-full lg:h-80 py-8 lg:pb-10" data-aos="fade-down-right">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">01.</span>
                                 <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
-                                    VR provides an immersive and interactive training environment,   allowing trainees
+                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
+                                    VR provides an immersive and interactive training environment, allowing trainees
                                     to engage with realistic simulations. This hands-on experience enhances learning
                                     retention and understanding compared to traditional training methods.
                                 </p>
                             </div>
                         </div>
-                        <div class="h-80 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-1/2 h-80 py-8 pb-10 pl-14" data-aos="fade-down-left">
+                        <div class="w-full border border-zinc-50 border-solid opacity-10  sm:block lg:hidden"></div>
+                        <div class="h-80 border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"></div>
+                        <div class="lg:w-1/2 sm:w-full lg:h-80 py-8 lg:pb-10 lg:pl-14" data-aos="fade-down-left">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">02.</span>
                                 <p class="font-2 text-2xl pl-5">Safe And Controlled Environment</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR training enables trainees to practice tasks and procedures in a safe and
                                     controlled virtual environment. It reduces the risks associated with real-world
                                     training, especially in high-risk industries or hazardous scenarios.
@@ -236,18 +249,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full border border-zinc-50 border-solid opacity-10"></div>
-                    <div class="flex justify-between items-start">
-                        <div class="w-1/2 py-14 pb-16 bg-cover bg-top bg-no-repeat"
+                    <div class="h-full border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"></div>
+                    <div class="flex lg:flex-row sm:flex-col justify-between items-start">
+                        <!-- img -->
+                        <div class="lg:w-1/2 sm:w-full py-14 pb-16 bg-cover bg-top bg-no-repeat"
                             style="height: 400px; background-image: url('assets/image/tranning-img.png');"></div>
-                        <div class=" border border-zinc-50 border-solid opacity-10" style="height: 400px;"></div>
-                        <div class="w-1/2 py-14 pb-16 pl-14" style="height: 400px;" data-aos="fade-left">
+                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"
+                            style="height: 400px;"></div>
+                        <!-- 03 -->
+                        <div class="lg:w-1/2 sm:w-full py-14 lg:pb-10 lg:pl-14" style="height: 400px;"
+                            data-aos="fade-left">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">03.</span>
                                 <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR training eliminates the need for expensive physical equipment setups, travel
                                     expenses, and material consumption for training purposes. It also reduces the
                                     time required for training sessions, as trainees can access virtual simulations
@@ -256,15 +273,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full border border-zinc-50 border-solid opacity-10"></div>
-                    <div class="flex justify-between items-start" data-aos="fade-up-right">
-                        <div class="w-1/2 py-14 pb-16" style="height: 380px;">
+                    <div class="h-full border border-zinc-50 border-solid opacity-10 lg:block sm:hidden"></div>
+                    <div class="flex justify-between items-start">
+                        <div class="w-1/2 py-14 pb-16  lg:block sm:hidden" style="height: 380px;"
+                            data-aos="fade-up-right">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">05.</span>
                                 <p class="font-2 text-2xl pl-5">Realistic Skill Application :</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR simulations closely replicate real-world scenarios, enabling trainees to
                                     practice applying skills and making decisions in a realistic context. This
                                     prepares them for on-the-job challenges and enhances their ability to perform
@@ -272,14 +290,16 @@
                                 </p>
                             </div>
                         </div>
-                        <div class=" border border-zinc-50 border-solid opacity-10" style="height: 380px;"></div>
-                        <div class="w-1/2 py-14 pb-16 pl-14" style="height: 380px;" data-aos="fade-up-left">
+                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"
+                            style="height: 380px;"></div>
+                        <div class="w-1/2 py-14 pb-16 pl-14  lg:block sm:hidden" style="height: 380px;"
+                            data-aos="fade-up-left">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">04.</span>
                                 <p class="font-2 text-2xl pl-5">Repeatable And Scalable Training</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR simulations can be easily replicated and scaled for training purposes.
                                     Trainees can repeat exercises multiple times to reinforce learning, and
                                     organizations can train a large number of employees simultaneously, ensuring
@@ -291,15 +311,21 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="lg:my-28"></div>
         <!-- INDUSTRIAL TRAININIG -->
-        <div class="industrial-tranning overflow-hidden" style="background: radial-gradient(73.67% 110.5% at 123.89% 115.23%, #CFA7C8 0%, rgba(91, 85, 172, 0.442) 56.2%, rgba(91, 85, 172, 0.439) 58.9%, rgba(91, 85, 172, 0) 100%);
-">
+        <div class="industrial-tranning overflow-hidden"
+            style="background: radial-gradient(73.67% 110.5% at 123.89% 115.23%, #CFA7C8 0%, rgba(91, 85, 172, 0.442) 56.2%, rgba(91, 85, 172, 0.439) 58.9%, rgba(91, 85, 172, 0) 100%);">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/6 twin-reality-img reality-img-2  relative" data-aos="fade-right"></div>
-                <div class=" w-3/6">
-                    <h2 class="font-2 text-6xl uppercase leading-relaxed">INDUSTRIAL TRAININIG</h2>
+                <div class="w-3/5 relative xl:block md:hidden" data-aos="fade-left">
+                    <img src="assets/image/vr-2.jpg" alt="vr-2"
+                        class="absolute w-full -left-52 -top-52 h-auto object-center"
+                        style="image-rendering: pixelated;">
+                </div>
+                <div class="xl:w-2/5 flex flex-col justify-center">
+                    <h2 class="font-2 text-5xl uppercase leading-relaxed">INDUSTRIAL TRAININIG</h2>
                     <div class="banner-border-2 pb-4"></div>
+                    <img src="assets/image/vr-2.jpg" alt="vr-2" class="w-full h-96 object-cover mt-5 xl:hidden sm:block"
+                        style="image-rendering: pixelated;" data-aos="fade-left">
                     <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
                         Virtual reality (VR) industrial training is a cutting-edge technology that allows companies
                         and organizations to train their employees in a highly realistic, immersive environment.
@@ -310,29 +336,61 @@
             </div>
             <div class="my-28"></div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl  mb-20">
-                <div class=" w-3/6">
+                <div class="xl:w-2/5 h-auto">
                     <h2 class="font-2 text-6xl uppercase leading-relaxed">BENEFITS</h2>
                     <div class="banner-border-2 pb-4"></div>
                     <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        One of the key benefits of VR industrial training is cost savings. Traditional training methods often require expensive equipment, facilities, and travel expenses. VR training, on the other hand, can be conducted in a single location using a VR headset and computer. This can help to significantly reduce the costs associated with training.
+                        One of the key benefits of VR industrial training is cost savings. Traditional training methods
+                        often require expensive equipment, facilities, and travel expenses. VR training, on the other
+                        hand, can be conducted in a single location using a VR headset and computer. This can help to
+                        significantly reduce the costs associated with training.
                     </p>
+                    <img src="assets/image/indutry-img.jpg" alt="indutry-img.jpg"
+                        class="w-full h-96 object-cover object-top mt-5 xl:hidden sm:block"
+                        style="image-rendering: pixelated;" data-aos="fade-right">
                     <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        In addition to cost savings, VR industrial training offers several other benefits. It can be conducted at any time and place, making it more convenient and flexible for trainees. VR training also allows for more realistic simulations and scenarios, which can help trainees retain information and learn more effectively. Finally, VR training can improve safety by allowing trainees to practice procedures and tasks without the risk of injury.
+                        In addition to cost savings, VR industrial training offers several other benefits. It can be
+                        conducted at any time and place, making it more convenient and flexible for trainees. VR
+                        training also allows for more realistic simulations and scenarios, which can help trainees
+                        retain information and learn more effectively. Finally, VR training can improve safety by
+                        allowing trainees to practice procedures and tasks without the risk of injury.
                     </p>
                 </div>
-                <div class="w-3/6 twin-reality-img tranning-img relative"  data-aos="fade-left"></div>
+                <div class="w-3/5 relative xl:block sm:hidden" data-aos="fade-left">
+                    <img src="assets/image/indutry-img.jpg" alt="indutry-img.jpg"
+                        class="absolute w-full -right-52 -top-72 h-auto object-cover"
+                        style="height: 600px; image-rendering: pixelated;">
+                </div>
             </div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/6 twin-reality-img industry-img-2  relative" data-aos="fade-right"></div>
-                <div class=" w-3/6">
-                    <h2 class="font-2 text-6xl uppercase leading-relaxed">TRAINING EXAMPLES</h2>
-                    <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        By using VR, trainees can learn these skills in a safe, controlled environment before applying them in the real world.
-                    </p>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        Many companies and organizations have already seen the benefits of VR industrial training. For example, a manufacturing company used VR training to teach its employees how to operate new equipment, resulting in faster and more accurate training, as well as improved efficiency on the production line. Another company used VR training to teach its employees how to safely handle hazardous materials, improving both the safety and productivity of its workers.
-                    </p>
+                <div class="w-full h-3/5 flex">
+                    <div class="w-3/5 relative  xl:block sm:hidden" data-aos="fade-right">
+                        <img src="assets/image/industry-img-2.png" alt="industry-img-2.png"
+                            class="absolute w-full -left-52 -top-0  object-cover object-top"
+                            style="image-rendering: pixelated;height: 500px;">
+                    </div>
+                    <div class="xl:w-2/5">
+                        <h2 class="font-2 text-5xl uppercase leading-relaxed">TRAINING EXAMPLES</h2>
+                        <div class="banner-border-2 pb-4"></div>
+                        <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                            By using VR, trainees can learn these skills in a safe, controlled environment before
+                            applying
+                            them in the real world.
+                        </p>
+                        <img src="assets/image/industry-img-2.png" alt="industry-img-2.png"
+                            class="w-full h-96 object-cover object-top mt-5 xl:hidden sm:block"
+                            style="image-rendering: pixelated;" data-aos="fade-left">
+                        <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                            Many companies and organizations have already seen the benefits of VR industrial training.
+                            For
+                            example, a manufacturing company used VR training to teach its employees how to operate new
+                            equipment, resulting in faster and more accurate training, as well as improved efficiency on
+                            the
+                            production line. Another company used VR training to teach its employees how to safely
+                            handle
+                            hazardous materials, improving both the safety and productivity of its workers.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="my-28"></div>
@@ -446,11 +504,6 @@
     <!-- JavaScript for Automatic Slider -->
     <script src="js/slider.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        new WOW().init();
-    </script>
-
     <script>
         AOS.init({
             duration: 1200,  // Controls animation duration

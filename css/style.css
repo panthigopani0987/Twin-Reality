@@ -143,7 +143,7 @@ body {
     left: 100px;
 }
 
-.reality-img-2::after,.industry-img-2::after {
+.reality-img-2::after {
     background-image: url('../assets/image/vr-2.jpg');
     left: -250px;
 }
@@ -153,18 +153,10 @@ body {
     background-size: cover;
 
 }
-.tranning-img::after,.industry-img-2::after{
+.tranning-img::after{
     background-image: url('../assets/image/indutry-img.jpg');
     background-size: cover;
     background-position: center;
-}
-.industry-img-2::after{
-    width: 850px;
-    height: 500px;
-    background-image: url('../assets/image/industry-img-2.png');
-    background-position: center top;
-    top: -240px;
-    left: -250px;
 }
 
 .our-project img {
