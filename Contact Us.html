@@ -28,34 +28,34 @@
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
     <!-- header -->
-    <header class="">
+    <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center text-xl">
+            <div class="flex justify-evenly items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="animate__animated animate__heartBeat">
+                <div class="">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative animate__animated animate__bounceInDown">
-                    <ul class="flex space-x-16">
+                <nav class="relative">
+                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn hover:text-yellow-500">
+                            <a href="service-vr.html" class="flex items-center dropbtn hover:text-yellow-500">
                                 Services
                                 <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
                             </a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
                                 <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
                                     Training</a>
                                 <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
@@ -72,34 +72,35 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4 animate__animated animate__flip">
-                    <div class="social-icon w-10 h-10">
+                <div class="flex space-x-4">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="relative sub-banner bg-center bg-top bg-cover bg-no-repeat p-40">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20 animate__animated animate__slideInLeft">
-                        <span class="font-2 text-7xl text-yellow-500">NEW IDEA FOR</span><br> YOUR APP?
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+            <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
+                <div class="w-full flex items-center ">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
+                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">NEW IDEA FOR</span><br> YOUR
+                        APP?
                     </h1>
                 </div>
             </div>
@@ -114,8 +115,8 @@
                         Send us a message and we’ll get back to you within 2 business days!
                     </p>
                 </div>
-                <div class="form w-full choose-bg p-16 mt-10">
-                    <form action="" method="get" class="  animate__animated animate__zoomIn">
+                <div class="form w-full choose-bg p-16 mt-10" data-aos="flip-up">
+                    <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
@@ -171,7 +172,7 @@
                 </div>
                 <div class="w-full flex flex justify-start mt-20">
                     <div class="w-1/2 flex flex-col justify-center">
-                        <div class="mt-16  animate__animated animate__flash">
+                        <div class="mt-16" data-aos="fade-right">
                             <p class="font-2 text-6xl uppercase leading-relaxed">30 minute</p>
                             <span class="text-6xl font-2 text-yellow-500 uppercase"> meeting</span>
                             <p class="mt-4 text-4xl leading-loose tracking-wider text-zinc-50">
@@ -181,14 +182,15 @@
                                 Web conferencing details provided upon<br> confirmation.
                             </p>
                         </div>
-                        <div class="mt-14 mb-24  animate__animated animate__jackInTheBox">
-                            <img src="assets/image/date-time.png" alt="date-time" style="width: 100%;">
+                        <div class="mt-14 mb-24">
+                            <img src="assets/image/date-time.png" alt="date-time" style="width: 100%;"
+                                data-aos="flip-down">
                         </div>
                     </div>
                     <div class=" border border-zinc-50 border-solid opacity-10" style="height: auto;"></div>
-                    <div class="w-1/2 flex flex-col mt-20">
+                    <div class="w-1/2 flex flex-col mt-20" data-aos="flip-up">
                         <div class="choose-bg p-16" style="height: 600px;">
-                            <div class="flex justify-center  items-center mb-8 animate__animated animate__zoomInDown">
+                            <div class="flex justify-center  items-center mb-8">
                                 <button id="prev" class="text-3xl font-2">
                                     <img src="assets/image/down (1).png" alt="down" class="w-10 h-10">
                                 </button>
@@ -199,20 +201,20 @@
                             </div>
 
                             <!-- Days of the Week -->
-                            <div class="flex justify-center text-center mb-6 animate__animated animate__zoomInDown">
-                                <div class="font-2 px-8">Mo</div>
-                                <div class="font-2 px-8">Tu</div>
-                                <div class="font-2 px-8">We</div>
-                                <div class="font-2 px-8">Th</div>
-                                <div class="font-2 px-8">Fr</div>
-                                <div class="font-2 px-8">Sa</div>
-                                <div class="font-2 px-8">Su</div>
+                            <div class="flex justify-center text-center mb-6">
+                                <div class="font-2 xl:px-8 sm:px-4">Mo</div>
+                                <div class="font-2 xl:px-8 sm:px-4">Tu</div>
+                                <div class="font-2 xl:px-8 sm:px-4">We</div>
+                                <div class="font-2 xl:px-8 sm:px-4">Th</div>
+                                <div class="font-2 xl:px-8 sm:px-4">Fr</div>
+                                <div class="font-2 xl:px-8 sm:px-4">Sa</div>
+                                <div class="font-2 xl:px-8 sm:px-4">Su</div>
                             </div>
-                            <div class="w-full border border-zinc-50 border-solid opacity-10 animate__animated animate__zoomInDown"></div>
+                            <div class="w-full border border-zinc-50 border-solid opacity-10"></div>
                             <!-- Dates -->
-                            <div id="dates" class="grid grid-cols-7 text-center gap-y-4 gap-px-1 mt-10 animate__animated animate__zoomInDown"></div>
+                            <div id="dates" class="grid grid-cols-7 text-center gap-y-4 gap-px-1 mt-10"></div>
                         </div>
-                        <div class="time p-20 flex flex-col">
+                        <div class="time p-20 flex flex-col" data-aos="fade-left">
                             <div class="flex items-center">
                                 <img src="assets/image/time.png" alt="time" class="w-10 h-10">
                                 <p class="pl-5 text-2xl text-zinc-300">Time Zone</p>
@@ -240,8 +242,11 @@
         <!-- Contact -->
         <div class="contact-us">
             <div class="container mx-auto px-4 flex flex-col  items-center py-4 text-xl">
-                <div class="w-full flex items-start justify-between mt-20">
-                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40 animate__animated animate__flipInX">
+                <div class="w-full flex flex-wrap items-center justify-evenly">
+                    <!-- contact -->
+                    <div data-aos="zoom-in-right"
+                        class="flex  flex-col items-center justify-center lg:h-64 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
                         <span class="text-4xl text-zinc-300 tracking-wide">Contact Us</span>
                         <div class="flex items-center pt-8">
                             <img src="assets/image/phone-call.png" alt="phone-call" class="w-5 h-5">
@@ -252,14 +257,20 @@
                             <p class="pl-4 font-light text-zinc-300 tracking-wider">contact@twinreality.com</p>
                         </div>
                     </div>
-                    <div class="tool_platforms w-96 flex flex-col items-center justify-center p-10 h-40 animate__animated animate__flipInX">
+                    <!-- location -->
+                    <div data-aos="zoom-in-right"
+                        class="flex  flex-col items-center justify-center lg:h-64 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
                         <span class="text-4xl text-zinc-300 tracking-wide">Visit Us</span>
                         <div class="flex flex-col items-center pt-8">
                             <p class=" font-light text-zinc-300 tracking-wide">Currently we are located in<br> Ahmedabad and Vadodara.</p>
                             <p class=" font-light text-zinc-300 tracking-wide pt-5">Office location coming soon</p>
                         </div>
                     </div>
-                    <div class="tool_platforms w-52 flex flex-col items-center justify-center p-10 px-32 h-40 animate__animated animate__flipInX">
+                    <!-- time -->
+                    <div data-aos="zoom-in-right"
+                        class="flex  flex-col items-center justify-center lg:h-64 sm:h-32 mt-16"
+                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
                         <span class="text-4xl text-zinc-300 tracking-wide">Our Hours</span>
                         <div class="flex items-center pt-8">
                             <img src="assets/image/time.png" alt="time.png" class="w-5 h-5">
@@ -282,14 +293,14 @@
                     </div>
                     <div class="flex mt-28">
                         <div class="w-1/2 mr-5">
-                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="animate__animated animate__flipInY object-cover object-top" src="assets/image/testimonial-1.png"
-                                            alt="project-1" style="width: 320px;height: 320px;">
+                                        <img class="object-cover object-top xl:h-72 xl:w-72 lg:w-52 lg:h-64" src="assets/image/testimonial-1.png" data-aos="flip-left"
+                                            alt="project-1">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
-                                        <p class="text-xl leading-relaxed tracking-wide pb-7">
+                                        <p class="xl:text-xl sm:text-base leading-relaxed tracking-wide pb-7">
                                             "“Happy with my Virtual Art Gallery design. The whole team performed a fantastic job, from conceptualising my design to putting it into action. ”
                                         </p>
                                         <div class="flex justify-between">
@@ -299,7 +310,7 @@
                                                 </span>
                                             </div>
                                             <div>
-                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 md:h-5">
                                             </div>
                                         </div>
                                     </div>
@@ -307,14 +318,14 @@
                             </div>
                         </div>
                         <div class="w-1/2 ml-5">
-                            <div class="our-project-vr flex flex-col justify-end h-72 p-8">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="animate__animated animate__flipInY object-cover object-top" src="assets/image/testimonial-2.png"
-                                            alt="project-1" style="width: 320px;height: 320px;">
+                                        <img class="object-cover object-top xl:w-72 xl:h-72 lg:w-52 lg:h-64" src="assets/image/testimonial-2.png" data-aos="flip-right"
+                                            alt="project-1">
                                     </div>
                                     <div style="width: 80%;" class="pl-8">
-                                        <p class="text-lg leading-relaxed tracking-wide pb-7">
+                                        <p class="xl:text-lg sm:text-base leading-relaxed tracking-wide pb-7">
                                             “The virtual show my team and I created for a client was a huge success, and they really enjoyed the 3D elements. I want to participate in this again next year....
                                         </p>
                                         <div class="flex justify-between">
@@ -324,7 +335,7 @@
                                                 </span>
                                             </div>
                                             <div>
-                                                <img src="assets/image/“.png" alt="“" class="ml-auto w-10 h-10">
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 md:h-5">
                                             </div>
                                         </div>
                                     </div>
@@ -341,13 +352,13 @@
         <div class="footer overflow-hidden h-auto">
             <div
                 class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="lg:w-1/3 md:w-1/2">
-                    <div class="flex flex-col justify-center items-start animate__animated animate__zoomInLeft">
+                <div class="xl:w-1/3 sm:w-1/2">
+                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 md:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -355,41 +366,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInLeft">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
-                            <a href="" class=" flex flex-col items-center justify-center animate__animated animate__slideInRight">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                            <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInUp">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 lg:block twin-reality-img footer-img relativ md:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
             </div>
         </div>
     </footer>
     <script src="js/calender.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
 </body>
 
 </html>

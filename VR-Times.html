@@ -28,24 +28,24 @@
     <!-- font-awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center text-xl">
+            <div class="flex justify-evenly items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="animate__animated animate__heartBeat">
+                <div class="">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" style="width: 140px;">
+                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <nav class="relative animate__animated animate__bounceInDown">
-                    <ul class="flex space-x-16">
+                <nav class="relative">
+                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
                         <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
@@ -55,7 +55,7 @@
                             </a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 hover:text-yellow-500">Virtual Reality</a>
+                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
                                 <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
                                     Training</a>
                                 <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
@@ -72,34 +72,34 @@
 
 
                 <!-- Social Icons -->
-                <div class="flex space-x-4 animate__animated animate__flip">
-                    <div class="social-icon w-10 h-10">
+                <div class="flex space-x-4">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon w-10 h-10">
+                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner relative bg-center bg-top bg-cover bg-no-repeat p-40">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+            <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 text-7xl leading-normal mt-20 animate__animated animate__fadeInLeft">
-                        <span class="font-2 text-7xl text-yellow-500">AR/VR </span><br>TIMES
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
+                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">AR/VR </span><br>TIMES
                     </h1>
                 </div>
             </div>
@@ -110,7 +110,7 @@
             <div class="arVrCard">
                 <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                     <div class="w-full flex flex-wrap justify-evenly">
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-1.png" alt="times-1" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-3.png" alt="times-3" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-4.png" alt="times-1" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -171,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-5.png" alt="times-5" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -191,7 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-6.png" alt="times-6" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -211,7 +211,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-7.png" alt="times-7" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-8.png" alt="times-8" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -251,7 +251,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-9.png" alt="times-9" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -271,7 +271,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-14 choose-bg animate__animated animate__zoomIn" style="width: 450px; height: 600px;">
+                        <div class="mt-14 choose-bg"  data-aos="zoom-in" style="width: 450px; height: 600px;">
                             <div class="relative">
                                 <img src="assets/image/times-10.png" alt="times-10" class="h-72 object-cover object-center">
                                 <div class="absolute bg-yellow-500 inline-block p-2 px-10 -bottom-5 right-5">
@@ -297,46 +297,47 @@
             <div class="my-28"></div>
             <!-- COMPANIES -->
             <div class="company">
-                <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+                <div
+                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
-                            <h3 class="font-2 text-6xl">
+                            <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
                         <div class="flex justify-between items-start mt-20">
-                            <div class="flex flex-wrap items-center justify-center">
-                                <div class="w-60 h-60 md:w-48 md:h-48">
-                                    <img class="animate__animated animate__rubberBand object-cover h-56 md:h-44" src="assets/image/company-1.png" alt="company-1"
-                                        >
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                        alt="company-1">
                                 </div>
                             </div>
-                            <div class="h-60 md:h-48 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex items-center justify-center">
-                                <div class="w-60 h-60 md:w-48 md:h-48">
-                                    <img class="animate__animated animate__rubberBand object-cover h-56 md:h-44" src="assets/image/company-2.png" alt="company-2"
-                                        >
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                        alt="company-2">
                                 </div>
                             </div>
-                            <div class="h-60 md:h-48 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex items-center justify-center">
-                                <div class="w-60 h-60 md:w-48 md:h-48">
-                                    <img class="animate__animated animate__rubberBand object-cover h-56 md:h-44 object-center" src="assets/image/company-3.png"
-                                        alt="company-3" >
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                        src="assets/image/company-3.png" alt="company-3">
                                 </div>
                             </div>
-                            <div class="h-60 md:h-48 border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex items-center justify-center">
-                                <div class="w-60 h-60 md:w-48 md:h-48">
-                                    <img class="animate__animated animate__rubberBand object-cover h-56 md:h-44" src="assets/image/company-4.png" alt="company-4"
-                                        >
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                        alt="company-4">
                                 </div>
                             </div>
-                            <div class="h-60 md:h-48 md:hidden lg:block border border-zinc-50 border-solid opacity-10"></div>
-                            <div class="flex md:hidden lg:block items-center justify-center">
-                                <div class="w-60 h-60 md:w-48 md:h-48">
-                                    <img class="animate__animated animate__rubberBand object-cover h-56 md:h-44" src="assets/image/company-5.png" alt="company-5"
-                                        >
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-5.png"
+                                        alt="company-5">
                                 </div>
                             </div>
                         </div>
@@ -350,13 +351,13 @@
         <div class="footer overflow-hidden h-auto">
             <div
                 class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="lg:w-1/3 md:w-1/2">
-                    <div class="flex flex-col justify-center items-start animate__animated animate__zoomInLeft">
+                <div class="xl:w-1/3 sm:w-1/2">
+                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 md:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg md:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -364,40 +365,53 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 md:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl md:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInLeft">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Book a Meeting On<br>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
-                            <a href="" class=" flex flex-col items-center justify-center animate__animated animate__slideInRight">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Connect With Us<br> On
+                            <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
                     </div>
                     <div class="footer-social-icon mt-10">
                         <div class="email">
-                            <a href="" class="flex flex-col items-center justify-center animate__animated animate__slideInUp">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 md:h-14">
-                                <span class="lg:pt-5 lg:text-xl md:text-base md:pt-3">Contact<br> @twinreality.in</span>
+                            <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
+                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 lg:block twin-reality-img footer-img relativ md:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1200,  // Controls animation duration
+            once: true,      // Animation runs only once
+            mirror: true
+        });
+    </script>
 </body>
 
 </html>
