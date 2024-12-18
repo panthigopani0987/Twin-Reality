@@ -29,87 +29,123 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
-                <!-- Logo -->
-                <div class="">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="relative  sm:block mob-s:hidden">
+                <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn text-yellow-500">
-                                Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-
-                <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.facebook.com/" class="" target="_blank">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
-                        <a href="https://x.com/" class="" target="_blank">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.instagram.com/" class="" target="_blank">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
                 </div>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block sm:hidden text-gray-700 focus:outline-none">
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+        <div class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
             <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
                 <div class="w-3/5 flex items-center " data-aos="fade-right">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20">
-                        <span class="font-2  lg:text-7xl sm:text-6xl text-yellow-500">VR APP</span><br> DEVELOPMENT
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl mob-s:text-4xl text-yellow-500">VR APP</span><br> DEVELOPMENT
                     </h1>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- form -->
         <div class="service-form">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="form-contain w-full flex justify-evenly">
-                    <p class="font-light leading-relaxed tracking-wider ">
+                    <p class="font-light leading-relaxed tracking-wider sm:text-xl mob-s:text-lg">
                         Bring your ideas to life with our Virtual Reality company. Our team of experienced developers
                         specializes in creating immersive, interactive VR experiences that engage and captivate
                         users. From gaming and entertainment to education and training, we can help you build a VR app
@@ -177,7 +213,7 @@
                     <div class="banner-border-2 pb-4"></div>
                     <img src="assets/image/vr-sol.png" alt="vr-sol"
                         class="w-full object-cover object-top h-96 mt-10 lg:block xl:hidden">
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed text-justify tracking-wide">
+                    <p class="font-light mt-8 text-gray-400 leading-relaxed text-justify tracking-wide sm:text-xl mob-s:text-lg ">
                         Twin Reality, a leading AR,VR,MR company in India, offers cost-effective and efficient
                         psychophysics-based solutions using Virtual Reality (VR) technology. With the help of
                         head-mounted VR devices and virtual hand controllers, industrial classrooms can simulate
@@ -191,12 +227,12 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- vr-video -->
         <div class="vr-video">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
-                    <h2 class="text-center font-2 text-7xl mb-8">What is VR or Virtual Reality?​</h2>
+                    <h2 class="text-center font-2 md:text-7xl mob-s:text-4xl mb-8">What is VR or Virtual Reality?​</h2>
 
                     <div class="relative overflow-hidden">
                         <!-- Slider Content -->
@@ -211,7 +247,7 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10" data-aos="fade-up">
-                                    <p class="text-gray-400 ">
+                                    <p class="text-gray-400  sm:text-xl mob-s:text-base">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
                                         enables users to interact with a three-dimensional environment. It typically
@@ -220,7 +256,7 @@
                                         controllers, to
                                         create a sense of presence and interactivity.
                                     </p>
-                                    <p class="text-gray-400 mt-5">
+                                    <p class="text-gray-400 mt-5 sm:text-xl mob-s:text-base">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
                                         game, a training simulation, or a virtual tour. The user can move around and
@@ -242,7 +278,7 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
-                                    <p class="text-gray-400 ">
+                                    <p class="text-gray-400    sm:text-xl mob-s:text-base">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
                                         enables users to interact with a three-dimensional environment. It typically
@@ -251,7 +287,7 @@
                                         controllers, to
                                         create a sense of presence and interactivity.
                                     </p>
-                                    <p class="text-gray-400 mt-5">
+                                    <p class="text-gray-400 mt-5   sm:text-xl mob-s:text-base">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
                                         game, a training simulation, or a virtual tour. The user can move around and
@@ -273,7 +309,7 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="vr-video-contain text-center mt-10">
-                                    <p class="text-gray-400 ">
+                                    <p class="text-gray-400   sm:text-xl mob-s:text-base">
                                         Virtual Reality (VR) refers to a computer-generated simulation or immersive
                                         experience that
                                         enables users to interact with a three-dimensional environment. It typically
@@ -282,7 +318,7 @@
                                         controllers, to
                                         create a sense of presence and interactivity.
                                     </p>
-                                    <p class="text-gray-400 mt-5">
+                                    <p class="text-gray-400 mt-5   sm:text-xl mob-s:text-base">
                                         The virtual environment can be designed to simulate a variety of experiences,
                                         such as a
                                         game, a training simulation, or a virtual tour. The user can move around and
@@ -295,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center mt-10">
+                    <div class="flex justify-center sm:mt-10">
                         <a type="button" id="prev" class="cursor-pointer">
                             <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
                         </a>
@@ -307,145 +343,147 @@
                 <!-- Slider Container -->
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- vr app development -->
         <div class="vr-app">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
                     <div class=" text-center">
-                        <h3 class="font-2 lg:text-6xl sm:text-4xl">
+                        <h3 class="font-2 lg:text-6xl mob-s:text-4xl">
                             VR APP DEVELOPMENT FOR INDUSTRIES
                         </h3>
                     </div>
-                    <div class="flex justify-between items-start mt-20">
-                        <div class="w-96 lg:h-48 sm:h-32 flex justify-center items-center" data-aos="zoom-in">
-                            <p class="lg:text-xl sm:text-lg">
-                                Virtual Reality Company Solutions for different industries
-                            </p>
+                    <div class="flex sm:flex-col mob-s:flex-row justify-center items-center mob-s:mt-10">
+                        <div class="sm:w-full mob-s:w-1/2  mob-s:h-full flex sm:flex-row mob-s:flex-col justify-between sm:items-start mob-s:items-center sm:mt-20">
+                            <div class="sm:w-96 lg:h-48 sm:h-32 mob-s:h-32 flex justify-center items-center mob-s:mb-5 sm:mb-0" data-aos="zoom-in">
+                                <p class="lg:text-xl sm:text-lg mob-s:text-base">
+                                    Virtual Reality Company Solutions for different industries
+                                </p>
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-1.png" alt="vr-app-1" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Architectural</span>
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-2.png" alt="vr-app-2.png" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Healthcare</span>
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-3.png" alt="vr-app-3.png" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Education</span>
+                            </div>
                         </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-1.png" alt="vr-app-1" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Architectural</span>
-                        </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-2.png" alt="vr-app-2.png" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Healthcare</span>
-                        </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-3.png" alt="vr-app-3.png" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Education</span>
-                        </div>
-                    </div>
-                    <div class="h-full border border-zinc-50 border-solid opacity-10"></div>
-                    <div class="flex justify-between items-start">
-                        <div class="w-96 lg:h-48 sm:h-32 flex justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app.png" alt="vr-app"
-                                class="w-96 lg:h-48 sm:h-32 object-cover object-center">
-                        </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-4.png" alt="vr-app-4" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Chemicals, Oil & Gas</span>
-                        </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-5.png" alt="vr-app-5.png" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Automotive</span>
-                        </div>
-                        <div class="lg:h-48 sm:h-32 border border-zinc-50 border-solid opacity-10"></div>
-                        <div class="w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center" data-aos="zoom-in">
-                            <img src="assets/image/vr-app-6.png" alt="vr-app-6.png" class="xl:w-auto lg:w-10 md:w-9">
-                            <span class="text-gray-400 mt-5 lg:text-xl sm:text-base">Industrial-Training</span>
+                        <div class="sm:w-full sm:h-0 mob-s:h-[550px] border border-zinc-50 border-solid opacity-10"></div>
+                        <div class="sm:w-full mob-s:w-1/2 mob-s:h-full flex sm:flex-row mob-s:flex-col justify-between sm:items-start mob-s:items-center">
+                            <div class="sm:w-96 lg:h-48 mob-s:h-32 flex justify-center items-center  mob-s:mb-5 sm:mb-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app.png" alt="vr-app"
+                                    class="sm:w-96 lg:h-48 mob-s:h-28 mob-s:w-48 object-cover object-center">
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-4.png" alt="vr-app-4" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Chemicals, Oil & Gas</span>
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-5.png" alt="vr-app-5.png" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Automotive</span>
+                            </div>
+                            <div class="lg:h-48 sm:h-32 sm:w-0 mob-s:w-full border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="sm:w-72 lg:h-48 sm:h-32 flex flex-col justify-center items-center mob-s:my-5 sm:my-0" data-aos="zoom-in">
+                                <img src="assets/image/vr-app-6.png" alt="vr-app-6.png" class="xl:w-auto lg:w-10 mob-s:w-9">
+                                <span class="text-gray-400 mt-5 lg:text-xl mob-s:text-base">Industrial-Training</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- vr advantages -->
         <div class="vr-advantages">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl mb-10">
                 <div class="w-full text-center">
-                    <h3 class="font-2  lg:text-6xl sm:text-4xl uppercase">
+                    <h3 class="font-2  lg:text-6xl sm:text-4xl mob-s:text-2xl uppercase">
                         Advantages Of VR & AR In Business
                     </h3>
                 </div>
             </div>
             <div class="container mx-auto px-4 flex items-center xl:my-4 xl:text-xl lg:text-lg">
-                <div class="choose-bg w-full p-16 lg:pl-28 h-96" data-aos="zoom-in-down">
+                <div class="choose-bg w-full sm:p-16 mob-s:p-8  lg:pl-28 h-96" data-aos="zoom-in-down">
                     <ul class="list-disc leading-relaxed tracking-wider">
-                        <li class="pb-10 text-zinc-300">Enhancing Consumer And Business Transparency Through A Striking
+                        <li class="sm:pb-10 mob-s:pb-5 text-zinc-300">Enhancing Consumer And Business Transparency Through A Striking
                             Visual Experience.</li>
-                        <li class="pb-10 text-zinc-300">Real-Time Data Sharing With The Proper User At The Proper Time.
+                        <li class="sm:pb-10 mob-s:pb-5 text-zinc-300">Real-Time Data Sharing With The Proper User At The Proper Time.
                         </li>
-                        <li class="pb-10 text-zinc-300">VR-Based Interactive Training And Virtual Showrooms.</li>
+                        <li class="sm:pb-10 mob-s:pb-5 text-zinc-300">VR-Based Interactive Training And Virtual Showrooms.</li>
                         <li class="text-zinc-300">Making An Impression On The Consumer's Mind While Using 3-D Marketing
                             That Is Noticeable</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- Tools & Platforms -->
         <div class="tools-platforms">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="w-full text-center">
-                    <h2 class=" font-2  lg:text-6xl sm:text-5xl leading-normal">TOOLS & PLATFORMS USED IN VR
+                    <h2 class=" font-2  lg:text-6xl sm:text-5xl mob-s:text-2xl leading-normal">TOOLS & PLATFORMS USED IN VR
                         DEVELOPMENT​</h2>
-                    <p class="font-light mt-5 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
+                    <p class="font-light mt-5 text-zinc-300 tracking-wide mob-s:text-sm sm:text-xl">Virtual Reality App Development Tools To
                         Create Different Solutions</p>
                 </div>
                 <div class="w-full flex flex-wrap items-center justify-evenly">
-                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/React360.png" alt="React360" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/React360.png" alt="React360" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">React360</span>
                     </div>
-                    <div data-aos="zoom-in-down" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-down" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Vuforia</span>
                     </div>
-                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/unity.png" alt="unity.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unity.png" alt="unity.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unity</span>
                     </div>
-                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/unreal-engine.png" alt="unreal-engine.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unreal-engine.png" alt="unreal-engine.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unreal Engine</span>
                     </div>
-                    <div data-aos="zoom-in-up" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/blender.png" alt="blender.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-up" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/blender.png" alt="blender.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Blender</span>
                     </div>
-                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/3ds max.png" alt="3ds max.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/3ds max.png" alt="3ds max.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">3ds Max</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <div class="gradiant-2 gradiant-3 relative overflow-hidden">
             <div class="faq">
                 <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                     <div class="container mx-auto py-16 px-6">
-                        <h1 class=" lg:text-6xl sm:text-4xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
+                        <h1 class=" lg:text-6xl sm:text-4xl mob-s:text-2xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
                         <div class="space-y-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
                             <!-- FAQ Item 1 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">1.</span> In Which Industries Is VR Most
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class=" sm:text-4xl mob-s:text-3xl text-yellow-500">1.</span> In Which Industries Is VR Most
                                         Useful?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
                                         <span style="font-size: 25px;">
@@ -454,7 +492,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content py-8">
-                                    <p class="text-xl  text-zinc-500">
+                                    <p class="sm:text-xl mob-s:text-lg  text-zinc-500">
                                         Virtual Reality (VR) is an immersive technology that allows users to experience
                                         a
                                         simulated environment through a headset or other similar devices. VR has
@@ -462,7 +500,7 @@
                                         its application across many industries and is proving to be a game-changer. The
                                         following are some of the industries where VR is most useful:
                                     </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                    <ul class="list-decimal list-inside sm:text-xl mob-s:text-lg mt-2 space-y-1 pl-10">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
                                             gaming industry, providing a completely immersive experience for gamers.
                                         </li>
@@ -484,9 +522,9 @@
                             <!-- FAQ Item 2 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">2.</span> How Is Virtual Reality Being
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class="sm:text-4xl mob-s:text-3xl text-yellow-500">2.</span> How Is Virtual Reality Being
                                         Used In
                                         Finance?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
@@ -496,7 +534,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content hidden py-8">
-                                    <p class="text-xl  text-zinc-500">
+                                    <p class="sm:text-xl mob-s:text-lg text-zinc-500">
                                         Virtual Reality (VR) is an immersive technology that allows users to experience
                                         a
                                         simulated environment through a headset or other similar devices. VR has
@@ -504,31 +542,15 @@
                                         its application across many industries and is proving to be a game-changer. The
                                         following are some of the industries where VR is most useful:
                                     </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
-                                            gaming industry, providing a completely immersive experience for gamers.
-                                        </li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
-                                            healthcare to simulate surgeries and train medical professionals. It is also
-                                            being used in therapy to help patients overcome phobias and anxiety.
-                                        </li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
-                                            education to create immersive learning experiences that allow students to
-                                            explore and understand complex concepts.</li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
-                                            being
-                                            used in architecture and design to provide clients with a virtual tour of
-                                            buildings and spaces before they are constructed.</li>
-                                    </ul>
                                 </div>
                             </div>
 
                             <!-- FAQ Item 3 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">3.</span> How Will Virtual Reality Help To
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class="sm:text-4xl mob-s:text-3xl text-yellow-500">3.</span> How Will Virtual Reality Help To
                                         Promote A Business?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
                                         <span style="font-size: 25px;">
@@ -537,15 +559,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content hidden py-8">
-                                    <p class="text-xl  text-zinc-500">
-                                        Virtual Reality (VR) is an immersive technology that allows users to experience
-                                        a
-                                        simulated environment through a headset or other similar devices. VR has
-                                        found
-                                        its application across many industries and is proving to be a game-changer. The
-                                        following are some of the industries where VR is most useful:
-                                    </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                    <ul class="list-decimal list-inside sm:text-xl mob-s:text-lg mt-2 space-y-1">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
                                             gaming industry, providing a completely immersive experience for gamers.
                                         </li>
@@ -575,18 +589,18 @@
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28 mob-s:my-8"></div>
             <!-- COMPANIES -->
             <div class="company relative">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
@@ -622,23 +636,72 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -646,23 +709,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -670,13 +733,16 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
@@ -695,6 +761,7 @@
         });
     </script>
     <script defer src="js/faq.js"></script>
+    <script src="js/mobile-toggle.js"></script>
 </body>
 
 </html>

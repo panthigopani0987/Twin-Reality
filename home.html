@@ -120,7 +120,7 @@
         </div>
 
         <!-- Mobile Menu (Initially hidden) -->
-        <div id="mobile-menu" class="hidden xs:hidden transparent text-center text-white">
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white">
             <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
             <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
             <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
@@ -893,15 +893,7 @@
             mirror: true
         });
     </script>
-    <script>
-        // Toggle mobile menu visibility
-        const menuButton = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-    </script>
+    <script src="js/mobile-toggle.js"></script>
 </body>
 
 </html>
