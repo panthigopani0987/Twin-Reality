@@ -30,7 +30,34 @@
     <!-- animate.js  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
@@ -40,11 +67,11 @@
             <!-- Logo -->
             <div class="flex-none w-40">
                 <a href="home.html">
-                    <img class="xl:w-auto lg:w-32 sm:w-28" src="assets/image/logo.png" alt="logo">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
                 </a>
             </div>
             <!-- Navigation Links -->
-            <nav class="relative">
+            <nav class="relative  sm:block mob-s:hidden">
                 <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
                     <li><a href="home.html" class="text-yellow-400">Home</a></li>
                     <!-- Dropdown for Services -->
@@ -69,7 +96,7 @@
                 </ul>
             </nav>
             <!-- Social Icons -->
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
                 <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
                     <a href="https://www.facebook.com/" class="" target="_blank">
                         <img src="assets/image/facebook.png" alt="facebook">
@@ -88,19 +115,19 @@
             </div>
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="block sm:hidden text-gray-700 focus:outline-none">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden">
-            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
-            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
-            <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden xs:hidden transparent text-center text-white">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
+
         <div class="gradiant-bg absolute -top-60 right-0 opacity-10" style="z-index: -9999999;background: hsla(291, 100%, 50%, 1);
 
         background: radial-gradient(circle, hsla(291, 100%, 50%, 1) 24%, hsla(257, 86%, 6%, 1) 61%);
@@ -118,54 +145,58 @@
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="banner relative xl:pb-52 lg:pb-0 sm:pb-52  pt-10" style="z-index: 99999;">
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl"
+        <div class="banner relative xl:pb-52 lg:pb-0 sm:pb-52  pt-10" style="z-index: 999999;">
+            <div class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl"
                 data-aos="fade-right">
 
                 <div class="flex items-center">
                     <div class="banner-contain  ">
-                        <h1 class="font-2 xl:text-7xl sm:text-5xl">
-                            Explorer A New <span class="text-yellow-500 font-2 xl:text-7xl sm:text-5xl">World</span>
+                        <h1 class="font-2 xl:text-7xl sm:text-5xl mob-s:text-4xl">
+                            Explorer A New <span
+                                class="text-yellow-500 font-2 xl:text-7xl mob-s:text-4xl sm:text-5xl">World</span>
                             With
                         </h1>
                     </div>
-                    <div class="banner-border xl:block sm:hidden"></div>
+                    <div class="border border-Zinc-50 border-solid w-32 opacity-10 mob-s:block sm:hidden"></div>
+                    <div class="banner-border xl:block sm:hidden  mob-s:hidden"></div>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl"
+            <div class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-2 text-xl"
                 data-aos="fade-left">
-                <div class="xl:w-96 lg:w-72"></div>
-                <div class="xl:w-96 lg:w-72"></div>
-                <div class="flex">
-                    <h1 class="xl:text-7xl sm:text-5xl z-10 font-2">
+                <div class="xl:w-96 lg:w-72 mob-s:hidden"></div>
+                <div class="xl:w-96 lg:w-72 mob-s:hidden"></div>
+                <div class="mob-s:w-full flex  mob-s:justify-end">
+                    <h1 class="xl:text-7xl sm:text-5xl mob-s:text-4xl z-10 font-2 block">
                         TWIN <span class="text-yellow-500 font-2">REALITY</span>
                     </h1>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl"
+            <div class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl"
                 data-aos="fade-left">
                 <div class="xl:w-3/4 lg:w-4/5"></div>
                 <div class="flex banner-border-2">
-                    <p class="xl:text-xl sm:text-base z-10 opacity-100 font-light tracking-wider leading-loose">
+                    <p
+                        class="xl:text-xl mob-s:text-base z-10 opacity-100 font-light tracking-wider leading-loose sm:mb-0 mob-s:mb-44">
                         We specialize in providing cutting-edge Virtual Reality solutions that transport you to
                         immersive digital worlds.
                     </p>
                 </div>
             </div>
-            <div class="container  lg:container  xl:container  lg:container  md:container  sm:container   mx-auto px-4 flex items-center py-4 text-xl "
+            <div class="container  xl:container  lg:container  md:container  sm:container   mx-auto px-4 flex items-center py-4 text-xl "
                 data-aos="zoom-in">
-                <div class="xl:w-3/6 xl:ml-10 sm:w-1/2 lg:block sm:hidden "></div>
+                <div class="xl:w-3/6 xl:ml-10 sm:w-1/2 lg:block mob-s:hidden "></div>
                 <div class="banner-img flex items-center mt-10 relative">
-                    <img class="lg:block  sm:hidden xl:w-72 sm:w-48" src="assets/image/banner-img.png" alt="banner-img"
-                        style="position: relative;">
+                    <img class="lg:block  mob-s:hidden xl:w-72 sm:w-48" src="assets/image/banner-img.png"
+                        alt="banner-img" style="position: relative;">
                     <div class=" absolute w-80 flex xl:left-64 sm:left-44 items-center group">
-                        <div class="lg:block sm:hidden  flex justify-center items-center play-btn xl:w-16 xl:h-16 sm:w-10 sm:h-10 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4">
+                        <div
+                            class="lg:block mob-s:hidden  flex justify-center items-center play-btn xl:w-16 xl:h-16 sm:w-10 sm:h-10 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-4">
                             <a href="" class="xl:w-16 xl:h-16 sm:w-10 sm:h-10 flex justify-evenly items-center">
                                 <i
                                     class="lg:inline-block fa-solid fa-caret-up fa-rotate-90 xl:text-5xl text-white  group-hover:text-yellow-500"></i>
                             </a>
                         </div>
-                        <div class="ml-5 lg:block sm:hidden  ">
+                        <div class="ml-5 lg:block mob-s:hidden  ">
                             <a href="">
                                 <span class="text-yellow-500 xl:text-3xl font-2  group-hover:text-white">Watch
                                     Intro</span>
@@ -174,181 +205,195 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/image/banner-bg.jpg" alt="banner-bg" class="absolute bottom-0 lg:left-0 sm:right-40  opacity-20">
-            <img src="assets/image/image 4.jpg" alt="banner-bg" class="absolute bottom-0 lg:left-0 sm:right-40  xl:w-auto sm:w-1/2">
+            <img src="assets/image/banner-bg.jpg" alt="banner-bg"
+                class="absolute bottom-0 lg:left-0 sm:right-40  opacity-20">
+            <img src="assets/image/image 4.jpg" alt="banner-bg"
+                class="absolute bottom-0 lg:left-0 sm:right-40  xl:w-auto sm:w-1/2">
         </div>
-        <div class="my-20"></div>
-        <div class="container  lg:container  xl:container  lg:container  md:container  sm:container lg:hidden sm:block   mx-auto px-4 flex items-center py-4 text-xl "
-                data-aos="zoom-in">
-                <div class="banner-img flex items-center mt-10 relative">
-                    <img class="w-3/5" src="assets/image/banner-img.png" alt="banner-img"
-                        style="position: relative;">
-                    <div class="absolute w-80 flex right-0 items-center group">
-                        <div class="flex justify-center items-center play-btn w-16 h-16 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-1 outline-2 outline-offset-4">
-                            <a href="" class="w-16 h-16 flex justify-evenly items-center">
-                                <i
-                                    class="fa-solid fa-caret-up fa-rotate-90 text-5xl text-white  group-hover:text-yellow-500"></i>
-                            </a>
-                        </div>
-                        <div class="ml-5">
-                            <a href="">
-                                <span class="text-yellow-500 text-3xl font-2  group-hover:text-white">Watch
-                                    Intro</span>
-                            </a>
-                        </div>
+        <div class="sm:my-20 mob-s:my-5"></div>
+        <div class="container xl:container  lg:container  md:container  sm:container lg:hidden sm:block   mx-auto px-4 flex items-center py-4 text-xl "
+            data-aos="zoom-in">
+            <div class="banner-img flex items-center mt-10 relative">
+                <img class="w-3/5" src="assets/image/banner-img.png" alt="banner-img" style="position: relative;">
+                <div class="absolute w-80 flex sm:right-0 mob-s:-right-36 items-center group">
+                    <div
+                        class="flex justify-center items-center play-btn sm:w-16 mob-s:w-10 sm:h-16 mob-s:h-10 bg-yellow-500 trasition  group-hover:bg-white  group-hover:outline-yellow-500 rounded-full outline outline-offset-4">
+                        <a href="" class="w-16 h-16 flex justify-evenly items-center">
+                            <i
+                                class="fa-solid fa-caret-up fa-rotate-90 sm:text-5xl mob-s:text-3xl text-white  group-hover:text-yellow-500"></i>
+                        </a>
+                    </div>
+                    <div class="ml-5">
+                        <a href="">
+                            <span class="text-yellow-500 sm:text-3xl mob-s:text-xl font-2  group-hover:text-white">Watch
+                                Intro</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        <div class="my-28"></div>
+        </div>
+        <div class="sm:my-20 mob-s:my-5"></div>
         <!-- twin reality -->
         <div class="twin-reality overflow-hidden">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="xl:w-2/5 sm:w-full sm:text-center lg:text-left">
-                    <h2 class="font-2 text-6xl uppercase leading-relaxed">Twin Reality</h2>
-                    <p class="font-2 tracking-widest font-light">AR, VR, MR Company In India</p>
+                    <h2 class="font-2 sm:text-6xl mob-s:text-4xl uppercase leading-relaxed">Twin Reality</h2>
+                    <p class="font-2 tracking-widest font-light sm:text-xl mob-s:text-lg">AR, VR, MR Company In India
+                    </p>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light xl:text-lg mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        Twin Reality is a cutting-edge technology company in India that <br> specializes in augmented
-                        reality (AR), virtual reality (VR), and <br> mixed reality (MR) solutions. Since its
-                        establishment, the <br> company has made significant strides in the field of immersive <br>
-                        technology, revolutionizing the way businesses and individuals <br> experience the world around
+                    <p
+                        class="font-light md:text-lg mob-s:text-base text-justify mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality is a cutting-edge technology company in India that specializes in augmented
+                        reality (AR), virtual reality (VR), and mixed reality (MR) solutions. Since its
+                        establishment, the company has made significant strides in the field of immersive
+                        technology, revolutionizing the way businesses and individuals experience the world around
                         them.
                     </p>
                     <img src="assets/image/twin-reality-img.jpg" alt="twin-reality" class="my-10 sm:block xl:hidden">
-                    <p class="font-light xl:text-lg mt-5 text-gray-400 leading-relaxed tracking-wide">
-                        Twin Reality’s unique approach to AR, VR, and MR involves <br> creating experiences that are
-                        tailored to the needs of the user. <br> They achieve this by combining creative design,
-                        innovative <br> technology, and a deep understanding of user behavior to <br> develop immersive
-                        experiences that are both engaging and <br> impactful.
+                    <p
+                        class="font-light md:text-lg mob-s:text-base text-justify mt-5 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality’s unique approach to AR, VR, and MR involves creating experiences that are
+                        tailored to the needs of the user. They achieve this by combining creative design,
+                        innovative technology, and a deep understanding of user behavior to develop immersive
+                        experiences that are both engaging and impactful.
                     </p>
                 </div>
-                <div class="xl:w-3/5 twin-reality-img relative sm:hidden xl:block" data-aos="zoom-in-left">
+                <div class="xl:w-3/5 twin-reality-img relative mob-s:hidden xl:block" data-aos="zoom-in-left">
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-20 mob-s:my-5"></div>
         <!-- Why choose TWIN REALITY? -->
         <div class="why-choose-twin-reality overflow-hidden">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="choose-bg w-full h-auto p-16 text-center">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                <div class="choose-bg w-full h-auto sm:p-16 mob-s:p-10 text-center">
                     <div class="">
                         <h3 class="font-2 lg:text-5xl sm:text-3xl">
                             WHY CHOOSE TWIN <span class="font-2 text-yellow-500">REALITY?</span>
                         </h3>
                     </div>
-                    <div class="flex sm:flex-wrap justify-evenly items-start lg:mt-20 sm:mt-10">
-                        <div class="flex flex-col items-center" data-aos="zoom-out">
-                            <div class="lg:w-24 lg:h-24 sm:h-16 sm:w-16 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                    <div
+                        class="flex mob-s:flex-wrap  mob-s:justify-between sm:justify-evenly items-start lg:mt-20 sm:mt-10">
+                        <div class="flex flex-col items-center sm:mt-0 mob-s:mt-10" data-aos="zoom-out">
+                            <div class="lg:w-24 lg:h-24 mob-s:h-16 mob-s:w-16  choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
                             border: 2px solid #241e37;">
                                 <img class="w-20" src="assets/image/joystick.png" alt="joystick">
                             </div>
-                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Modern Technology</p>
+                            <p class="text-center mt-6 lg:text-2xl sm:text-lg mob-s:text-base">Modern Technology</p>
                         </div>
-                        <div class="flex flex-col items-center" data-aos="zoom-out">
-                            <div class="lg:w-24 lg:h-24 sm:h-16 sm:w-16 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                        <div class="flex flex-col items-center sm:mt-0 mob-s:mt-10" data-aos="zoom-out">
+                            <div class="lg:w-24 lg:h-24 mob-s:h-16 mob-s:w-16  choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
                             border: 2px solid #241e37;">
                                 <img class="w-20" src="assets/image/settings.png" alt="settings">
                             </div>
-                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Cost Effective</p>
+                            <p class="text-center mt-6 lg:text-2xl sm:text-lg mob-s:text-base">Cost Effective</p>
                         </div>
-                        <div class="flex flex-col items-center" data-aos="zoom-out">
-                            <div class="lg:w-24 lg:h-24 sm:h-16 sm:w-16 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                        <div class="flex flex-col items-center sm:mt-0 mob-s:mt-10" data-aos="zoom-out">
+                            <div class="lg:w-24 lg:h-24 mob-s:h-16 mob-s:w-16  choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
                             border: 2px solid #241e37;">
                                 <img class="w-20" src="assets/image/costumer-service.png" alt="costumer-service">
                             </div>
-                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Versatile Applications</p>
+                            <p class="text-center mt-6 lg:text-2xl sm:text-lg mob-s:text-base">Versatile Applications
+                            </p>
                         </div>
-                        <div class="flex flex-col items-center" data-aos="zoom-out">
-                            <div class="lg:w-24 lg:h-24 sm:h-16 sm:w-16 choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
+                        <div class="flex flex-col items-center sm:mt-0 mob-s:mt-10" data-aos="zoom-out">
+                            <div class="lg:w-24 lg:h-24 mob-s:h-16 mob-s:w-16  choose-bg  p-4" style="background: rgb(36,31,52);background: linear-gradient(127deg, rgba(36,31,52,1) 0%, rgba(36,27,59,1) 22%, rgba(14,7,32,1) 55%);
                             border: 2px solid #241e37;">
                                 <img class="w-20" src="assets/image/bonus.png" alt="bonus">
                             </div>
-                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Scalability</p>
+                            <p class="text-center mt-6 lg:text-2xl sm:text-lg mob-s:text-base">Scalability</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-20 mob-s:my-5"></div>
         <!-- reality -->
         <div class="reality overflow-hidden">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row sm:flex-col xl:items-center sm:justify-center py-4 text-xl">
-                <div class="sm:w-full mb-10 sm:block xl:hidden" data-aos="fade-left">
-                    <img src="assets/image/vr-app.png" alt="vr-app" class="h-96 object-cover object-center"
-                        style="width: 800px;">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row mob-s:flex-col xl:items-center mob-s:justify-center py-4 text-xl">
+                <div class="mob-s:w-full mb-10 mob-s:block xl:hidden" data-aos="fade-left">
+                    <img src="assets/image/vr-app.png" alt="vr-app"
+                        class="sm:h-96 mob-s:h-60 object-cover object-center" style="width: 800px;">
                 </div>
-                <div class="xl:w-3/6 sm:w-full lg:text-left sm:text-center">
+                <div class="xl:w-3/6 mob-s:w-full lg:text-left mob-s:text-center">
                     <h2 class="font-2 lg:text-6xl uppercase leading-relaxed">VIRTUAL REALITY</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        Twin Reality , an India-based VR and AR development service <br> provider, is committed to
+                    <p
+                        class="font-light sm:text-xl text-justify mob-s:text-sm mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        Twin Reality , an India-based VR and AR development service provider, is committed to
                         providing
-                        the best experiences in cutting- <br>edge AR and VR solutions, outstanding high-definition
+                        the best experiences in cutting-edge AR and VR solutions, outstanding high-definition
                         visuals,
-                        real-<br>time adaptability, and highly immersive services for Virtual Reality<br> applications .
+                        real-time adaptability, and highly immersive services for Virtual Reality applications .
                     </p>
                 </div>
-                <div class="xl:w-3/6 xl:block twin-reality-img reality-img bg-cover relative sm:hidden"
+                <div class="xl:w-3/6 xl:block twin-reality-img reality-img bg-cover relative mob-s:hidden"
                     data-aos="fade-left"></div>
             </div>
             <div class="xl:my-28"></div>
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row sm:flex-col items-center py-4 text-xl">
-                <div class="lg:w-3/6 twin-reality-img reality-img-2 relative xl:block sm:hidden" data-aos="fade-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row mob-s:flex-col items-center py-4 text-xl">
+                <div class="lg:w-3/6 twin-reality-img reality-img-2 relative xl:block mob-s:hidden"
+                    data-aos="fade-right">
                 </div>
-                <div class="sm:w-full mb-10 sm:block xl:hidden" data-aos="fade-right">
-                    <img src="assets/image/banner-img.png" alt="vr-app" class="h-80 object-cover" style="width: 800px;">
+                <div class="sm:w-full mb-10 mob-s:block xl:hidden" data-aos="fade-right">
+                    <img src="assets/image/banner-img.png" alt="vr-app" class="sm:h-80 mob-s:h-60 object-cover"
+                        style="width: 800px;">
                 </div>
                 <div class="xl:w-3/6 sm:w-full lg:text-left sm:text-center">
                     <h2 class="font-2 lg:text-6xl uppercase leading-relaxed">METAVERSE</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        As a metaverse development company, we take you through the<br> process of building your own
-                        virtual world and enriching it with<br> experiences, landscapes, items, assets, and
-                        opportunities to connect<br> with customers. With our expertise in blockchain, augmented
-                        reality,<br> and virtual reality...
+                    <p
+                        class="font-light sm:text-xl text-justify mob-s:text-sm mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        As a metaverse development company, we take you through the process of building your own
+                        virtual world and enriching it with experiences, landscapes, items, assets, and
+                        opportunities to connect with customers. With our expertise in blockchain, augmented
+                        reality, and virtual reality...
                     </p>
                 </div>
             </div>
             <div class="xl:my-28 "></div>
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row sm:flex-col items-center py-4 text-xl">
-                <div class="xl:w-3/6 sm:w-full lg:text-left sm:text-center">
-                    <div class="sm:w-full mb-10 sm:block xl:hidden" data-aos="fade-left">
-                        <img src="assets/image/vr-3.jpg" alt="vr-app" class="h-96 object-cover object-center"
-                            style="width: 800px;">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex xl:flex-row mob-s:flex-col items-center py-4 text-xl">
+                <div class="xl:w-3/6 mob-s:w-full lg:text-left sm:text-center">
+                    <div class="sm:w-full mb-10 mob-s:block xl:hidden" data-aos="fade-left">
+                        <img src="assets/image/vr-3.jpg" alt="vr-app"
+                            class="sm:h-96 mob-s:h-60 object-cover object-center" style="width: 800px;">
                     </div>
                     <h2 class="font-2 lg:text-6xl uppercase leading-relaxed">VIRTUAL EVENTS</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
-                        At Twin Reality we combine the finest of in-person event experiences<br> with online event
-                        capabilities, We provide a virtual event solution to<br> meet the demands of the modern hybrid
-                        event, such as 3D immersive<br> platforms, live streaming, and audience involvement.
+                    <p
+                        class="font-light sm:text-xl text-justify mob-s:text-sm mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        At Twin Reality we combine the finest of in-person event experiences with online event
+                        capabilities, We provide a virtual event solution to meet the demands of the modern hybrid
+                        event, such as 3D immersive platforms, live streaming, and audience involvement.
                     </p>
                 </div>
-                <div class="xl:w-3/6 twin-reality-img reality-img-3 relative xl:block sm:hidden" data-aos="fade-left">
+                <div class="xl:w-3/6 twin-reality-img reality-img-3 relative xl:block mob-s:hidden"
+                    data-aos="fade-left">
                 </div>
             </div>
         </div>
-        <div class="my-36"></div>
+        <div class="sm:my-36  mob-s:my-5"></div>
         <div class="gradiant pb-20">
             <!-- Projects -->
             <div class="project">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row sm:flex-col lg:justify-between items-center py-4 text-xl">
-                    <div class="lg:w-2/5 sm:w-full sm:mb-56" data-aos="fade-up-right">
-                        <div class="our-project lg:flex sm:flex-row sm:justify-between lg:flex-col">
-                            <img src="assets/image/Model.png" alt="Model" class="lg:w-96 sm:w-72">
-                            <div class="sm:text-right lg:text-left">
-                                <h2 class="font-2 lg:text-6xl sm:text-4xl sm:mb-5 uppercase leading-relaxed mt-24">our
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 lg:flex lg:flex-row sm:flex-col lg:justify-between items-center py-4 text-xl">
+                    <div class="lg:w-2/5 mob-s:w-full sm:mb-56 mob-s:mb-20" data-aos="fade-up-right">
+                        <div class="our-project lg:flex mob-s:flex-row mob-s:justify-between lg:flex-col">
+                            <img src="assets/image/Model.png" alt="Model" class="sm:w-96 mob-s:w-72">
+                            <div class="mob-s:text-right lg:text-left">
+                                <h2 class="font-2 lg:text-6xl sm:text-4xl sm:mb-5 uppercase leading-relaxed lg:mt-24">
+                                    our
                                     projects</h2>
                                 <p class="font-2 sm:text-base tracking-widest font-light">AR, VR, MR Company In India
                                 </p>
                                 <div class="banner-border-2 lg:pb-4"></div>
-                                <div class="lg:flex lg:justify-start sm:justify-end lg:mt-10 sm:mt-5">
+                                <div class="lg:flex lg:justify-start mob-s:justify-end lg:mt-10 mob-s:mt-5">
 
                                     <a href=""
                                         class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600 transition duration-150 ease-out hover:ease-in  p-3 px-10 font-medium tracking-wider text-center">VIEW
@@ -357,22 +402,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-3/5 sm:w-full" data-aos="fade-up-left">
+                    <div class="lg:w-3/5 mob-s:w-full" data-aos="fade-up-left">
                         <div class="lg:h-80 lg:block sm:hidden"></div>
                         <div
-                            class="our-project-vr lg:flex lg:flex-col sm:flex-row lg:justify-end lg:w-full lg:h-96 lg:p-10">
-                            <div class="lg:flex lg:items-end">
+                            class="our-project-vr lg:flex lg:flex-col mob-s:flex-row lg:justify-end lg:w-full lg:h-96 lg:p-10 mob-s:p-10">
+                            <div class="lg:flex lg:flex-row mob-s:flex mob-s:items-end">
                                 <div class="">
-                                    <img src="assets/image/project-1.jpg" alt="project-1" class="sm:w-80"
-                                        style="width: 400px;">
+                                    <img src="assets/image/project-1.jpg" alt="project-1" class="lg:w-96 mob-s:w-96">
                                 </div>
-                                <div class="ml-20">
-                                    <div class="flex justify-center mb-20">
-                                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
-                                        <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                <div class="sm:ml-20 mob-s:ml-5">
+                                    <div class="flex justify-center mb-20 ">
+                                        <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="w-10 mr-10">
+                                        <img src="assets/image/Arrow 1.png" alt="Arrow 1" class="w-10 ">
                                     </div>
-                                    <img src="assets/image/project-2.png" alt="project-2" style="width: 350px;"
-                                        class="w-80">
+                                    <img src="assets/image/project-2.png" alt="project-2"
+                                        class="lg:w-80 sm:w-80 mob-s:w-80">
                                 </div>
                             </div>
                             <p class="font-2 lg:text-lg text-yellow-500 tracking-wide leading-loose mt-10">VIRTUAL
@@ -383,21 +427,21 @@
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28  mob-s:my-5"></div>
             <!-- Our service -->
             <div class="our-service">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl">
                                 OUR SERVIECS
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20 sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="zoom-in">
                                 <div>
-                                    <img class="object-cover sm:w-32 sm:h-32 xl:w-64 xl:h-64 lg:w-48 lg:h-48"
+                                    <img class="object-cover mob-s:w-44 mob-s:h-44 sm:w-32 sm:h-32 xl:w-64 xl:h-64 lg:w-48 lg:h-48"
                                         src="assets/image/services-1.png" alt="services-1"
                                         style="border: 2px solid #241e37;">
                                 </div>
@@ -405,7 +449,7 @@
                             </div>
                             <div class="flex flex-col items-center" data-aos="zoom-in">
                                 <div>
-                                    <img class="object-cover sm:w-32 sm:h-32 xl:w-64 xl:h-64 lg:w-48 lg:h-48"
+                                    <img class="object-cover mob-s:w-44 mob-s:h-44 sm:w-32 sm:h-32 xl:w-64 xl:h-64 lg:w-48 lg:h-48"
                                         src="assets/image/services-2.png" alt="services-2"
                                         style="border: 2px solid #241e37;">
                                 </div>
@@ -436,81 +480,140 @@
                                 <p class="text-center mt-6 lg:text-2xl sm:text-lg">VR Consultation</p>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="service-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center mr-5" data-aos="zoom-in">
+                                            <div>
+                                                <img class="object-cover mob-s:w-40 mob-s:h-40"
+                                                    src="assets/image/services-1.png" alt="services-1"
+                                                    style="border: 2px solid #241e37;">
+                                            </div>
+                                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Virtual Reality</p>
+                                        </div>
+                                        <div class="flex flex-col items-center " data-aos="zoom-in">
+                                            <div>
+                                                <img class="object-cover mob-s:w-40 mob-s:h-40"
+                                                    src="assets/image/services-2.png" alt="services-2"
+                                                    style="border: 2px solid #241e37;">
+                                            </div>
+                                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">VR Industrial <br>
+                                                Training
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center  mr-5" data-aos="zoom-in">
+                                            <div>
+                                                <img class="object-cover object-center mob-s:w-40 mob-s:h-40"
+                                                    src="assets/image/services-3.png" alt="services-3"
+                                                    style="border: 2px solid #241e37;">
+                                            </div>
+                                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Metaverse <br> Development</p>
+                                        </div>
+                                        <div class="flex flex-col items-center" data-aos="zoom-in">
+                                            <div>
+                                                <img class="object-cover mob-s:w-40 mob-s:h-40"
+                                                    src="assets/image/services-4.png" alt="services-4"
+                                                    style="border: 2px solid #241e37;">
+                                            </div>
+                                            <p class="text-center mt-6 lg:text-2xl sm:text-lg">Virtual Event <br> Management</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="service-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="service-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28  mob-s:my-10"></div>
         <!-- OUR AR/VR TIMES -->
         <div class="our-times overflow-hidden">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl text-center">
-                <div class="w-full mb-20">
-                    <h3 class="font-2 lg:text-6xl sm:text-5xl">
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl text-center">
+                <div class="w-full sm:mb-20 mob-s:mb-5">
+                    <h3 class="font-2 lg:text-6xl sm:text-5xl mob-s:text-3xl">
                         OUR AR/VR TIMES
                     </h3>
                 </div>
             </div>
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex lg:flex-row sm:flex-col items-center py-4 text-xl">
-                <div class="xl:w-3/6 sm:w-full sm:flex sm:flex-col" data-aos="zoom-in-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex lg:flex-row mob-s:flex-col items-center py-4 text-xl">
+                <div class="xl:w-3/6 mob-s:w-full mob-s:flex mob-s:flex-col" data-aos="zoom-in-right">
                     <div class="flex items-center">
-                        <img class="w-56 h-56 sm:w-48 sm:h-48 object-cover object-center" src="assets/image/times-1.png"
-                            alt="times-1">
+                        <img class="w-56 h-56 sm:w-48 mob-s:w-36 sm:h-48 mob-s:h-36 object-cover object-center"
+                            src="assets/image/times-1.png" alt="times-1">
                         <div class="p-6">
-                            <h3 class="font-2">Process of designing a VR industrial<br> training program</h3>
-                            <p class="pt-3 font-light text-base">
-                                Designing an Impactful VR Industrial Training<br> Program: Step-by-Step Virtual Reality
+                            <h3 class="font-2 sm:text-xl mob-s:text-sm">Process of designing a VR industrial training
+                                program</h3>
+                            <p class="pt-3 font-light sm:text-base mob-s:text-xs">
+                                Designing an Impactful VR Industrial Training Program: Step-by-Step Virtual Reality
                                 (VR)....
                             </p>
                             <a href="VR-Times.html" class="pt-4 flex items-center group">
                                 <span
-                                    class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
+                                    class="font-2 sm:text-base mob-s:text-sm text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
                                     MORE</span>
-                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
+                                <img class="sm:w-14 sm:h-4 mob-s:w-10 mob-s:h-2  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
                                     src="assets/image/Arrow 1.png" alt="Arrow">
                             </a>
                         </div>
                     </div>
                     <img src="assets/image/our-times.jpg" alt="our-times"
-                        class="my-10 h-96 object-cover sm:block xl:hidden">
-                    <div class="flex items-center mt-10">
-                        <img class="w-56 h-56 sm:w-48 sm:h-48 object-cover object-center" src="assets/image/times-2.png"
-                            alt="times-2">
+                        class="sm:my-10 sm:h-96 mob-s:h-64  object-cover mob-s:block xl:hidden">
+                    <div class="flex items-center sm:mt-10 mob-s:mt-5">
+                        <img class="w-56 h-56 sm:w-48 mob-s:w-36 sm:h-48 mob-s:h-36 object-cover object-center"
+                            src="assets/image/times-2.png" alt="times-2">
                         <div class="p-6">
-                            <h3 class="font-2">Illumetry Eos: Illumetry Unveils Its New<br> Holographic Display Device
+                            <h3 class="font-2  sm:text-xl mob-s:text-sm">Illumetry Eos: Illumetry Unveils Its New
+                                Holographic Display Device
                             </h3>
-                            <p class="pt-3 font-light text-base">
-                                Illumetry, a provider of XR displays, recently<br> announced its Illumetry EOS
+                            <p class="pt-3 font-light text-base sm:text-base mob-s:text-xs">
+                                Illumetry, a provider of XR displays, recently announced its Illumetry EOS
                                 gadget....
                             </p>
                             <a href="VR-Times.html" class="pt-4 flex items-center group">
                                 <span
-                                    class="font-2 text-base text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
+                                    class="font-2 sm:text-base mob-s:text-sm text-yellow-500 pr-5  group-hover:text-yellow-400  transition duration-150 ease-out hover:ease-in ">READ
                                     MORE</span>
-                                <img class="w-14 h-4  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
+                                <img class="sm:w-14 sm:h-4 mob-s:w-10 mob-s:h-2  group-hover:ml-2 transition duration-150 ease-out hover:ease-in "
                                     src="assets/image/Arrow 1.png" alt="Arrow">
                             </a>
                         </div>
                     </div>
-                    <div class="mt-10 lg:block sm:hidden">
+                    <div class="mt-10 lg:block sm:hidden mob-s:text-center">
                         <a href="VR-Times.html"
-                            class="text-lg project-btn bg-sky-600  hover:bg-white hover:text-sky-600 transition duration-150 ease-out hover:ease-in p-2.5 px-20 text-base font-medium tracking-wider text-center"
+                            class="text-lg project-btn bg-sky-600  hover:bg-white hover:text-sky-600 transition duration-150 ease-out hover:ease-in p-2.5 px-20 font-medium tracking-wider text-center"
                             style="width: 150px;">VIEW ALL</a>
                     </div>
                 </div>
-                <div class="xl:w-3/6 xl:block sm:w-1/2 twin-reality-img our-times-img relative sm:hidden"
+                <div class="xl:w-3/6 xl:block sm:w-1/2 twin-reality-img our-times-img relative mob-s:hidden"
                     data-aos="zoom-in-left"></div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28  mob-s:my-10"></div>
         <div class="gradiant-2 relative overflow-hidden">
             <!-- TESTIMONIAL -->
             <div class="testimontal">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full   overflow-hidden">
-                        <h2 class="text-center font-2 lg:text-7xl sm:text-5xl mb-20">TESTIMONTAL​</h2>
+                        <h2 class="text-center font-2 lg:text-7xl mob-s:text-5xl mb-20">TESTIMONTAL​</h2>
 
                         <div class="relative" data-aos="zoom-out-down">
                             <!-- Slider Content -->
@@ -518,41 +621,41 @@
                                 <!-- Slide 1 -->
                                 <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
                                     <div
-                                        class="our-project-vr flex flex-col justify-end xl:w-full xl:h-96 sm:h-72 xl:p-10 sm:p-5">
+                                        class="our-project-vr flex flex-col justify-end xl:w-full xl:h-96 sm:h-72 mob-s:h-52 xl:p-10  mob-s:p-5">
                                         <div class="flex items-end">
                                             <div>
-                                                <img class="object-cover object-top xl:h-96 sm:h-72 "
+                                                <img class="object-cover object-top xl:h-96 sm:h-72 sm:w-80  mob-s:h-52  mob-s:w-44"
                                                     data-aos="flip-right" data-aos-easing="linear"
                                                     data-aos-duration="1500" src="assets/image/testimonials.png"
-                                                    alt="project-1" style="width: 320px;">
+                                                    alt="project-1">
                                             </div>
-                                            <div style="width: 80%;" class="xl:pl-16 sm:pl-10">
+                                            <div style="width: 80%;" class="xl:pl-16 sm:pl-10  mob-s:pl-3">
                                                 <p
-                                                    class="leading-loose xl:text-xl sm:text-base tracking-wide xl:pr-28 xl:pb-14 sm:pb-5">
+                                                    class="leading-loose xl:text-xl sm:text-base  mob-s:text-sm tracking-wide  mob-s:text-justify xl:pr-28 xl:pb-14  mob-s:pb-5">
                                                     Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry.
                                                     Lorem
                                                     Ipsum
-                                                    has been the industry's standard dummy text ever since the 1500s,
+                                                    has been <span class="sm:block mob-s:hidden"> the industry's standard dummy text ever since the 1500s,
                                                     when an
                                                     unknown
                                                     printer took a galley of type and scrambled it to make a type
                                                     specimen book.
                                                     It has survived not only five centuries, but also the leap into
                                                     electronic
-                                                    typesetting.
+                                                    typesetting.</span>
                                                 </p>
                                                 <div class="flex justify-between">
                                                     <div>
                                                         <img src="assets/image/star.png" alt="star"
-                                                            class="pb-3 lg:w-36 sm:w-28">
-                                                        <span class="font-2 xl:text-lg sm:text-lg">
+                                                            class="pb-3 lg:w-36 sm:w-28  mob-s:w-20 ">
+                                                        <span class="font-2 xl:text-lg sm:text-lg  mob-s:text-sm">
                                                             Yasheh Patel
                                                         </span>
                                                     </div>
                                                     <div>
                                                         <img src="assets/image/“.png" alt="“"
-                                                            class="ml-auto xl:w-24 sm:w-16">
+                                                            class="ml-auto xl:w-24 sm:w-16 mob-s:w-8">
                                                     </div>
                                                 </div>
                                             </div>
@@ -562,41 +665,41 @@
                                 <!-- Slide 2 -->
                                 <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
                                     <div
-                                        class="our-project-vr flex flex-col justify-end xl:w-full xl:h-96 sm:h-72 xl:p-10 sm:p-5">
+                                        class="our-project-vr flex flex-col justify-end xl:w-full xl:h-96 sm:h-72 mob-s:h-52 xl:p-10  mob-s:p-5">
                                         <div class="flex items-end">
                                             <div>
-                                                <img class="object-cover object-top xl:h-96 sm:h-72 "
+                                                <img class="object-cover object-top xl:h-96 sm:h-72 sm:w-80  mob-s:h-52  mob-s:w-44"
                                                     data-aos="flip-right" data-aos-easing="linear"
                                                     data-aos-duration="1500" src="assets/image/testimonial-2.png"
-                                                    alt="project-1" style="width: 320px;">
+                                                    alt="project-1">
                                             </div>
-                                            <div style="width: 80%;" class="xl:pl-16 sm:pl-10">
+                                            <div style="width: 80%;" class="xl:pl-16 sm:pl-10  mob-s:pl-3">
                                                 <p
-                                                    class="leading-loose xl:text-xl sm:text-base tracking-wide xl:pr-28 xl:pb-14 sm:pb-5">
+                                                    class="leading-loose xl:text-xl sm:text-base  mob-s:text-sm tracking-wide  mob-s:text-justify xl:pr-28 xl:pb-14  mob-s:pb-5">
                                                     Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry.
                                                     Lorem
                                                     Ipsum
-                                                    has been the industry's standard dummy text ever since the 1500s,
+                                                    has been <span class="sm:block mob-s:hidden"> the industry's standard dummy text ever since the 1500s,
                                                     when an
                                                     unknown
                                                     printer took a galley of type and scrambled it to make a type
                                                     specimen book.
                                                     It has survived not only five centuries, but also the leap into
                                                     electronic
-                                                    typesetting.
+                                                    typesetting.</span>
                                                 </p>
                                                 <div class="flex justify-between">
                                                     <div>
                                                         <img src="assets/image/star.png" alt="star"
-                                                            class="pb-3 lg:w-36 sm:w-28">
-                                                        <span class="font-2 xl:text-lg sm:text-lg">
+                                                            class="pb-3 lg:w-36 sm:w-28  mob-s:w-20 ">
+                                                        <span class="font-2 xl:text-lg sm:text-lg  mob-s:text-sm">
                                                             Alexis Mark
                                                         </span>
                                                     </div>
                                                     <div>
                                                         <img src="assets/image/“.png" alt="“"
-                                                            class="ml-auto xl:w-24 sm:w-16">
+                                                            class="ml-auto xl:w-24 sm:w-16 mob-s:w-8">
                                                     </div>
                                                 </div>
                                             </div>
@@ -616,18 +719,18 @@
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28  mob-s:my-10"></div>
             <!-- COMPANIES -->
             <div class="company">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
@@ -663,23 +766,72 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28  mob-s:my-10"></div>
         </div>
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -687,23 +839,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -711,17 +863,21 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
     <script src="js/slider.js"></script>
+    <script src="js/service.js"></script>
     <!-- WOW.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -738,18 +894,13 @@
         });
     </script>
     <script>
-        window.onscroll = function () { myFunction() };
+        // Toggle mobile menu visibility
+        const menuButton = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
+        menuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
     </script>
 </body>
 

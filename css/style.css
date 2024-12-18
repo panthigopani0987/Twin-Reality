@@ -96,6 +96,7 @@ body {
     background: linear-gradient(0deg, rgba(38, 108, 153, 1) 0%, rgba(15, 44, 75, 1) 10%, rgba(9, 2, 27, 1) 28%);
     position: relative;
 }
+
 .banner-image img {
     width: 750px;
     height: 600px;
@@ -114,7 +115,8 @@ body {
 }
 
 .twin-reality-img::after,
-.footer-img::after,.tranning-img::after ,
+.footer-img::after,
+.tranning-img::after,
 .industry-img-2::after {
     position: absolute;
     content: "";
@@ -134,13 +136,26 @@ body {
 
 .reality-img::after,
 .reality-img-2::after,
-.reality-img-3::after{
+.reality-img-3::after {
     width: 850px;
-    height: 400px;
+    height: 350px;
     background-image: url('../assets/image/vr\ \(1\).jpg');
     background-size: cover;
     top: -190px;
     left: 100px;
+}
+
+#service-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* Ensures container width matches viewport */
+}
+
+#service-slider>div {
+    min-width: 100%;
+    /* Each slide takes the full width */
+    flex-shrink: 0;
 }
 
 .reality-img-2::after {
@@ -149,18 +164,15 @@ body {
 }
 
 .reality-img-3::after {
-    background-image: url('../assets/image/vr-3.jpg');    
+    background-image: url('../assets/image/vr-3.jpg');
     background-size: cover;
 
 }
-.tranning-img::after{
+
+.tranning-img::after {
     background-image: url('../assets/image/indutry-img.jpg');
     background-size: cover;
     background-position: center;
-}
-
-.our-project img {
-    width: 500px;
 }
 
 .our-project-vr {
@@ -170,7 +182,7 @@ body {
 
 }
 
-.gradiant{
+.gradiant {
     height: auto;
     background: rgb(66, 56, 109);
     background: linear-gradient(27deg, rgba(66, 56, 109, 1) 0%, rgba(27, 21, 60, 1) 14%, rgba(9, 2, 27, 1) 26%);
@@ -183,13 +195,16 @@ body {
     top: 0px;
     right: -300px;
 }
-.gradiant-3::after{
+
+.gradiant-3::after {
     top: 500px;
 }
-.gradiant-4::after{
+
+.gradiant-4::after {
     top: -300px;
 }
-.gradiant-5::after{
+
+.gradiant-5::after {
     top: 50%
 }
 
@@ -236,9 +251,11 @@ input:focus+label {
     top: -290px;
     left: 170px;
 }
-.faq-header{
+
+.faq-header {
     border-bottom: 2px solid #fafafa23;
 }
-.galleryImg:hover .gallery-img{
+
+.galleryImg:hover .gallery-img {
     opacity: 1;
 }
