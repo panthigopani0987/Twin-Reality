@@ -29,82 +29,118 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
-                <!-- Logo -->
-                <div class="">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="relative  sm:block mob-s:hidden">
+                <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn text-yellow-500">
-                                Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-
-                <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.facebook.com/" class="" target="_blank">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
-                        <a href="https://x.com/" class="" target="_blank">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.instagram.com/" class="" target="_blank">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
                 </div>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block relative sm:hidden text-gray-700 focus:outline-none">
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white absolute top-10 right-44 bg-[#09021b]  transform translate-x-full transition-transform duration-300">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+        <div class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
             <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">VR </span>CONSULATION
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl mob-s:text-4xl text-yellow-500">VR</span><br> CONSULATION
                     </h1>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- form -->
         <div class="service-form">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
@@ -113,7 +149,7 @@
                         Developing virtual events with custom made venue and custom booth
                     </p>
                 </div>
-                <div class="form w-full choose-bg p-16 mt-10" style="height: 520px;"  data-aos="flip-down">
+                <div class="form w-full choose-bg md:p-16 mob-s:p-8 mt-10 h-auto"   data-aos="flip-down">
                     <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div>
@@ -156,12 +192,12 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- Steps -->
         <div class="steps">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-full flex justify-between items-center">
-                    <div class="mr-10" data-aos="zoom-in-right">
+                <div class="w-full flex md:flex-row mob-s:flex-col justify-between items-center">
+                    <div class="md:mr-10 md:my-0 mob-s:my-5" data-aos="zoom-in-right">
                         <div class="flex items-center">
                             <h5 class="text-yellow-500 text-5xl">01.</h5> <span class="font-2 text-2xl ml-5">Step
                                 1</span>
@@ -171,8 +207,8 @@
                             where we ask detailed questions and gather detailed information.
                         </p>
                     </div>
-                    <div class="h-64 border border-zinc-50 border-solid opacity-10"></div>
-                    <div class="mx-10" data-aos="zoom-in">
+                    <div class="h-64 border border-zinc-50 border-solid opacity-10 md:block mob-s:hidden"></div>
+                    <div class="md:mx-10 md:my-0 mob-s:my-5" data-aos="zoom-in">
                         <div class="flex items-center">
                             <h5 class="text-yellow-500 text-5xl">02.</h5> <span class="font-2 text-2xl ml-5">Step
                                 2</span>
@@ -182,8 +218,8 @@
                             forward with your idea.
                         </p>
                     </div>
-                    <div class="h-64 border border-zinc-50 border-solid opacity-10"></div>
-                    <div class="mx-10" data-aos="zoom-in-left">
+                    <div class="h-64 border border-zinc-50 border-solid opacity-10 md:block mob-s:hidden"></div>
+                    <div class="md:mx-10 md:my-0 mob-s:my-5" data-aos="zoom-in-left">
                         <div class="flex items-center">
                             <h5 class="text-yellow-500 text-5xl">03.</h5> <span class="font-2 text-2xl ml-5">Step
                                 3</span>
@@ -197,64 +233,58 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- Don't just take our word for it -->
         <div class="takeOurWord">
-            <div class="mt-28"></div>
+            <div class="sm:my-28 mob-s:my-8"></div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
                     <div class="">
-                        <h3 class="font-2 text-6xl  text-center">
-                            DON'T JUST TAKE OUR WORD FOR IT
+                        <h3 class="font-2 md:text-6xl mob-s:text-3xl text-center">
+                            Clients With Our Solutions
                         </h3>
                     </div>
-                    <div class="flex mt-28">
-                        <div class="w-1/2 mr-5">
-                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
+                    <div class="flex md:flex-row mob-s:flex-col mt-28">
+                        <div class="md:w-1/2 mr-5">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-52 mob-s:h-48 lg:p-8 mob-s:p-4 ">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top xl:h-72 xl:w-72 lg:w-52 lg:h-64" src="assets/image/testimonial-1.png" data-aos="flip-left"
+                                        <img class="object-cover object-top xl:h-72 xl:w-72 lg:w-52 lg:h-64 mob-s:w-44 mob-s:h-52" src="assets/image/testimonial-1.png" data-aos="flip-left"
                                             alt="project-1">
                                     </div>
-                                    <div style="width: 80%;" class="pl-8">
-                                        <p class="xl:text-xl md:text-base leading-relaxed tracking-wide pb-7">
-                                            It's fantastic that we attend the consultation session. Now I have more
-                                            clear view of my XR app
+                                    <div style="width: 80%;" class="pl-6">
+                                        <p class="xl:text-xl mob-s:text-sm leading-relaxed tracking-wide pb-7">
+                                            "“Happy with my Virtual Art Gallery design. The whole team performed a fantastic job <span class="mob-s:hidden md:block">, from conceptualising my design to putting it into action. ”</span> ...
                                         </p>
                                         <div class="flex justify-between">
                                             <div>
-                                                <img src="assets/image/star.png" alt="star" class="pb-3 xl:w-auto md:w-20">
-                                                <span class="font-2 xl:text-lg md:text-sm">
-                                                    Mark -<span class="text-zinc-300 font-2 xl:text-lg md:text-sm"> Founder Travel
-                                                        VR</span>
+                                                <span class="font-2 text-lg">
+                                                    Eesa Haines
                                                 </span>
                                             </div>
                                             <div>
-                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 md:h-5">
+                                                <img src="assets/image/“.png" alt="“" class="ml-auto xl:w-10 md:w-5 xl:h-10 mob-s:h-5">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-1/2 ml-5">
-                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-64 p-8">
+                        <div class="md:w-1/2 ml-5 mob-s:hidden md:block">
+                            <div class="our-project-vr flex flex-col justify-end xl:h-72 md:h-52 lg:p-8 sm:p-4">
                                 <div class="flex items-end">
                                     <div>
-                                        <img class="object-cover object-top xl:w-72 xl:h-72 lg:w-52 lg:h-64" src="assets/image/testimonial-2.png" data-aos="flip-right"
+                                        <img class="object-cover object-top xl:w-72 xl:h-72 lg:w-52 lg:h-64 sm:w-40 sm:h-52"  src="assets/image/testimonial-2.png" data-aos="flip-right"
                                             alt="project-1">
                                     </div>
-                                    <div style="width: 80%;" class="pl-8">
-                                        <p class="xl:text-lg md:text-base leading-relaxed tracking-wide pb-7">
-                                            We are developing Medical VR app and has some doubts related to implication.
-                                            The meeting was fruitful.
+                                    <div style="width: 80%;" class="pl-6">
+                                        <p class="xl:text-xl sm:text-sm leading-relaxed tracking-wide lg:pb-7 sm:pb-2">
+                                            “The virtual show my team and I created for a client was a huge success, and they really enjoyed the 3D elements. I want to participate in this again next year....
                                         </p>
                                         <div class="flex justify-between">
                                             <div>
-                                                <img src="assets/image/star.png" alt="star" class="pb-3 xl:w-auto md:w-20">
-                                                <span class="font-2 xl:text-lg md:text-sm">
-                                                    Alexis -<span class="text-zinc-300 font-2 xl:text-lg md:text-sm"> CEO Medical
-                                                        Training</span>
+                                                <span class="font-2 text-lg">
+                                                    Tina Talley
                                                 </span>
                                             </div>
                                             <div>
@@ -269,7 +299,7 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <div class="gradiant-2 gradiant-3  relative overflow-hidden">
             <!-- images-para -->
             <div class="imagePara">
@@ -339,14 +369,14 @@
             <!-- COMPANIES -->
             <div class="company relative">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
@@ -382,6 +412,55 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -391,38 +470,38 @@
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                                an unknown printer took a galley.
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -430,16 +509,20 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
+    <script src="js/mobile-toggle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

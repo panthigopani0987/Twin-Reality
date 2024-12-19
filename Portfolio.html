@@ -29,81 +29,118 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
-                <!-- Logo -->
-                <div class="">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="relative  sm:block mob-s:hidden">
+                <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn hover:text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn hover:text-yellow-500">
-                                Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-
-                <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.facebook.com/" class="" target="_blank">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
-                        <a href="https://x.com/" class="" target="_blank">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.instagram.com/" class="" target="_blank">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
                 </div>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block relative sm:hidden text-gray-700 focus:outline-none">
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white absolute top-10 right-44 bg-[#09021b]  transform translate-x-full transition-transform duration-300">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+        <div class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
             <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">PORTFOLIO</span><br> OF TWIN REALITY
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl mob-s:text-4xl text-yellow-500">PORTFOLIO</span><br> OF TWIN REALITY
                     </h1>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <div class="gradiant-2 gradiant-5 relative overflow-hidden">
             <!-- gallery -->
             <div class="gallery">
@@ -112,110 +149,110 @@
                         <a href="" class="h-10 p-1 px-7 mt-5 bg-yellow-500">
                             All
                         </a>
-                        <a href="" class="h-10 p-1 mt-5 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
+                        <a href="" class="h-10 p-1 mt-5 md:text-xl mob-s:text-base px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
                             AI
                         </a>
-                        <a href="" class="h-10 p-1 mt-5 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
+                        <a href="" class="h-10 p-1 mt-5 md:text-xl mob-s:text-base px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
                             Configurator
                         </a>
-                        <a href="" class="h-10 p-1 mt-5 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
+                        <a href="" class="h-10 p-1 mt-5 md:text-xl mob-s:text-base px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
                             Homepage
                         </a>
-                        <a href="" class="h-10 p-1 mt-5 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
+                        <a href="" class="h-10 p-1 mt-5 md:text-xl mob-s:text-base px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
                             Industrial VR Training
                         </a>
-                        <a href="" class="h-10 p-1 mt-5 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
+                        <a href="" class="h-10 p-1 mt-5 md:text-xl mob-s:text-base px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500">
                             Latest
                         </a>
-                        <a href="" class="h-10 p-1 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
+                        <a href="" class="h-10 p-1 px-7 md:text-xl mob-s:text-base bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
                             Virtual Reality
                         </a>
-                        <a href="" class="h-10 p-1 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
+                        <a href="" class="h-10 p-1 px-7 md:text-xl mob-s:text-base bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
                             Webver
                         </a>
-                        <a href="" class="h-10 p-1 px-7 bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
+                        <a href="" class="h-10 p-1 px-7 md:text-xl mob-s:text-base bg-transparent border-2 border-zinc-500 hover:bg-zinc-500 mt-5">
                             Virtual Events
                         </a>
                     </div>
                     <div class="w-full flex flex-wrap justify-evenly items-center mt-20">
-                        <div class="w-96 bg-cover relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-1.png" alt="gallery-1">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-2.png" alt="gallery-2">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-3.png" alt="gallery-3">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-4.png" alt="gallery-4">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-5.png" alt="gallery-5">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-6.png" alt="gallery-6">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-7.png" alt="gallery-7">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-8.png" alt="gallery-8">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
-                        <div class="w-96 bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
+                        <div class="md:w-96 mob-s:w-[45%] bg-cover  relative galleryImg transition duration-300 ease-in-out mt-10">
                             <div  data-aos="zoom-in">
                                 <img src="assets/image/gallery-9.png" alt="gallery-9">
                             </div>
                             <div
-                                class="gallery-img w-full  h-20 opacity-0 transition duration-300 ease-in-out text-3xl font-bold text-center p-5 absolute bg-purple-600 right-0 bottom-0">
+                                class="gallery-img w-full  md:h-20 mob-s:h-10  opacity-0 transition duration-300 ease-in-out md:text-3xl mob-s:text-base font-bold text-center md:p-5 mob-s:p-3 absolute bg-purple-600 right-0 bottom-0">
                                 Virtual Art Gallery
                             </div>
                         </div>
@@ -229,18 +266,18 @@
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28 mob-s:my-8"></div>
             <!-- COMPANIES -->
-            <div class="company">
+            <div class="company relative">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
@@ -276,23 +313,72 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28 mob-s:my-8"></div>
         </div>
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -300,23 +386,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -324,17 +410,21 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
     <script src="js/slider.js"></script>
+    <script src="js/mobile-toggle.js"></script>
     <script defer src="js/faq.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 

@@ -29,105 +29,148 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
                 <!-- Logo -->
-                <div class="">
+                <div class="flex-none w-40">
                     <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+                        <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
                     </a>
                 </div>
-
                 <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
+                <nav class="relative  sm:block mob-s:hidden">
+                    <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                        <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
                         <!-- Dropdown for Services -->
                         <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn text-yellow-500">
+                            <a href="service-vr.html" class="flex items-center dropbtn text-yellow-400">
                                 Services
                                 <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
                             </a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
+                                <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                                <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial
                                     Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
+                                <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                                <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
                                     Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
+                                <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
                             </div>
                         </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
+                        <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                        <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                        <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
                     </ul>
                 </nav>
-
-
                 <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
+                <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                    <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
                         <a href="https://www.facebook.com/" class="" target="_blank">
                             <img src="assets/image/facebook.png" alt="facebook">
                         </a>
                     </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
+                    <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
                         <a href="https://x.com/" class="" target="_blank">
                             <img src="assets/image/twitter.png" alt="twitter">
                         </a>
                     </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
+                    <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
                         <a href="https://www.instagram.com/" class="" target="_blank">
                             <img src="assets/image/instragram.png" alt="instragram">
                         </a>
                     </div>
                 </div>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="block relative sm:hidden text-gray-700 focus:outline-none">
+                    <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+                </button>
             </div>
-        </div>
+
+            <!-- Mobile Menu (Initially hidden) -->
+            <div id="mobile-menu"
+                class="hidden sm:hidden transparent text-center text-white absolute top-10 right-44 bg-[#09021b]  transform translate-x-full transition-transform duration-300">
+                <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+                <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+                <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+                <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+                <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
+            </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
-            <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">METAVERSE</span> DEVELOPMENT
+        <div
+            class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
+            <div
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span
+                            class="font-2  lg:text-7xl sm:text-6xl mob-s:text-4xl text-yellow-500">METAVERSE</span><br>
+                        DEVELOPMENT
                     </h1>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- form -->
         <div class="service-form">
-            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+            <div
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="form-contain w-full flex">
-                    <p class="font-light leading-relaxed tracking-wider ">
+                    <p class="font-light leading-relaxed tracking-wider  sm:text-xl mob-s:text-lg">
                         We are one of the India’s first Metaverse Development Company. Creating Virtual Solutions for
                         industries.
                     </p>
                 </div>
-                <div class="form w-full choose-bg p-16 mt-10" data-aos="flip-up">
+                <div class="form w-full h-auto choose-bg md:p-16 p-10 mt-10 " data-aos="flip-up">
                     <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
                                     Name</label>
                                 <input type="text" id="first-name" placeholder="Your First Name"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
                                 <label for="last-name" class="block text-xl font-medium text-zinc-400 mb-3">Last
                                     Name</label>
                                 <input type="text" id="last-name" placeholder="Your Last Name"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
@@ -135,12 +178,12 @@
                                 <label for="email-address" class="block text-xl font-medium text-zinc-400 mb-3">Email
                                     Address</label>
                                 <input type="email" id="email-address" placeholder="Your Email Address"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
                                 <label for="role" class="block text-xl font-medium text-zinc-400 mb-3">Role</label>
                                 <input type="text" id="role" placeholder="Your Job Role"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
@@ -148,14 +191,14 @@
                                 <label for="message"
                                     class="block text-xl font-medium text-zinc-400 mb-3">Message</label>
                                 <textarea id="message" rows="4" placeholder="Your Message"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2  focus:ring-yellow-500 focus:border-yellow-500">
                                 </textarea>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
                             <div>
                                 <button type="submit"
-                                    class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  p-3 px-16 text-xl font-medium tracking-wider text-center">
+                                    class="animate__animated animate__zoomIn project-btn bg-sky-600 p-3 px-16 text-xl hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  font-medium tracking-wider text-center">
                                     SUBMIT
                                 </button>
                             </div>
@@ -164,14 +207,16 @@
                 </div>
             </div>
         </div>
-        <div class="my-32"></div>
         <!-- twin-reality-sol -->
         <div class="twin-reality overflow-hidden">
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div class="my-32"></div>
+            <div
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="xl:w-2/5">
-                    <h2 class="font-2 text-6xl uppercase leading-normal">metaverse Development for Business</h2>
+                    <h2 class="font-2 sm:text-6xl mob-s:text-3xl uppercase leading-normal">metaverse Development for
+                        Business</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                    <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                         The metaverse is rapidly emerging as a new frontier for businesses looking to leverage
                         immersive technologies to engage customers, train employees, and showcase products and
                         services in new and innovative ways. By providing a fully immersive, interactive virtual
@@ -183,57 +228,66 @@
                 <div class="w-3/5 twin-reality-img tr-sol bg-center  bg-cover bg-no-repeat  relative xl:block sm:hidden"
                     data-aos="fade-left"></div>
             </div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl">
+            <div
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="flex flex-col">
-                    <img src="assets/image/vr-sol.png" alt="vr-sol" class="h-96 object-cover object-center xl:hidden sm:block">
-                    <p class="font-light text-gray-400 leading-relaxed tracking-wide">
-                        At Twin Reality, we believe that the metaverse represents a powerful new tool for businesses looking
-                        to achieve their goals and stand out in an increasingly competitive marketplace. With our expertise
-                        in metaverse development and immersive technologies, we are well-positioned to help companies of all
+                    <img src="assets/image/vr-sol.png" alt="vr-sol"
+                        class="sm:h-96 mob-s:h-52 am:mb-0 mob-s:mb-5 object-cover object-center xl:hidden sm:block">
+                    <p class="font-light sm:text-xl mob-s:text-base text-gray-400 leading-relaxed tracking-wide">
+                        At Twin Reality, we believe that the metaverse represents a powerful new tool for businesses
+                        looking
+                        to achieve their goals and stand out in an increasingly competitive marketplace. With our
+                        expertise
+                        in metaverse development and immersive technologies, we are well-positioned to help companies of
+                        all
                         sizes and industries harness the full potential of this exciting new technology.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- what is the need -->
         <div class="what-needs">
-            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+            <div
+                class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="w-full text-center">
-                    <h2 class=" font-2 text-6xl leading-normal">What Is The Need To Develop A Metaverse For Your
+                    <h2 class=" font-2 sm:text-6xl mob-s:text-3xl leading-normal">What Is The Need To Develop A
+                        Metaverse For Your
                         Business?​</h2>
-                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Developing a metaverse for your business can
+                    <p class="font-light sm:mt-10 mob-s:mt-5 text-zinc-300 tracking-wide sm:text-xl mob-s:text-base">
+                        Developing a metaverse for your business can
                         provide numerous benefits and help you stay ahead of the competition in today’s rapidly
                         evolving business landscape.</p>
                 </div>
-                <div class="w-full flex lg:flex-row sm:flex-col items-start justify-evenly mt-20">
-                    <div class="mt-14 flex flex-col items-center justify-center text-center lg:w-5/12 sm:w-full h-72"
+                <div class="w-full flex lg:flex-row mob-s:flex-col items-start justify-evenly sm:mt-20">
+                    <div class="mt-14 flex flex-col items-center justify-center text-center lg:w-5/12 mob-s:w-full h-72"
                         data-aos="fade-down-right"
                         style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <h6 class="font-2 text-2xl">
+                        <h6 class="font-2 sm:text-2xl">
                             Enhanced Learning Experience
                         </h6>
-                        <p class="text-zinc-400 mt-7 px-10 xl:text-xl sm:text-base">
+                        <p class="text-zinc-400 mt-7 px-10 xl:text-xl mob-s:text-base">
                             A metaverse can help businesses to create highly immersive and engaging experiences for
                             their customers. This can include everything from virtual showrooms and product
                             demos to interactive experiences that allow customers to explore your products or
                             services in new and innovative ways.
                         </p>
                     </div>
-                    <div class="mt-14 flex flex-col items-center justify-center text-center lg:w-5/12 sm:w-full h-72"
+                    <div class="mt-14 flex flex-col items-center justify-center text-center lg:w-5/12 mob-s:w-full h-72"
                         data-aos="fade-down-left"
                         style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <h6 class="font-2 text-2xl">
+                        <h6 class="font-2 sm:text-2xl">
                             Improved Employee Training
                         </h6>
-                        <p class="text-zinc-400 mt-7 px-10 xl:text-xl sm:text-base">
+                        <p class="text-zinc-400 mt-7 px-10 xl:text-xl mob-s:text-base">
                             Metaverse technology can help to improve employee training by providing interactive
                             simulations, gamifying learning, enabling remote training, & providing real-time
                             feedback. By using metaverse technology, companies can create more engaging experiences.
                         </p>
                     </div>
                 </div>
-                <div class="w-full flex lg:flex-row sm:flex-col items-start justify-evenly lg:mt-14">
+                <div
+                    class="w-full flex lg:flex-row sm:flex-col items-start justify-evenly lg:mt-14 sm:flex mob-s:hidden">
                     <div class="mt-14 flex flex-col items-center justify-center text-center lg:w-5/12 sm:w-full h-72 "
                         data-aos="fade-up-right"
                         style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
@@ -261,13 +315,13 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- metaverse development -->
-        <div class="metaverse">
-            <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
+        <div class="metaverse mob-s:hidden lg:block">
+            <div class="container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="w-full text-center">
-                    <h2 class=" font-2 lg:text-7xl leading-normal">Metaverse Development Solutions​</h2>
-                    <p class="font-light pt-10 text-zinc-300 tracking-wide">Developing a metaverse for your business can
+                    <h2 class=" font-2 lg:text-7xl mob-s:text-3xl leading-normal">Metaverse Development Solutions​</h2>
+                    <p class="font-light sm:text-xl mob-s:text-base sm:pt-10 mob-s:pt-5 text-zinc-300 tracking-wide">Developing a metaverse for your business can
                         provide numerous benefits and help you stay ahead of the competition in today’s rapidly
                         evolving business landscape.</p>
                 </div>
@@ -277,7 +331,7 @@
                         <!-- Slide 1 -->
                         <div class="min-w-full flex flex-col items-center p-6 rounded-lg">
                             <div class="w-full flex justify-start mt-20">
-                                <div class="w-1/2 flex flex-col justify-center" style="height: 495px;">
+                                <div class="w-1/2 flex flex-col justify-center h-[495px]">
                                     <div class="flex items-center">
                                         <span class="text-5xl text-yellow-500">01.</span>
                                         <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
@@ -292,20 +346,19 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                <div class=" border border-zinc-50 border-solid opacity-10 lg:block hidden  h-[495px]">
                                 </div>
-                                <div class="w-1/2 h-96 pt-16" data-aos="fade-down-left">
-                                    <img src="assets/image/tranning-img.png" alt="tranning-img" style=" height: 430px;" class="object-cover object-center">
+                                <div class="lg:w-1/2 w-full h-96 pt-16" data-aos="fade-down-left">
+                                    <img src="assets/image/tranning-img.png" alt="tranning-img" class=" h-[430px] object-cover object-center">
                                 </div>
                             </div>
-                            <div class="w-full flex items-start">
+                            <div class=" flex items-start">
                                 <div class="w-1/2">
-                                    <img src="assets/image/metaverse.png" alt="metaverse" data-aos="fade-up-right"
-                                        style="width: 750px; height: 430px;" class="object-cover object-center">
+                                    <img src="assets/image/metaverse.png" alt="metaverse" data-aos="fade-up-right" class="w-[750px] object-cover object-center  h-[430px]">
                                 </div>
-                                <div class=" border border-zinc-50 border-solid opacity-10" style="height: 495px;">
+                                <div class=" border border-zinc-50 border-solid opacity-10  h-[495px]">
                                 </div>
-                                <div class="w-1/2 flex flex-col justify-center pl-20" style="height: 495px;">
+                                <div class="w-1/2 flex flex-col justify-center pl-20  h-[495px]">
                                     <div class="flex items-center">
                                         <span class="text-5xl text-yellow-500">02.</span>
                                         <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
@@ -429,64 +482,65 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- Tools & Platforms -->
         <div class="tools-platforms">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                 <div class="w-full text-center">
-                    <h2 class=" font-2  lg:text-6xl sm:text-5xl leading-normal">TOOLS & PLATFORMS USED IN VR
+                    <h2 class=" font-2  lg:text-6xl sm:text-5xl mob-s:text-2xl leading-normal">TOOLS & PLATFORMS USED IN VR
                         DEVELOPMENT​</h2>
-                    <p class="font-light mt-5 text-zinc-300 tracking-wide">Virtual Reality App Development Tools To
+                    <p class="font-light mt-5 text-zinc-300 tracking-wide mob-s:text-sm sm:text-xl">Virtual Reality App Development Tools To
                         Create Different Solutions</p>
                 </div>
                 <div class="w-full flex flex-wrap items-center justify-evenly">
-                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/React360.png" alt="React360" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/React360.png" alt="React360" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">React360</span>
                     </div>
-                    <div data-aos="zoom-in-down" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-down" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/Vuforia.png" alt="Vuforia" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Vuforia</span>
                     </div>
-                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/unity.png" alt="unity.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unity.png" alt="unity.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unity</span>
                     </div>
-                    <div data-aos="zoom-in-right" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/unreal-engine.png" alt="unreal-engine.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-right" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/unreal-engine.png" alt="unreal-engine.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Unreal Engine</span>
                     </div>
-                    <div data-aos="zoom-in-up" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/blender.png" alt="blender.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-up" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/blender.png" alt="blender.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">Blender</span>
                     </div>
-                    <div data-aos="zoom-in-left" class="flex items-center justify-center lg:h-48 sm:h-32 mt-16"
-                        style="width: 30%;background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
-                        <img src="assets/image/3ds max.png" alt="3ds max.png" class="pr-5 lg:w-24 sm:w-16">
+                    <div data-aos="zoom-in-left" class="flex items-center justify-center sm:w-[30%] lg:h-48 sm:h-32 mob-s:h-32 mob-s:w-[45%] mt-16"
+                        style="background: linear-gradient(#09021b, #09021b) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,linear-gradient(#816912 0%, #634b11 34%, #09021b 100%);border-radius: 0px;box-sizing: content-box;">
+                        <img src="assets/image/3ds max.png" alt="3ds max.png" class="pr-5 lg:w-24 sm:w-16 mob-s:w-16">
                         <span class="lg:text-3xl sm:text-xl text-zinc-300 font-light tracking-wide">3ds Max</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <div class="gradiant-2 gradiant-3 relative overflow-hidden">
             <div class="faq">
                 <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
                     <div class="container mx-auto py-16 px-6">
-                        <h1 class="text-7xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
-                        <div class="space-y-4">
+                        <h1 class=" lg:text-6xl sm:text-4xl mob-s:text-2xl font-2 text-center mb-20">MOST ASKED QUESTIONS</h1>
+                        <div class="space-y-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 
                             <!-- FAQ Item 1 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">1.</span> In Which Industries Is VR Most
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class=" sm:text-4xl mob-s:text-3xl text-yellow-500">1.</span> In Which Industries Is VR Most
                                         Useful?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
                                         <span style="font-size: 25px;">
@@ -495,7 +549,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content py-8">
-                                    <p class="text-xl  text-zinc-500">
+                                    <p class="sm:text-xl mob-s:text-lg  text-zinc-500">
                                         Virtual Reality (VR) is an immersive technology that allows users to experience
                                         a
                                         simulated environment through a headset or other similar devices. VR has
@@ -503,7 +557,7 @@
                                         its application across many industries and is proving to be a game-changer. The
                                         following are some of the industries where VR is most useful:
                                     </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                    <ul class="list-decimal list-inside sm:text-xl mob-s:text-lg mt-2 space-y-1 pl-10">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
                                             gaming industry, providing a completely immersive experience for gamers.
                                         </li>
@@ -525,9 +579,9 @@
                             <!-- FAQ Item 2 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">2.</span> How Is Virtual Reality Being
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class="sm:text-4xl mob-s:text-3xl text-yellow-500">2.</span> How Is Virtual Reality Being
                                         Used In
                                         Finance?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
@@ -537,7 +591,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content hidden py-8">
-                                    <p class="text-xl  text-zinc-500">
+                                    <p class="sm:text-xl mob-s:text-lg text-zinc-500">
                                         Virtual Reality (VR) is an immersive technology that allows users to experience
                                         a
                                         simulated environment through a headset or other similar devices. VR has
@@ -545,31 +599,15 @@
                                         its application across many industries and is proving to be a game-changer. The
                                         following are some of the industries where VR is most useful:
                                     </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
-                                            gaming industry, providing a completely immersive experience for gamers.
-                                        </li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Healthcare: VR is being used in
-                                            healthcare to simulate surgeries and train medical professionals. It is also
-                                            being used in therapy to help patients overcome phobias and anxiety.
-                                        </li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Education: VR is being used in
-                                            education to create immersive learning experiences that allow students to
-                                            explore and understand complex concepts.</li>
-                                        <li class="text-zinc-500 py-2 leading-relaxed">Architecture and Design: VR is
-                                            being
-                                            used in architecture and design to provide clients with a virtual tour of
-                                            buildings and spaces before they are constructed.</li>
-                                    </ul>
                                 </div>
                             </div>
 
                             <!-- FAQ Item 3 -->
                             <div>
                                 <div
-                                    class="faq-header flex justify-between items-center text-center py-4 cursor-pointer">
-                                    <h2 class="text-2xl tracking-wide text-zinc-400"><span
-                                            class=" text-4xl text-yellow-500">3.</span> How Will Virtual Reality Help To
+                                    class="faq-header flex justify-between items-center py-4 cursor-pointer">
+                                    <h2 class="sm:text-2xl mob-s:text-xl tracking-wide text-zinc-400"><span
+                                            class="sm:text-4xl mob-s:text-3xl text-yellow-500">3.</span> How Will Virtual Reality Help To
                                         Promote A Business?</h2>
                                     <div class="icon text-zinc-50 w-7 h-7 rounded-full bg-sky-500 text-center">
                                         <span style="font-size: 25px;">
@@ -578,15 +616,7 @@
                                     </div>
                                 </div>
                                 <div class="faq-content hidden py-8">
-                                    <p class="text-xl  text-zinc-500">
-                                        Virtual Reality (VR) is an immersive technology that allows users to experience
-                                        a
-                                        simulated environment through a headset or other similar devices. VR has
-                                        found
-                                        its application across many industries and is proving to be a game-changer. The
-                                        following are some of the industries where VR is most useful:
-                                    </p>
-                                    <ul class="list-decimal list-inside text-xl mt-2 space-y-1 pl-10">
+                                    <ul class="list-decimal list-inside sm:text-xl mob-s:text-lg mt-2 space-y-1">
                                         <li class="text-zinc-500 py-2 leading-relaxed">Gaming: VR has revolutionized the
                                             gaming industry, providing a completely immersive experience for gamers.
                                         </li>
@@ -620,83 +650,143 @@
             <!-- COMPANIES -->
             <div class="company relative">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
-                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/client (1).png"
-                                        alt="client (1).png">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                        alt="company-1">
                                 </div>
                             </div>
                             <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
-                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/client (2).png"
-                                        alt="client (2).png">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                        alt="company-2">
                                 </div>
                             </div>
                             <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24 object-center"
-                                        src="assets/image/client (3).png" alt="client (3).png">
+                                        src="assets/image/company-3.png" alt="company-3">
                                 </div>
                             </div>
                             <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
-                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/client (4).png"
-                                        alt="client (4).png">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                        alt="company-4">
                                 </div>
+                            </div>
+                            <div class="xl:h-60 sm:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                            <div class="flex flex-col items-center" data-aos="fade-up">
+                                <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                    <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-5.png"
+                                        alt="company-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
     </main>
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container xl:container  lg:container  md:container  sm:container  xl:container xl:container  lg:container  md:container  sm:container  lg:container xl:container  lg:container  md:container  sm:container  md:container xl:container  lg:container  md:container  sm:container  sm:container xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center"
+                        data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                                an unknown printer took a galley.
+                            <p
+                                class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
+                                Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
+                                Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
+                                an<br> unknown printer took a galley.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div
+                    class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us
+                        </h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -704,18 +794,23 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br>
+                                    @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
     <!-- JavaScript for Automatic Slider -->
     <script src="js/slider.js"></script>
+    <script src="js/mobile-toggle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>

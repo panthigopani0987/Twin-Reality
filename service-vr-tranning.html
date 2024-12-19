@@ -29,82 +29,118 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
-                <!-- Logo -->
-                <div class="">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="relative  sm:block mob-s:hidden">
+                <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="VR-Times.html" class="hover:text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn text-yellow-500">
-                                Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="hover:text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-
-                <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.facebook.com/" class="" target="_blank">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
-                        <a href="https://x.com/" class="" target="_blank">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.instagram.com/" class="" target="_blank">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
                 </div>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block relative sm:hidden text-gray-700 focus:outline-none">
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white absolute top-10 right-44 bg-[#09021b]  transform translate-x-full transition-transform duration-300">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+        <div class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
             <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">VR INDUSTRIAL</span> TRAINING
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl mob-s:text-3xl text-yellow-500">VR INDUSTRIAL</span><br> DEVELOPMENT
                     </h1>
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- form -->
         <div class="service-form">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
@@ -113,41 +149,39 @@
                         Custom Virtual Reality App Development for Industrial Training
                     </p>
                 </div>
-                <div class="form-1 w-full choose-bg p-16 mt-10" style="height: 450px;" data-aos="flip-up">
+                <div class="form w-full h-auto choose-bg md:p-16 p-10 mt-10 " data-aos="flip-up">
                     <form action="" method="get">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-xl font-medium mb-3 text-zinc-400">First
                                     Name</label>
                                 <input type="text" id="first-name" placeholder="Your First Name"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
                                 <label for="email-address" class="block text-xl font-medium text-zinc-400 mb-3">Email
                                     Address</label>
                                 <input type="email" id="email-address" placeholder="Your Email Address"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
                             <div>
-                                <label for="company-name" class="block text-xl font-medium text-zinc-400 mb-3">Company
-                                    Name</label>
+                                <label for="company-name" class="block text-xl font-medium text-zinc-400 mb-3">Company Name</label>
                                 <input type="text" id="company-name" placeholder="Company Name"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                             <div>
-                                <label for="requirement"
-                                    class="block text-xl font-medium text-zinc-400 mb-3">Requirement</label>
+                                <label for="requirement" class="block text-xl font-medium text-zinc-400 mb-3">Requirement</label>
                                 <input type="text" id="requirement" placeholder="Requirement"
-                                    class="mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
+                                    class=" mt-1 block w-full bg-transparent text-white placeholder:text-zinc-600 border border-zinc-600 p-2 px-4 focus:ring-yellow-500 focus:border-yellow-500">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mt-10">
                             <div>
                                 <button type="submit"
-                                    class="project-btn bg-sky-600 hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  p-3 px-16 text-xl font-medium tracking-wider text-center uppercase">
-                                    send
+                                    class="animate__animated animate__zoomIn project-btn bg-sky-600 p-3 px-16 text-xl hover:bg-white hover:text-sky-600  transition duration-150 ease-out hover:ease-in  font-medium tracking-wider text-center">
+                                    SUBMIT
                                 </button>
                             </div>
                         </div>
@@ -155,19 +189,19 @@
                 </div>
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- vr-video -->
         <div class="vr-video">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
-                    <h2 class="text-center font-2 text-7xl mb-8">VR INDUSTRIAL TRAINING​</h2>
+                    <h2 class="text-center font-2 md:text-7xl mob-s:text-3xl mb-8">VR INDUSTRIAL TRAINING​</h2>
 
                     <div class="relative overflow-hidden">
                         <!-- Slider Content -->
                         <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider">
                             <!-- Slide 1 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
-                                <iframe width="1000" height="500"
+                                <iframe class="md:w-[1000px] mob-s:w-full md:h-[500px] mob-s:h-[300px]"
                                     src="https://www.youtube.com/embed/vxdR8QUS8Lc?si=-bqLCYZwd11QXkJf"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -177,7 +211,7 @@
                             <!-- Slide 2 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500"
+                                    <iframe class="md:w-[1000px] mob-s:w-full md:h-[500px] mob-s:h-[300px]"
                                         src="https://www.youtube.com/embed/ITHaJGshnWA?si=VH7vkFwur-bqNHZ3"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -188,7 +222,7 @@
                             <!-- Slide 3 -->
                             <div class="min-w-full flex flex-col items-center text-center p-6 b rounded-lg">
                                 <div class="flex justify-center items-center">
-                                    <iframe width="1000" height="500"
+                                    <iframe class="md:w-[1000px] mob-s:w-full md:h-[500px] mob-s:h-[300px]"
                                         src="https://www.youtube.com/embed/R9_imC5XwVo?si=R6Ce_ZrTHTypZtcs"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -209,39 +243,39 @@
                 <!-- Slider Container -->
             </div>
         </div>
-        <div class="my-28"></div>
+        <div class="sm:my-28 mob-s:my-8"></div>
         <!-- The Power Of VR Training -->
         <div class="vr-tranning">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full">
                     <div class=" text-center">
-                        <h3 class="font-2 text-6xl uppercase">
+                        <h3 class="font-2 md:text-6xl mob-s:text-3xl uppercase">
                             The Power Of VR Training
                         </h3>
                     </div>
-                    <div class="flex lg:flex-row sm:flex-col justify-between items-start mt-20">
-                        <div class="lg:w-1/2 sm:w-full lg:h-80 py-8 lg:pb-10" data-aos="fade-down-right">
+                    <div class="flex lg:flex-row mob-s:flex-col justify-between items-start mt-20">
+                        <div class="lg:w-1/2 mob-s:w-full lg:h-80 py-8 lg:pb-10" data-aos="fade-down-right">
                             <div class="flex items-center">
-                                <span class="text-5xl text-yellow-500">01.</span>
-                                <p class="font-2 text-2xl pl-5">Enhanced Learning Experience</p>
+                                <span class="sm:text-5xl mob-s:text-3xl text-yellow-500">01.</span>
+                                <p class="font-2 sm:text-2xl mob-s:text-xl pl-5">Enhanced Learning Experience</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 sm:text-xl mob-s:text-base xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR provides an immersive and interactive training environment, allowing trainees
                                     to engage with realistic simulations. This hands-on experience enhances learning
                                     retention and understanding compared to traditional training methods.
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full border border-zinc-50 border-solid opacity-10  sm:block lg:hidden"></div>
-                        <div class="h-80 border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"></div>
-                        <div class="lg:w-1/2 sm:w-full lg:h-80 py-8 lg:pb-10 lg:pl-14" data-aos="fade-down-left">
+                        <div class="w-full border border-zinc-50 border-solid opacity-10  mob-s:block lg:hidden"></div>
+                        <div class="h-80 border border-zinc-50 border-solid opacity-10  lg:block mob-s:hidden"></div>
+                        <div class="lg:w-1/2 mob-s:w-full lg:h-80 py-8 lg:pb-10 lg:pl-14" data-aos="fade-down-left">
                             <div class="flex items-center">
-                                <span class="text-5xl text-yellow-500">02.</span>
-                                <p class="font-2 text-2xl pl-5">Safe And Controlled Environment</p>
+                                <span class="sm:text-5xl mob-s:text-3xl text-yellow-500">02.</span>
+                                <p class="font-2 sm:text-2xl mob-s:text-xl pl-5">Safe And Controlled Environment</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 sm:text-xl mob-s:text-base xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR training enables trainees to practice tasks and procedures in a safe and
                                     controlled virtual environment. It reduces the risks associated with real-world
                                     training, especially in high-risk industries or hazardous scenarios.
@@ -249,22 +283,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"></div>
-                    <div class="flex lg:flex-row sm:flex-col justify-between items-start">
+                    <div class="h-full border border-zinc-50 border-solid opacity-10  lg:block mob-s:hidden"></div>
+                    <div class="flex lg:flex-row mob-s:flex-col justify-between items-start">
                         <!-- img -->
-                        <div class="lg:w-1/2 sm:w-full py-14 pb-16 bg-cover bg-top bg-no-repeat"
-                            style="height: 400px; background-image: url('assets/image/tranning-img.png');"></div>
-                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"
+                        <div class="lg:w-1/2 mob-s:w-full sm:h-[400px] mob-s:h-[200px] py-14 pb-16 bg-cover bg-top bg-no-repeat"
+                            style=" background-image: url('assets/image/tranning-img.png');"></div>
+                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block mob-s:hidden"
                             style="height: 400px;"></div>
                         <!-- 03 -->
-                        <div class="lg:w-1/2 sm:w-full py-14 lg:pb-10 lg:pl-14" style="height: 400px;"
+                        <div class="lg:w-1/2 mob-s:w-full sm:h-[400px] mob-s:h-auto py-14 lg:pb-10 lg:pl-14"
                             data-aos="fade-left">
                             <div class="flex items-center">
-                                <span class="text-5xl text-yellow-500">03.</span>
-                                <p class="font-2 text-2xl pl-5">Cost And Time Savings</p>
+                                <span class="sm:text-5xl mob-s:text-3xl text-yellow-500">03.</span>
+                                <p class="font-2 sm:text-2xl mob-s:text-xl pl-5">Cost And Time Savings</p>
                             </div>
                             <div class="">
-                                <p class="mt-10 xl:leading-loose tracking-wider font-light text-zinc-300">
+                                <p class="mt-10 sm:text-xl mob-s:text-base xl:leading-loose tracking-wider font-light text-zinc-300">
                                     VR training eliminates the need for expensive physical equipment setups, travel
                                     expenses, and material consumption for training purposes. It also reduces the
                                     time required for training sessions, as trainees can access virtual simulations
@@ -273,9 +307,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full border border-zinc-50 border-solid opacity-10 lg:block sm:hidden"></div>
+                    <div class="h-full border border-zinc-50 border-solid opacity-10 lg:block mob-s:hidden"></div>
                     <div class="flex justify-between items-start">
-                        <div class="w-1/2 py-14 pb-16  lg:block sm:hidden" style="height: 380px;"
+                        <div class="w-1/2 py-14 pb-16  lg:block mob-s:hidden" style="height: 380px;"
                             data-aos="fade-up-right">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">05.</span>
@@ -290,9 +324,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block sm:hidden"
+                        <div class=" border border-zinc-50 border-solid opacity-10  lg:block mob-s:hidden"
                             style="height: 380px;"></div>
-                        <div class="w-1/2 py-14 pb-16 pl-14  lg:block sm:hidden" style="height: 380px;"
+                        <div class="w-1/2 py-14 pb-16 pl-14  lg:block mob-s:hidden" style="height: 380px;"
                             data-aos="fade-up-left">
                             <div class="flex items-center">
                                 <span class="text-5xl text-yellow-500">04.</span>
@@ -311,22 +345,22 @@
                 </div>
             </div>
         </div>
-        <div class="lg:my-28"></div>
+        <div class="lg:sm:my-28 mob-s:my-8"></div>
         <!-- INDUSTRIAL TRAININIG -->
         <div class="industrial-tranning overflow-hidden"
             style="background: radial-gradient(73.67% 110.5% at 123.89% 115.23%, #CFA7C8 0%, rgba(91, 85, 172, 0.442) 56.2%, rgba(91, 85, 172, 0.439) 58.9%, rgba(91, 85, 172, 0) 100%);">
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
-                <div class="w-3/5 relative xl:block md:hidden" data-aos="fade-left">
+                <div class="w-3/5 relative xl:block mob-s:hidden" data-aos="fade-left">
                     <img src="assets/image/vr-2.jpg" alt="vr-2"
                         class="absolute w-full -left-52 -top-52 h-auto object-center"
                         style="image-rendering: pixelated;">
                 </div>
                 <div class="xl:w-2/5 flex flex-col justify-center">
-                    <h2 class="font-2 text-5xl uppercase leading-relaxed">INDUSTRIAL TRAININIG</h2>
+                    <h2 class="font-2 sm:text-5xl mob-s:text-3xl uppercase leading-relaxed">INDUSTRIAL TRAININIG</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <img src="assets/image/vr-2.jpg" alt="vr-2" class="w-full h-96 object-cover mt-5 xl:hidden sm:block"
+                    <img src="assets/image/vr-2.jpg" alt="vr-2" class="sm:w-full sm:h-96 mob-s:h-52 object-cover mt-5 xl:hidden mob-s:block"
                         style="image-rendering: pixelated;" data-aos="fade-left">
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                    <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                         Virtual reality (VR) industrial training is a cutting-edge technology that allows companies
                         and organizations to train their employees in a highly realistic, immersive environment.
                         Using VR, trainees can learn new skills, practice procedures, and experience simulated
@@ -334,21 +368,21 @@
                     </p>
                 </div>
             </div>
-            <div class="my-28"></div>
-            <div class="container mx-auto px-4 flex items-center py-4 text-xl  mb-20">
+            <div class="sm:my-28 mob-s:my-8"></div>
+            <div class="container mx-auto px-4 flex items-center py-4 text-xl  sm:mb-20">
                 <div class="xl:w-2/5 h-auto">
-                    <h2 class="font-2 text-6xl uppercase leading-relaxed">BENEFITS</h2>
+                    <h2 class="font-2 sm:text-6xl mob-s:text-3xl uppercase leading-relaxed">BENEFITS</h2>
                     <div class="banner-border-2 pb-4"></div>
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                    <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                         One of the key benefits of VR industrial training is cost savings. Traditional training methods
                         often require expensive equipment, facilities, and travel expenses. VR training, on the other
                         hand, can be conducted in a single location using a VR headset and computer. This can help to
                         significantly reduce the costs associated with training.
                     </p>
                     <img src="assets/image/indutry-img.jpg" alt="indutry-img.jpg"
-                        class="w-full h-96 object-cover object-top mt-5 xl:hidden sm:block"
+                        class="w-full sm:h-96 mob-s:52 object-cover object-top mt-5 xl:hidden mob-s:block"
                         style="image-rendering: pixelated;" data-aos="fade-right">
-                    <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                    <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                         In addition to cost savings, VR industrial training offers several other benefits. It can be
                         conducted at any time and place, making it more convenient and flexible for trainees. VR
                         training also allows for more realistic simulations and scenarios, which can help trainees
@@ -356,7 +390,7 @@
                         allowing trainees to practice procedures and tasks without the risk of injury.
                     </p>
                 </div>
-                <div class="w-3/5 relative xl:block sm:hidden" data-aos="fade-left">
+                <div class="w-3/5 relative xl:block mob-s:hidden" data-aos="fade-left">
                     <img src="assets/image/indutry-img.jpg" alt="indutry-img.jpg"
                         class="absolute w-full -right-52 -top-72 h-auto object-cover"
                         style="height: 600px; image-rendering: pixelated;">
@@ -364,23 +398,23 @@
             </div>
             <div class="container mx-auto px-4 flex items-center py-4 text-xl">
                 <div class="w-full h-3/5 flex">
-                    <div class="w-3/5 relative  xl:block sm:hidden" data-aos="fade-right">
+                    <div class="w-3/5 relative  xl:block mob-s:hidden" data-aos="fade-right">
                         <img src="assets/image/industry-img-2.png" alt="industry-img-2.png"
                             class="absolute w-full -left-52 -top-0  object-cover object-top"
                             style="image-rendering: pixelated;height: 500px;">
                     </div>
                     <div class="xl:w-2/5">
-                        <h2 class="font-2 text-5xl uppercase leading-relaxed">TRAINING EXAMPLES</h2>
+                        <h2 class="font-2 sm:text-5xl mob-s:text-3xl uppercase leading-relaxed">TRAINING EXAMPLES</h2>
                         <div class="banner-border-2 pb-4"></div>
-                        <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                             By using VR, trainees can learn these skills in a safe, controlled environment before
                             applying
                             them in the real world.
                         </p>
                         <img src="assets/image/industry-img-2.png" alt="industry-img-2.png"
-                            class="w-full h-96 object-cover object-top mt-5 xl:hidden sm:block"
+                            class="w-full sm:h-96 mob-s:h-52 object-cover object-top mt-5 xl:hidden mob-s:block"
                             style="image-rendering: pixelated;" data-aos="fade-left">
-                        <p class="font-light mt-8 text-gray-400 leading-relaxed tracking-wide">
+                        <p class="font-light sm:text-xl mob-s:text-base mt-8 text-gray-400 leading-relaxed tracking-wide">
                             Many companies and organizations have already seen the benefits of VR industrial training.
                             For
                             example, a manufacturing company used VR training to teach its employees how to operate new
@@ -393,21 +427,21 @@
                     </div>
                 </div>
             </div>
-            <div class="my-28"></div>
+            <div class="sm:my-28 mob-s:my-8"></div>
         </div>
         <div class="gradiant-2 gradiant-4 relative overflow-hidden">
             <div class="mt-28"></div>
             <!-- COMPANIES -->
             <div class="company relative">
                 <div
-                    class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
+                    class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-4 text-xl">
                     <div class="w-full text-center">
                         <div class="">
                             <h3 class="font-2 lg:text-6xl sm:text-4xl">
                                 TRUSTED BY BIG COMPANIES
                             </h3>
                         </div>
-                        <div class="flex justify-between items-start mt-20">
+                        <div class="flex justify-between items-start mt-20  sm:flex  mob-s:hidden">
                             <div class="flex flex-col items-center" data-aos="fade-up">
                                 <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
                                     <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
@@ -443,6 +477,55 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="relative mob-s:flex sm:hidden overflow-hidden" data-aos="zoom-out-down">
+                            <!-- Slider Wrapper -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="company-slider" style="width: 200%;">
+                                <!-- Slide 1 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-1.png"
+                                                    alt="company-1">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60 sm:h-28  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-2.png"
+                                                    alt="company-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="min-w-full flex flex-row items-center p-6 rounded-lg">
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24 object-center"
+                                                    src="assets/image/company-3.png" alt="company-3">
+                                            </div>
+                                        </div>
+                                        <div class="xl:h-60  mob-s:h-28 border border-zinc-50 border-solid opacity-10"></div>
+                                        <div class="flex flex-col items-center" data-aos="fade-up">
+                                            <div class="xl:w-60 xl:h-60 sm:w-28 sm:h-28">
+                                                <img class="object-cover xl:h-60 sm:h-24" src="assets/image/company-4.png"
+                                                    alt="company-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-24 flex justify-center mt-10">
+                                <a type="button" id="company-prev" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 2.png" alt="Arrow 2" class="mr-10">
+                                </a>
+                                <a type="button" id="company-next" class="cursor-pointer">
+                                    <img src="assets/image/Arrow 1.png" alt="Arrow 1">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,14 +535,14 @@
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -467,23 +550,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -491,18 +574,22 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
     <!-- JavaScript for Automatic Slider -->
     <script src="js/slider.js"></script>
+    <script src="js/mobile-toggle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

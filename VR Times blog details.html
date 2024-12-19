@@ -29,77 +29,113 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- animate.js  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'mob-s': '320px',
+                        'mob-l': '355px',
+                        'mob-xl': '425px',
+                        'tablet': '768px',
+                        'laptop': '1024px',
+                        'laptop-l': '1440px',
+                        '4k': '2550px',
+                    },
+                    colors: {
+                        customGray: '#434343',
+                        customBlue: '#001B3A',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'custom-light': '10px 10px 30px 0px #00000073',
+                        'custom-dark': '-10px -10px 30px 0px #2B2B2B',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
-     <!-- header -->
-     <header>
+    <!-- header -->
+    <header>
         <div class="navbar">
-            <div class="flex justify-evenly items-center xl:text-xl">
-                <!-- Logo -->
-                <div class="">
-                    <a href="home.html">
-                        <img src="assets/image/logo.png" alt="logo" class="lg:w-32 md:w-24">
+            <div class="flex sm:justify-evenly mob-s:justify-between items-center xl:text-xl">
+            <!-- Logo -->
+            <div class="flex-none w-40">
+                <a href="home.html">
+                    <img class="xl:w-auto lg:w-32 sm:w-28 mob-s:w-24" src="assets/image/logo.png" alt="logo">
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="relative  sm:block mob-s:hidden">
+                <ul class="flex xl:space-x-16 lg:space-x-9 sm:space-x-5 lg:text-xl sm:text-base">
+                    <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+                    <!-- Dropdown for Services -->
+                    <li class="relative group dropdown">
+                        <a href="service-vr.html" class="flex items-center dropbtn hover:text-yellow-400">
+                            Services
+                            <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-content">
+                            <a href="service-vr.html" class="gap-5 hover:text-yellow-400">Virtual Reality</a>
+                            <a href="service-vr-tranning.html" class="hover:text-yellow-400">VR Industrial Training</a>
+                            <a href="service-metaverse.html" class="hover:text-yellow-400">Metaverse Development</a>
+                            <a href="service-virtual-event.html" class="hover:text-yellow-400">Virtual Event
+                                Managment</a>
+                            <a href="service-vr-consoltion.html" class="hover:text-yellow-400">VR Consultation</a>
+                        </div>
+                    </li>
+                    <li><a href="VR-Times.html" class="text-yellow-400">AR/VR Times</a></li>
+                    <li><a href="Portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="Contact Us.html" class="hover:text-yellow-400">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 sm:flex  mob-s:hidden">
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.facebook.com/" class="" target="_blank">
+                        <img src="assets/image/facebook.png" alt="facebook">
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
-                <nav class="relative">
-                    <ul class="flex xl:space-x-16 lg:space-x-10 md:space-x-5">
-                        <li><a href="home.html" class="hover:text-yellow-500">Home</a></li>
-                        <!-- Dropdown for Services -->
-                        <li class="relative group dropdown">
-                            <a href="" class="flex items-center dropbtn hover:text-yellow-500">
-                                Services
-                                <img class="w-3 m-2 " src="assets/image/down-arrow.png" alt="down arrow">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-content">
-                                <a href="service-vr.html" class="gap-5 text-yellow-500">Virtual Reality</a>
-                                <a href="service-vr-tranning.html" class="hover:text-yellow-500">VR Industrial
-                                    Training</a>
-                                <a href="service-metaverse.html" class="hover:text-yellow-500">Metaverse Development</a>
-                                <a href="service-virtual-event.html" class="hover:text-yellow-500">Virtual Event
-                                    Managment</a>
-                                <a href="service-vr-consoltion.html" class="hover:text-yellow-500">VR Consultation</a>
-                            </div>
-                        </li>
-                        <li><a href="VR-Times.html" class="text-yellow-500">AR/VR Times</a></li>
-                        <li><a href="Portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
-                        <li><a href="Contact Us.html" class="hover:text-yellow-500">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-
-                <!-- Social Icons -->
-                <div class="flex space-x-4">
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.facebook.com/" class="" target="_blank">
-                            <img src="assets/image/facebook.png" alt="facebook">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8" style="padding: 7px;">
-                        <a href="https://x.com/" class="" target="_blank">
-                            <img src="assets/image/twitter.png" alt="twitter">
-                        </a>
-                    </div>
-                    <div class="social-icon lg:w-10 md:w-8 lg:h-10 md:h-8">
-                        <a href="https://www.instagram.com/" class="" target="_blank">
-                            <img src="assets/image/instragram.png" alt="instragram">
-                        </a>
-                    </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8" style="padding: 7px;">
+                    <a href="https://x.com/" class="" target="_blank">
+                        <img src="assets/image/twitter.png" alt="twitter">
+                    </a>
+                </div>
+                <div class="social-icon lg:w-10 lg:h-10 sm:w-8">
+                    <a href="https://www.instagram.com/" class="" target="_blank">
+                        <img src="assets/image/instragram.png" alt="instragram">
+                    </a>
                 </div>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block relative sm:hidden text-gray-700 focus:outline-none">
+                <img src="assets/image/menu.png" alt="menu" class="mob-s:w-5">
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden transparent text-center text-white absolute top-10 right-44 bg-[#09021b]  transform translate-x-full transition-transform duration-300">
+            <a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="service-vr.html" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+            <a href="VR-Times.html" class="block px-4 py-2 hover:bg-gray-100">AR/VR Times</a>
+            <a href="Portfolio.html" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+            <a href="Contact Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     <!-- main -->
     <main>
         <!-- banner -->
-        <div class="sub-banner bg-center bg-top bg-cover bg-no-repeat p-40 pl-0">
+        <div class="sub-banner sm:bg-center sm:bg-top bg-cover bg-no-repeat mob-s:bg-center sm:h-[700px] sm:p-40 mob-s:p-20 pl-0">
             <div class="container mx-auto px-4  xl:pl-28 flex items-center py-4 text-xl">
-                <div class="w-3/5 flex items-center ">
-                    <h1 class="font-2 lg:text-7xl sm:text-6xl leading-normal mt-20" data-aos="fade-right">
-                        <span class="font-2 lg:text-7xl sm:text-6xl text-yellow-500 block">AR/VR </span><br>TIMES
+                <div class="w-3/5 flex items-center " data-aos="fade-right">
+                    <h1 class="font-2 lg:text-7xl sm:text-6xl mob-s:text-4xl leading-normal mt-20">
+                        <span class="font-2  lg:text-7xl sm:text-6xl mob-s:text-4xl text-yellow-500">AR/VR</span><br> TIMES
                     </h1>
                 </div>
             </div>
@@ -108,29 +144,28 @@
         <!-- AR/VR Times blog details -->
         <div class="blog">
             <div class="container mx-auto px-4 flex flex-col items-center py-4 text-xl">
-                <div class="w-full flex justify-top">
+                <div class="w-full flex md:flex-row mob-s:flex-col justify-top">
                     <div class="">
-                        <h2 class="font-2 text-6xl leading-normal">Process of designing a VR industrial<br> training
+                        <h2 class="font-2 md:text-6xl mob-s:text-3xl leading-normal">Process of designing a VR industrial<br> training
                             program</h2>
                     </div>
                     <div class="flex mt-5">
                         <div class="flex bg-yellow-950 inline-block p-2 px-9 h-10 mx-5">
                             <img src="assets/image/user (1).png" alt="user" class="w-5 h-5 mr-3 font-light">
-                            <span class="tracking-wide">Esther Howard</span>
+                            <span class="tracking-wide md:text-xl mob-s:text-base">Esther Howard</span>
                         </div>
-                        <div class="bg-yellow-500 inline-block p-2 px-10 h-10">
+                        <div class="bg-yellow-500 md:text-xl mob-s:text-base inline-block p-2 px-10 h-10">
                             <span>29 Oct</span>
                         </div>
                     </div>
                 </div>
-                <div class="w-full mt-20" data-aos="zoom-in">
-                    <img src="assets/image/blog.png" alt="blog" class="object-cover object-center"
-                        style="width: 100%;height: 500px;">
-                    <h3 class="font-2 text-4xl mt-16">Designing an Impactful VR Industrial Training Program:
+                <div class="w-full md:mt-20 mob-s:mt-10" data-aos="zoom-in">
+                    <img src="assets/image/blog.png" alt="blog" class="object-cover object-center w-full md:h-[500px]">
+                    <h3 class="font-2 md:text-4xl md:mt-16 mob-s:mt-5">Designing an Impactful VR Industrial Training Program:
                         Step-by-Step</h3>
                 </div>
-                <div class="w-full mt-20 choose-bg h-80 p-20" data-aos="flip-up">
-                    <p class="text-2xl text-zinc-400 text-justify leading-relaxed">
+                <div class="w-full md:mt-20 mob-s:mt-5 choose-bg h-80 md:p-20 mob-s:p-10" data-aos="flip-up">
+                    <p class="md:text-2xl mob-s:text-base text-zinc-400 text-justify leading-relaxed">
                         Virtual Reality (VR) has proven to be a revolutionary force in various sectors, be it marketing,
                         education, architecture, or the ever-evolving world of Industrial training. With the immersive
                         experience it offers, trainees can gain hands-on experience without facing real-world risks. But
@@ -140,38 +175,38 @@
                 </div>
                 <div class="w-full mt-14" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">01.</span> Understand the Core Needs and Objectives
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">01.</span> Understand the Core Needs and Objectives
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-10 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Before diving headfirst into designing your program, it’s imperative to understand what you
                             aim to achieve.
                         </p>
-                        <p class="mt-5 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             <span class="text-yellow-500">Pro Tip:</span>
                             Check out how various industries, such as the aviation, construction, and automotive
                             sectors, have tailored their training programs to meet their specific needs.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-right">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">02.</span> Choose the Right Equipment and Software
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">02.</span> Choose the Right Equipment and Software
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             With a myriad of options available, from the Meta Quest 3 to Sony’s new VR headset,
                             selecting the right hardware is crucial. Alongside the device, explore software platforms
                             like CubismVR that can enhance the realism of your training simulations.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-right">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">03.</span> Incorporate Real-World Scenarios
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">03.</span> Incorporate Real-World Scenarios
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Basing your training simulations on real-world scenarios is key to ensuring practical
                             learning. Whether it’s dealing with a fire emergency, as demonstrated in VR fire safety
                             training, or managing oil & gas operations effectively through VR, the more realistic your
@@ -179,24 +214,24 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">04.</span> Enhance with AI and Advanced Features
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">04.</span> Enhance with AI and Advanced Features
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Consider integrating cutting-edge AI technology, like the ability to transform text prompts
                             into 3D worlds. Advanced features can adapt training based on the user’s progress, ensuring
                             a more tailored experience.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">05.</span> Ensure Safety and Comfort
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">05.</span> Ensure Safety and Comfort
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             It’s vital to ensure that the participants feel safe and comfortable. Products like [Cyber
                             Shoes can provide an intuitive and physically engaging way to move within VR environments.
                             Furthermore, understand the potential challenges of VR, such as motion sickness, and design
@@ -204,12 +239,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">06.</span> Collect Feedback and Iterate
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">06.</span> Collect Feedback and Iterate
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Post-training, collect feedback from your participants. Platforms like Hiber3D provide tools
                             for real-time interaction, making feedback collection seamless.
                         </p>
@@ -219,81 +254,80 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-10" data-aos="flip-right">
-                    <img src="assets/image/blog-2.png" alt="blog" class="object-cover object-center"
-                        style="width: 100%;height: 500px;">
-                    <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                <div class="w-full md:mt-10 mob-s:mt-5" data-aos="flip-right">
+                    <img src="assets/image/blog-2.png" alt="blog" class="w-full md:h-[500px] object-cover object-center">
+                    <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                         While we’ve outlined the steps to create an effective VR training program, let’s take a deeper
                         dive into how evolving technologies and various sectors are shaping the future of VR in
                         industrial training.
                     </p>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-right">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">07.</span> Embrace Multi-disciplinary Training Techniques
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">07.</span> Embrace Multi-disciplinary Training Techniques
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Training isn’t just about mastering one skill; it’s about blending multiple skills to tackle complex challenges. A classic example is the confluence of virtual reality and medical training, allowing medical students to perform surgeries in a risk-free environment.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-right">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">08.</span> Include Gamified Elements
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">08.</span> Include Gamified Elements
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Bringing in elements from VR gaming, like those seen in Among Us’s official VR remake, can make training sessions more engaging and interactive. Gamification boosts retention and encourages trainees to approach scenarios more creatively.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-right">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-right">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">09.</span> Continuous Updates & Evolution
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">09.</span> Continuous Updates & Evolution
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             With rapid tech advancements, like the generative image dynamics, it’s vital to regularly update your VR modules. This ensures your training materials are always on the cutting edge.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">10.</span> Collaboration in the Virtual Space
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">10.</span> Collaboration in the Virtual Space
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             With platforms like Horizon Workspaces, trainees can collaborate in real-time in a virtual environment, promoting teamwork and collective problem-solving.
                         </p>
-                        <p class="mt-5 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300  md:text-xl mob-s:text-base font-light tracking-wide">
                             <span class="text-yellow-500">Industry Spotlight :</span>
                             The mining industry is leveraging VR for safety and operational training, showcasing how traditional sectors are adopting futuristic technologies.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">11.</span> Dive into the Metaverse
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">11.</span> Dive into the Metaverse
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             The metaverse is the next frontier, and it’s closer than we think. Whether it’s attending conferences, like the Meta Connect 2023, or integrating virtual temples, the metaverse will redefine how we perceive VR training.
                         </p>
                     </div>
                 </div>
-                <div class="w-full mt-14" data-aos="fade-left">
+                <div class="w-full md:mt-14 mob-s:mt-5" data-aos="fade-left">
                     <div class="flex flex-col justify-center items-start py-4 cursor-pointer">
-                        <h2 class="text-4xl font-2 tracking-wide text-zinc-50"><span
-                                class=" text-6xl text-yellow-500">12.</span> Measure, Analyze, Improve
+                        <h2 class="md:text-4xl mob-s:text-xl font-2 tracking-wide text-zinc-50"><span
+                                class=" md:text-6xl mob-s:text-3xl text-yellow-500">12.</span> Measure, Analyze, Improve
                         </h2>
-                        <p class="mt-10 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300 font-light md:text-xl mob-s:text-base tracking-wide">
                             Use analytics to measure the effectiveness of your training programs. Understanding where trainees excel or struggle provides data-driven insights for future iterations.
                         </p>
-                        <p class="mt-5 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300  md:text-xl mob-s:text-base font-light tracking-wide">
                             In conclusion, the world of VR industrial training is vast and expanding. At twinreality.in, we pride ourselves on being at the forefront of this revolution. From the latest XR news to insights into sectors like the refinery industry and defense, we’ve got it all covered.
                         </p>
-                        <p class="mt-5 text-zinc-300 font-light tracking-wide">
+                        <p class="mt-5 text-zinc-300  md:text-xl mob-s:text-base font-light tracking-wide">
                             <span class="text-yellow-500">Ready to embark on your VR journey?</span>
                             Dive into our vast collection and stay updated with every leap in the world of virtual reality. Let’s shape the future, one virtual step at a time!
                         </p>
@@ -307,14 +341,14 @@
     <footer>
         <div class="footer overflow-hidden h-auto">
             <div
-                class="container  lg:container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex items-center py-20 text-xl">
-                <div class="xl:w-1/3 sm:w-1/2">
-                    <div class="flex flex-col justify-center items-start" data-aos="fade-down-right">
+                class="container  xl:container  lg:container  md:container  sm:container mx-auto px-4 flex mob-s:flex-col sm:flex-row items-center py-20 text-xl">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full">
+                    <div class="flex flex-col justify-center sm:items-start mob-s:items-center" data-aos="fade-down-right">
                         <div class="logo">
-                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32">
+                            <img src="assets/image/logo.png" alt="logo" class="lg:w-40 sm:w-32 mob-s:w-24">
                         </div>
                         <div class="footer-contain mt-10 ">
-                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg leading-relaxed tracking-wide">
+                            <p class="text-zinc-400 opacity-75 lg:text-lg sm:text-lg mob-s:text-sm sm:text-left mob-s:text-center leading-relaxed tracking-wide">
                                 Lorem Ipsum is simply dummy text<br> of the printing and typesetting<br> industry. Lorem
                                 Ipsum has been<br> the industry's standard dummy text<br> ever since the 1500s, when
                                 an<br> unknown printer took a galley.
@@ -322,23 +356,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 sm:w-1/2 flex-col justify-center items-center text-center">
+                <div class="xl:w-1/3 sm:w-1/2 mob-s:w-full flex-col justify-center items-center text-center mob-s:mt-10 sm:mt-0">
                     <div class="footer-title">
-                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl sm:text-3xl">Reach us</h4>
+                        <h4 class="font-2 text-yellow-500 uppercase font-medium lg:text-4xl mob-s:text-3xl">Reach us</h4>
                     </div>
                     <div class="banner-border-2 pb-4"></div>
                     <div class="footer-social-icon flex justify-evenly mt-10">
                         <div class="calendly">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-down-right">
-                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Book a Meeting On<br>
+                                <img src="assets/image/calendly.png" alt="Calendly" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Book a Meeting On<br>
                                     Calendly</span>
                             </a>
                         </div>
                         <div class="whatsapp">
                             <a href="" class=" flex flex-col items-center justify-center" data-aos="fade-down-left">
-                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Connect With Us<br> On
+                                <img src="assets/image/whatsapp.png" alt="whatsapp" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Connect With Us<br> On
                                     WhatsApp</span>
                             </a>
                         </div>
@@ -346,18 +380,21 @@
                     <div class="footer-social-icon mt-10">
                         <div class="email">
                             <a href="" class="flex flex-col items-center justify-center" data-aos="fade-up">
-                                <img src="assets/image/email.png" alt="email" class="lg:h-20 sm:h-14">
-                                <span class="lg:pt-5 lg:text-xl sm:text-base sm:pt-3">Contact<br> @twinreality.in</span>
+                                <img src="assets/image/email.png" alt="email" class="lg:h-20 mob-s:h-14">
+                                <span class="lg:pt-5 lg:text-xl mob-s:text-base mob-s:pt-3">Contact<br> @twinreality.in</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ sm:hidden"></div>
+                <div class="xl:w-1/3 xl:block twin-reality-img footer-img relativ mob-s:hidden"></div>
+            </div>
+            <div class="mob-s:block sm:hidden">
+                <img src="assets/image/footer.png" alt="footer">
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+    <script src="js/mobile-toggle.js"></script>
     <script>
         new WOW().init();
     </script>

@@ -245,7 +245,7 @@ input:focus+label {
 }
 
 .tr-sol::after {
-    height: 600px;
+    height: 530px;
     background-image: url('../assets/image/vr-sol.png');
     top: -290px;
     left: 170px;
